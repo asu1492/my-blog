@@ -1,18 +1,15 @@
 ---
 layout: page
-title: About
+title: About Me
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+Hi, I’m Abhishek Singh.
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+I’ve always been passionate about learning deeply and sharing that knowledge with clarity and purpose. My journey has taken me through diverse paths — from preparing for the Indian Civil Services to building intelligent, scalable software systems in the supply chain domain.
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+My background in philosophy, history, and governance has shaped the way I think — helping me approach engineering problems with structured reasoning, analytical depth, and an appreciation for systems thinking. I bring the same mindset to software engineering — whether it’s designing resilient APIs with Java and Spring Boot, integrating chatbots using OpenAI or Vertex AI, or developing event-driven systems with RabbitMQ.
 
+This site is my space to share ideas, document what I learn, and hopefully spark curiosity or insight in someone else. Whether it’s a technical deep dive, system design reflection, or productivity experiment, my goal is to make learning visible and useful — to myself, and to others walking similar paths.
 
-[jekyll-organization]: https://github.com/jekyll
+Thanks for stopping by — I hope you find something valuable here.
