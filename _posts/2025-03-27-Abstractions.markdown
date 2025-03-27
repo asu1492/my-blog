@@ -3,6 +3,7 @@ layout: post
 title:  "Abstraction in Java"
 date:   2025-03-27 22:29:52 +0530
 categories: java
+tags: [java, abstraction]
 ---
 
 #  Question on Abstraction 
@@ -65,4 +66,5 @@ categories: java
 - What happens when a subclass does not add annotation "@override" while implementing an abstract method?
 	- It will not cause any issue. However we this annotation to let compiler that we are implementing an abstract method of superclass. 
 	- If we do not add this annotation, we might end up creating a new method, if there is some typo error in the method signature. 
+
 #corejava
