@@ -58,6 +58,9 @@ paginate: 10
 # The base URL of your site
 baseurl: "/my-blog"
 
+# Avatar
+avatar: /assets/img/avatar/avatar.jpg  # Add your avatar image to this path
+
 # ------------ The following options are not recommended to be modified ------------------
 
 kramdown:
