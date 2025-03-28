@@ -1,0 +1,46 @@
+---
+layout: home
+permalink: /
+nav_order: 1
+title: Home
+nav_exclude: true
+---
+
+# Welcome to My Blog
+
+This is my personal blog where I share my thoughts, experiences, and knowledge about various topics.
+
+## Recent Posts
+
+{% for post in paginator.posts %}
+  <h2>
+    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+  </h2>
+  <p class="post-meta">
+    <time datetime="{{ post.date | date_to_xmlschema }}">
+      {{ post.date | date: "%B %d, %Y" }}
+    </time>
+    {% if post.categories.size > 0 %}
+      • Categories: {{ post.categories | join: ", " }}
+    {% endif %}
+  </p>
+  <p>{{ post.excerpt }}</p>
+{% endfor %}
+
+{% if paginator.total_pages > 1 %}
+  <nav class="pagination">
+    {% if paginator.previous_page %}
+      <a href="{{ paginator.previous_page_path | relative_url }}">&laquo; Previous</a>
+    {% endif %}
+    {% for page in (1..paginator.total_pages) %}
+      {% if page == paginator.page %}
+        <span class="page current">{{ page }}</span>
+      {% else %}
+        <a href="{{ paginator.paginate_path | replace: ':num', page | relative_url }}">{{ page }}</a>
+      {% endif %}
+    {% endfor %}
+    {% if paginator.next_page %}
+      <a href="{{ paginator.next_page_path | relative_url }}">Next &raquo;</a>
+    {% endif %}
+  </nav>
+{% endif %}

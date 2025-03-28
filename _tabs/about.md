@@ -1,7 +1,7 @@
 ---
 layout: page
-title: About Me
-permalink: /about/
+icon: fas fa-info-circle
+order: 4
 ---
 
 Hi, I’m Abhishek Singh.
@@ -13,3 +13,10 @@ My background in philosophy, history, and governance has shaped the way I think 
 This site is my space to share ideas, document what I learn, and hopefully spark curiosity or insight in someone else. Whether it’s a technical deep dive, system design reflection, or productivity experiment, my goal is to make learning visible and useful — to myself, and to others walking similar paths.
 
 Thanks for stopping by — I hope you find something valuable here.
+
+
+**Contact Me:**
+
+- **Email:** [asu141504@gmail.com](mailto:asu141504@gmail.com)
+- **GitHub:** <a href="https://github.com/asu1492" target="_blank" rel="noopener noreferrer">github.com/asu1492</a>
+- **LinkedIn:** <a href="https://www.linkedin.com/in/abhishekujjain" target="_blank" rel="noopener noreferrer">linkedin.com/in/abhishekujjain</a>
