@@ -7,7 +7,8 @@ tags: [philosophy, quantum]
 ---
 
 
-Key Argument:What we are witnessing today is more than just a technological upgrade — it is a Kuhnian paradigm shift in the nature of computation itself. As quantum computing matures, it could redefine the foundations of AI, software development, and how we model reality — marking a transition as profound as the shift from Newtonian mechanics to relativity.
+🧠 **Key Argument:** 
+``` What we are witnessing today is more than just a technological upgrade — it is a Kuhnian paradigm shift in the nature of computation itself. As quantum computing matures, it could redefine the foundations of AI, software development, and how we model reality — marking a transition as profound as the shift from Newtonian mechanics to relativity.```
 
 In the famous debate between Karl Popper and Thomas Kuhn, Popper argued that science is a search for truth through deductive falsification — meaning scientific theories must be testable and open to being proven false. Kuhn, however, presented a contrasting view in The Structure of Scientific Revolutions, arguing that science does not progress toward an absolute truth, but instead evolves through paradigm shifts — fundamental changes in the basic concepts and experimental practices of a scientific discipline.
 
