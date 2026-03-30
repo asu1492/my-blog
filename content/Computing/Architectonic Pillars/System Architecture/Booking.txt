@@ -1,0 +1,52 @@
+Booking.txt
+
+Functional Requirement 
+
+Non Functional
+1. Scalability - million
+2. Availability - highly Availability 
+3. Reliability - Strongly consistent - no double booking ; idempotency - payment retries 
+4. Performance - less than <100ms 
+5. Security
+6. Observability
+7. Extensible 
+
+
+Core Entities 
+1. Show
+2. Seat
+3. SeatInventory 
+4. Reservation 
+
+Enum 
+public enum SeatStatus{
+    AVAILABLE,
+    LOCKED,
+    BOOKED
+}
+
+
+@Entity 
+@Table
+public class Show{
+    @Id
+    @GeneratedValue(stategy=GenerationType.IDENTITY)
+    private Long id;
+
+    private String movieNamel;
+    private LocalDateTime showTime;
+}
+
+@Entity
+public class Seat{
+    
+    @Id
+    @GeneratedValue(stategy=GenerationType.IDENTITY)
+    private Long id;
+
+    private String seatNumber;
+
+    @ManyToOne
+    private Show show;
+}
+

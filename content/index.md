@@ -8,13 +8,5 @@ My journey spans diverse paths — from preparing for the Indian Civil Services 
 
 This digital garden is my space to share ideas, document what I learn, and spark curiosity. Whether it's a technical deep dive, system design reflection, or a philosophical observation — my goal is to make learning visible and useful.
 
-## Topics
 
-- [[Java/Abstraction|Abstraction in Java]]
-- [[Java/Aggregation|Aggregation in Java]]
-- [[DSA/Arrays|Arrays & Coding Problems]]
-- [[Computing/Paradigm-Shift-in-Computing-World|Paradigm Shift in Computing]]
-
-## About Me
-
-[[about|Learn more about me →]]
+### [[about|Learn more about me →]]

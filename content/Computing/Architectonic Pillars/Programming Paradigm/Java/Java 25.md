@@ -1,0 +1,7 @@
+
+1.  [JDK Enhancement Proposal (JEP) 512](https://openjdk.org/jeps/512) **Compact Source Files and Instance Main Methods**, which eliminates the intimidating `public static void main(String[] args)` that has confused beginners for decades. Students can now start with: void main() {println("Hello World")}
+2. Java 25 evolves the language in a more accessible and expressive way, doing away with some of the tedious (e.g., boilerplate) aspects of the language, example, you don’t need to wrap everything in a class within source files, and you don’t have to include `super()` or `this()` function calls at the beginning of a constructor. 
+3. [virtual threads](https://thenewstack.io/how-do-javas-virtual-threads-help-your-business/), introduced in [Java 21](https://thenewstack.io/we-can-have-nice-things-upgrading-to-java-21-is-worth-it/), are seeing heavy adoption in AI workloads because ML inference often involves many concurrent operations that don’t need full OS threads. 
+4. advanced features like pattern matching — [JEP 507](https://openjdk.org/jeps/507) **Primitive Types in Patterns, instanceof, and switch** extends this to primitive types in Java 25, and [JEP 505](https://openjdk.org/jeps/505) **Structured Concurrency** and the [JEP 508](https://openjdk.org/jeps/508) **Vector API** are used for optimized computations and in AI inference and compute scenarios.
+5. Java plus AI ecosystem, including LangChain4j hitting its 1.0 GA release, introducing Virtual Threads, model expansion, agentic mode, enhanced reasoning support, multimodality and more.
+6. 
