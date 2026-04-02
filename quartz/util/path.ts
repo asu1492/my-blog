@@ -73,7 +73,12 @@ export function slugifyFilePath(fp: FilePath, excludeExt?: boolean): FullSlug {
   fp = stripSlashes(fp) as FilePath
   let ext = getFileExtension(fp)
   const withoutFileExt = fp.replace(new RegExp(ext + "$"), "")
-  if (excludeExt || [".md", ".html", undefined].includes(ext)) {
+  // Keep `.html` for static HTML assets (correct MIME on hosts like GitHub Pages; iframes otherwise download extensionless files).
+  // Still treat `index.html` like `.md` so it maps to the path ending in `index` / site root.
+  const segments = withoutFileExt.split("/").filter((x) => x.length > 0)
+  const lastSeg = segments[segments.length - 1] ?? ""
+  const isIndexHtml = ext === ".html" && lastSeg === "index"
+  if (excludeExt || [".md", undefined].includes(ext) || isIndexHtml) {
     ext = ""
   }
 

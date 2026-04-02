@@ -110,6 +110,7 @@ describe("transforms", () => {
       [
         ["content/index.md", "content/index"],
         ["content/index.html", "content/index"],
+        ["Organizing Data/data-structures-codex.html", "Organizing-Data/data-structures-codex.html"],
         ["content/_index.md", "content/index"],
         ["/content/index.md", "content/index"],
         ["content/cool.png", "content/cool.png"],
