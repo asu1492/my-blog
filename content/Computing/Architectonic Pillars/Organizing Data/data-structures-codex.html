@@ -1,0 +1,1597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Data Structures — First Principles Codex</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --ink: #0e0d0b;
+    --paper: #f5f0e8;
+    --cream: #ede7d9;
+    --accent: #c8401a;
+    --accent2: #1a5c8f;
+    --accent3: #2d7a4f;
+    --gold: #b8860b;
+    --muted: #7a7060;
+    --rule: #c8b89a;
+    --mono: 'JetBrains Mono', monospace;
+    --serif: 'Playfair Display', Georgia, serif;
+    --sans: 'DM Sans', sans-serif;
+    --card-bg: #faf7f2;
+    --sidebar-w: 260px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 15px;
+    line-height: 1.7;
+    display: flex;
+    min-height: 100vh;
+  }
+
+  /* ── SIDEBAR ── */
+  #sidebar {
+    width: var(--sidebar-w);
+    min-height: 100vh;
+    background: var(--ink);
+    color: var(--paper);
+    position: fixed;
+    top: 0; left: 0;
+    overflow-y: auto;
+    z-index: 100;
+    padding-bottom: 40px;
+  }
+
+  #sidebar-header {
+    padding: 32px 20px 20px;
+    border-bottom: 1px solid #2a2820;
+  }
+
+  #sidebar-header .codex-label {
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 8px;
+  }
+
+  #sidebar-header h1 {
+    font-family: var(--serif);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--paper);
+  }
+
+  #sidebar-header .subtitle {
+    font-size: 11px;
+    color: #9a9080;
+    margin-top: 6px;
+    font-style: italic;
+    font-family: var(--serif);
+  }
+
+  .nav-section {
+    padding: 16px 0 0;
+  }
+
+  .nav-section-label {
+    font-family: var(--mono);
+    font-size: 8.5px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #665e50;
+    padding: 0 20px 8px;
+  }
+
+  .nav-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 20px;
+    cursor: pointer;
+    transition: background 0.15s;
+    border-left: 2px solid transparent;
+    font-size: 13px;
+    color: #b0a890;
+    text-decoration: none;
+  }
+
+  .nav-item:hover { background: #1a1810; color: var(--paper); }
+  .nav-item.active { border-left-color: var(--accent); background: #1e1c16; color: var(--paper); }
+
+  .nav-item .nav-num {
+    font-family: var(--mono);
+    font-size: 9px;
+    color: #4a4438;
+    min-width: 18px;
+  }
+
+  .nav-item.active .nav-num { color: var(--accent); }
+
+  .nav-dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  /* ── MAIN ── */
+  #main {
+    margin-left: var(--sidebar-w);
+    flex: 1;
+    max-width: 900px;
+    padding: 60px 56px 100px;
+  }
+
+  /* ── HERO ── */
+  #hero {
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 48px;
+    margin-bottom: 64px;
+    position: relative;
+  }
+
+  .hero-meta {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  #hero h2 {
+    font-family: var(--serif);
+    font-size: 52px;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-bottom: 20px;
+  }
+
+  #hero h2 em {
+    color: var(--accent);
+    font-style: italic;
+  }
+
+  .hero-intro {
+    font-size: 16px;
+    color: var(--muted);
+    max-width: 600px;
+    line-height: 1.8;
+    font-weight: 300;
+  }
+
+  .hero-quote {
+    margin-top: 32px;
+    padding: 20px 24px;
+    border-left: 3px solid var(--accent);
+    background: var(--cream);
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 15px;
+    color: var(--muted);
+    max-width: 560px;
+  }
+
+  .hero-quote cite {
+    display: block;
+    margin-top: 8px;
+    font-family: var(--sans);
+    font-style: normal;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  /* ── DS CARDS ── */
+  .ds-section {
+    display: none;
+  }
+
+  .ds-section.visible {
+    display: block;
+    animation: fadeIn 0.3s ease;
+  }
+
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+  .section-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 36px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .section-number {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--accent);
+    padding: 4px 10px;
+    border: 1px solid var(--accent);
+    border-radius: 2px;
+    margin-top: 6px;
+    white-space: nowrap;
+  }
+
+  .section-title-block h2 {
+    font-family: var(--serif);
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.15;
+    margin-bottom: 6px;
+  }
+
+  .section-title-block .tagline {
+    font-size: 13px;
+    color: var(--muted);
+    font-style: italic;
+    font-family: var(--serif);
+  }
+
+  /* Principle card */
+  .principle-card {
+    background: var(--ink);
+    color: var(--paper);
+    border-radius: 4px;
+    padding: 28px 32px;
+    margin-bottom: 32px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .principle-card::before {
+    content: '∴';
+    position: absolute;
+    right: 20px; top: 10px;
+    font-size: 72px;
+    color: #1e1c16;
+    font-family: var(--serif);
+    pointer-events: none;
+  }
+
+  .principle-label {
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 10px;
+  }
+
+  .principle-text {
+    font-family: var(--serif);
+    font-size: 17px;
+    line-height: 1.65;
+    color: var(--paper);
+  }
+
+  /* Grid of property cards */
+  .props-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+
+  .prop-card {
+    background: var(--card-bg);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 18px 20px;
+  }
+
+  .prop-card .prop-label {
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 8px;
+  }
+
+  .prop-card .prop-value {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--ink);
+  }
+
+  .prop-card .prop-value code {
+    font-family: var(--mono);
+    font-size: 12px;
+    background: var(--cream);
+    padding: 1px 5px;
+    border-radius: 2px;
+    color: var(--accent);
+  }
+
+  /* Complexity table */
+  .complexity-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 32px;
+    font-size: 13px;
+  }
+
+  .complexity-table th {
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-align: left;
+    padding: 10px 14px;
+    border-bottom: 2px solid var(--rule);
+    background: var(--cream);
+  }
+
+  .complexity-table td {
+    padding: 10px 14px;
+    border-bottom: 1px solid #e8dfc8;
+    vertical-align: top;
+  }
+
+  .complexity-table tr:last-child td { border-bottom: none; }
+
+  .complexity-table td:nth-child(2),
+  .complexity-table td:nth-child(3),
+  .complexity-table td:nth-child(4) {
+    font-family: var(--mono);
+    font-size: 12px;
+  }
+
+  .o-best { color: var(--accent3); }
+  .o-ok { color: var(--accent2); }
+  .o-bad { color: var(--accent); }
+  .o-ugly { color: #b02020; font-weight: 700; }
+
+  /* Patterns section */
+  .patterns-title {
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 16px;
+    padding-top: 8px;
+    border-top: 1px solid var(--rule);
+  }
+
+  .patterns-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 40px;
+  }
+
+  .pattern-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 14px 18px;
+    background: var(--card-bg);
+    border: 1px solid var(--rule);
+    border-radius: 3px;
+    transition: border-color 0.15s, background 0.15s;
+    cursor: default;
+  }
+
+  .pattern-item:hover { border-color: var(--accent); background: #fdf8f0; }
+
+  .pattern-arrow {
+    color: var(--accent);
+    font-family: var(--mono);
+    font-size: 11px;
+    margin-top: 2px;
+    flex-shrink: 0;
+  }
+
+  .pattern-content strong {
+    font-size: 14px;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 2px;
+    font-family: var(--sans);
+  }
+
+  .pattern-content span {
+    font-size: 12.5px;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+
+  /* Memory visualization */
+  .memory-viz {
+    margin: 24px 0 32px;
+    padding: 20px;
+    background: var(--cream);
+    border-radius: 4px;
+    font-family: var(--mono);
+    font-size: 12px;
+    overflow-x: auto;
+  }
+
+  .memory-viz .viz-label {
+    font-size: 9px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 12px;
+  }
+
+  .mem-cells {
+    display: flex;
+    gap: 2px;
+    flex-wrap: wrap;
+  }
+
+  .mem-cell {
+    min-width: 36px;
+    height: 36px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--rule);
+    background: white;
+    font-size: 11px;
+    position: relative;
+  }
+
+  .mem-cell.highlight { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+  .mem-cell.accent { background: #fde8e0; border-color: var(--accent); }
+  .mem-cell.accent2 { background: #e0edf6; border-color: var(--accent2); }
+  .mem-cell.accent3 { background: #e0f0e8; border-color: var(--accent3); }
+
+  .mem-cell .cell-idx {
+    font-size: 8px;
+    color: var(--muted);
+    position: absolute;
+    top: 2px;
+    left: 3px;
+  }
+
+  /* Code snippet */
+  .code-block {
+    background: #0e0d0b;
+    color: #d4c9b0;
+    border-radius: 4px;
+    padding: 20px 24px;
+    font-family: var(--mono);
+    font-size: 12px;
+    line-height: 1.7;
+    margin-bottom: 32px;
+    overflow-x: auto;
+  }
+
+  .code-block .comment { color: #5a5548; }
+  .code-block .keyword { color: #c8401a; }
+  .code-block .string { color: #4a9060; }
+  .code-block .num { color: #8a6030; }
+
+  /* Real world panel */
+  .realworld-panel {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 40px;
+  }
+
+  .rw-card {
+    padding: 14px 16px;
+    border: 1px solid var(--rule);
+    border-radius: 3px;
+    background: var(--card-bg);
+  }
+
+  .rw-card .rw-icon {
+    font-size: 18px;
+    margin-bottom: 6px;
+  }
+
+  .rw-card .rw-title {
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 4px;
+  }
+
+  .rw-card .rw-desc {
+    font-size: 11.5px;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+
+  /* Section divider */
+  .divider {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 48px 0;
+    color: var(--rule);
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.1em;
+  }
+
+  .divider::before, .divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--rule);
+  }
+
+  /* Tabs */
+  .tab-bar {
+    display: flex;
+    gap: 0;
+    border-bottom: 2px solid var(--rule);
+    margin-bottom: 28px;
+  }
+
+  .tab-btn {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 8px 18px;
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -2px;
+    cursor: pointer;
+    color: var(--muted);
+    transition: color 0.15s;
+  }
+
+  .tab-btn:hover { color: var(--ink); }
+  .tab-btn.active { color: var(--accent); border-bottom-color: var(--accent); }
+
+  .tab-pane { display: none; }
+  .tab-pane.active { display: block; animation: fadeIn 0.2s ease; }
+
+  /* Invariants badge */
+  .invariants {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 28px;
+  }
+
+  .badge {
+    font-family: var(--mono);
+    font-size: 10px;
+    padding: 4px 10px;
+    border-radius: 2px;
+    border: 1px solid;
+  }
+
+  .badge-red { border-color: var(--accent); color: var(--accent); background: #fde8e0; }
+  .badge-blue { border-color: var(--accent2); color: var(--accent2); background: #e0edf6; }
+  .badge-green { border-color: var(--accent3); color: var(--accent3); background: #e0f0e8; }
+  .badge-gold { border-color: var(--gold); color: var(--gold); background: #faf3de; }
+
+  /* Home overview grid */
+  #overview-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+    margin-top: 40px;
+  }
+
+  .overview-card {
+    padding: 20px;
+    border: 1px solid var(--rule);
+    border-radius: 3px;
+    background: var(--card-bg);
+    cursor: pointer;
+    transition: border-color 0.15s, transform 0.15s, background 0.15s;
+  }
+
+  .overview-card:hover {
+    border-color: var(--accent);
+    background: #fdf8f0;
+    transform: translateY(-2px);
+  }
+
+  .overview-card .oc-num {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--accent);
+    margin-bottom: 8px;
+  }
+
+  .overview-card .oc-title {
+    font-family: var(--serif);
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+
+  .overview-card .oc-principle {
+    font-size: 11.5px;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+
+  .overview-card .oc-complexity {
+    margin-top: 12px;
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--accent3);
+  }
+
+  /* Scrollbar */
+  #sidebar::-webkit-scrollbar { width: 4px; }
+  #sidebar::-webkit-scrollbar-track { background: transparent; }
+  #sidebar::-webkit-scrollbar-thumb { background: #2a2820; border-radius: 2px; }
+
+  @media (max-width: 800px) {
+    #sidebar { display: none; }
+    #main { margin-left: 0; padding: 32px 24px 80px; }
+    .props-grid { grid-template-columns: 1fr; }
+    .realworld-panel { grid-template-columns: 1fr; }
+    #overview-grid { grid-template-columns: 1fr 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- SIDEBAR -->
+<nav id="sidebar">
+  <div id="sidebar-header">
+    <div class="codex-label">First Principles</div>
+    <h1>Data Structures<br>Codex</h1>
+    <div class="subtitle">From memory to dataism</div>
+  </div>
+
+  <div class="nav-section">
+    <div class="nav-section-label">Introduction</div>
+    <a class="nav-item active" onclick="showSection('home')">
+      <span class="nav-num">00</span>
+      <span class="nav-dot" style="background:#c8401a"></span>
+      Overview
+    </a>
+  </div>
+
+  <div class="nav-section">
+    <div class="nav-section-label">Linear Structures</div>
+    <a class="nav-item" onclick="showSection('array')">
+      <span class="nav-num">01</span>
+      <span class="nav-dot" style="background:#c8401a"></span>
+      Array & Matrix
+    </a>
+    <a class="nav-item" onclick="showSection('string')">
+      <span class="nav-num">02</span>
+      <span class="nav-dot" style="background:#d4621e"></span>
+      String
+    </a>
+    <a class="nav-item" onclick="showSection('linkedlist')">
+      <span class="nav-num">03</span>
+      <span class="nav-dot" style="background:#e07832"></span>
+      Linked List
+    </a>
+    <a class="nav-item" onclick="showSection('stack')">
+      <span class="nav-num">04</span>
+      <span class="nav-dot" style="background:#1a5c8f"></span>
+      Stack & Queue
+    </a>
+  </div>
+
+  <div class="nav-section">
+    <div class="nav-section-label">Associative</div>
+    <a class="nav-item" onclick="showSection('hashmap')">
+      <span class="nav-num">05</span>
+      <span class="nav-dot" style="background:#2d7a4f"></span>
+      HashMap / HashSet
+    </a>
+    <a class="nav-item" onclick="showSection('heap')">
+      <span class="nav-num">06</span>
+      <span class="nav-dot" style="background:#4a8a60"></span>
+      Heap / Priority Queue
+    </a>
+  </div>
+
+  <div class="nav-section">
+    <div class="nav-section-label">Hierarchical</div>
+    <a class="nav-item" onclick="showSection('tree')">
+      <span class="nav-num">07</span>
+      <span class="nav-dot" style="background:#b8860b"></span>
+      Tree & BST
+    </a>
+    <a class="nav-item" onclick="showSection('trie')">
+      <span class="nav-num">08</span>
+      <span class="nav-dot" style="background:#a07008"></span>
+      Trie
+    </a>
+    <a class="nav-item" onclick="showSection('segtree')">
+      <span class="nav-num">09</span>
+      <span class="nav-dot" style="background:#906000"></span>
+      Segment / Fenwick Tree
+    </a>
+  </div>
+
+  <div class="nav-section">
+    <div class="nav-section-label">Networks</div>
+    <a class="nav-item" onclick="showSection('graph')">
+      <span class="nav-num">10</span>
+      <span class="nav-dot" style="background:#7a3a8a"></span>
+      Graph
+    </a>
+  </div>
+
+  <div class="nav-section">
+    <div class="nav-section-label">Algorithm Paradigms</div>
+    <a class="nav-item" onclick="showSection('patterns')">
+      <span class="nav-num">11</span>
+      <span class="nav-dot" style="background:#555045"></span>
+      Patterns Atlas
+    </a>
+  </div>
+</nav>
+
+<!-- MAIN -->
+<main id="main">
+
+  <!-- HOME -->
+  <section id="home" class="ds-section visible">
+    <div id="hero">
+      <div class="hero-meta">Data Structures · First Principles Codex</div>
+      <h2>Where <em>Memory</em><br>Becomes Meaning</h2>
+      <p class="hero-intro">
+        Every data structure is an answer to one question: <em>given how memory works, how do we arrange information so that the operations we need most are fast?</em> This codex traces each structure from its physical first principle to its derived patterns — the reusable algorithmic moves that follow naturally from the structure's geometry.
+      </p>
+      <blockquote class="hero-quote">
+        "Just as the world is increasingly interpreted in terms of data and information flows, organisms are algorithms and life is data processing."
+        <cite>— Yuval Noah Harari, Homo Deus</cite>
+      </blockquote>
+    </div>
+
+    <div class="patterns-title">All 10 Structures at a Glance — click to explore</div>
+    <div id="overview-grid">
+      <div class="overview-card" onclick="showSection('array')">
+        <div class="oc-num">01 · LINEAR</div>
+        <div class="oc-title">Array & Matrix</div>
+        <div class="oc-principle">Contiguous memory block. Direct index = memory offset.</div>
+        <div class="oc-complexity">Access O(1) · Search O(n) · Insert O(n)</div>
+      </div>
+      <div class="overview-card" onclick="showSection('string')">
+        <div class="oc-num">02 · LINEAR</div>
+        <div class="oc-title">String</div>
+        <div class="oc-principle">Immutable character array. Pattern matching lives here.</div>
+        <div class="oc-complexity">Access O(1) · Concat O(n) · Match O(n·m)</div>
+      </div>
+      <div class="overview-card" onclick="showSection('linkedlist')">
+        <div class="oc-num">03 · LINEAR</div>
+        <div class="oc-title">Linked List</div>
+        <div class="oc-principle">Nodes scattered in memory, connected by pointers.</div>
+        <div class="oc-complexity">Access O(n) · Insert O(1) · Space overhead</div>
+      </div>
+      <div class="overview-card" onclick="showSection('stack')">
+        <div class="oc-num">04 · LINEAR</div>
+        <div class="oc-title">Stack & Queue</div>
+        <div class="oc-principle">LIFO and FIFO — order of insertion controls access.</div>
+        <div class="oc-complexity">Push/Pop O(1) · Enqueue/Dequeue O(1)</div>
+      </div>
+      <div class="overview-card" onclick="showSection('hashmap')">
+        <div class="oc-num">05 · ASSOCIATIVE</div>
+        <div class="oc-title">HashMap / HashSet</div>
+        <div class="oc-principle">Hash function maps key → bucket index. Average O(1).</div>
+        <div class="oc-complexity">Get/Set avg O(1) · Worst O(n)</div>
+      </div>
+      <div class="overview-card" onclick="showSection('heap')">
+        <div class="oc-num">06 · ASSOCIATIVE</div>
+        <div class="oc-title">Heap</div>
+        <div class="oc-principle">Array-encoded complete binary tree with order property.</div>
+        <div class="oc-complexity">Extract O(log n) · Insert O(log n)</div>
+      </div>
+      <div class="overview-card" onclick="showSection('tree')">
+        <div class="oc-num">07 · HIERARCHICAL</div>
+        <div class="oc-title">Tree & BST</div>
+        <div class="oc-principle">Hierarchical parent-child. BST: ordered subtrees.</div>
+        <div class="oc-complexity">BST avg O(log n) · worst O(n)</div>
+      </div>
+      <div class="overview-card" onclick="showSection('trie')">
+        <div class="oc-num">08 · HIERARCHICAL</div>
+        <div class="oc-title">Trie</div>
+        <div class="oc-principle">Tree where each edge = one character. Prefix sharing.</div>
+        <div class="oc-complexity">Search O(L) · Insert O(L) by key length</div>
+      </div>
+      <div class="overview-card" onclick="showSection('segtree')">
+        <div class="oc-num">09 · HIERARCHICAL</div>
+        <div class="oc-title">Segment Tree</div>
+        <div class="oc-principle">Binary tree over array ranges. Aggregates stored at nodes.</div>
+        <div class="oc-complexity">Query O(log n) · Update O(log n)</div>
+      </div>
+      <div class="overview-card" onclick="showSection('graph')">
+        <div class="oc-num">10 · NETWORK</div>
+        <div class="oc-title">Graph</div>
+        <div class="oc-principle">Nodes + edges. The most general structure — all others are special cases.</div>
+        <div class="oc-complexity">BFS/DFS O(V+E)</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 01 ARRAY -->
+  <section id="array" class="ds-section">
+    <div class="section-header">
+      <div class="section-number">01</div>
+      <div class="section-title-block">
+        <h2>Array & Matrix</h2>
+        <div class="tagline">The atom of all computation</div>
+      </div>
+    </div>
+
+    <div class="principle-card">
+      <div class="principle-label">First Principle</div>
+      <div class="principle-text">
+        RAM is a giant indexed array. Every read/write is an address calculation. An array in your program <em>is</em> memory — elements sit at consecutive addresses, so <code style="background:#1e1c16;color:#c8401a;padding:2px 6px;border-radius:2px">element[i] = base_address + i × element_size</code>. Index arithmetic is not an abstraction — it is literal pointer arithmetic on physical hardware.
+      </div>
+    </div>
+
+    <div class="invariants">
+      <span class="badge badge-red">Fixed size (static) or amortised resize (dynamic)</span>
+      <span class="badge badge-blue">Uniform element type → uniform stride</span>
+      <span class="badge badge-green">Index ∈ [0, n-1] → O(1) random access</span>
+      <span class="badge badge-gold">Contiguous allocation → cache-line friendly</span>
+    </div>
+
+    <div class="memory-viz">
+      <div class="viz-label">Memory layout — array [3, 1, 4, 1, 5, 9, 2, 6]</div>
+      <div class="mem-cells">
+        <div class="mem-cell highlight"><span class="cell-idx">base</span>3</div>
+        <div class="mem-cell accent"><span class="cell-idx">+1</span>1</div>
+        <div class="mem-cell accent2"><span class="cell-idx">+2</span>4</div>
+        <div class="mem-cell accent"><span class="cell-idx">+3</span>1</div>
+        <div class="mem-cell accent3"><span class="cell-idx">+4</span>5</div>
+        <div class="mem-cell accent"><span class="cell-idx">+5</span>9</div>
+        <div class="mem-cell accent2"><span class="cell-idx">+6</span>2</div>
+        <div class="mem-cell accent"><span class="cell-idx">+7</span>6</div>
+        <div class="mem-cell" style="background:#f5f0e8;border-style:dashed"><span class="cell-idx">+8</span>—</div>
+        <div class="mem-cell" style="background:#f5f0e8;border-style:dashed"><span class="cell-idx">+9</span>—</div>
+      </div>
+      <div style="margin-top:10px;font-size:10px;color:#7a7060">addr(a[i]) = 0x1000 + i × 4 bytes &nbsp;|&nbsp; a[4] → 0x1010 instantly, no traversal</div>
+    </div>
+
+    <div class="tab-bar">
+      <button class="tab-btn active" onclick="switchTab(this,'array-complexity')">Complexity</button>
+      <button class="tab-btn" onclick="switchTab(this,'array-patterns')">Derived Patterns</button>
+      <button class="tab-btn" onclick="switchTab(this,'array-realworld')">Real World</button>
+    </div>
+
+    <div id="array-complexity" class="tab-pane active">
+      <table class="complexity-table">
+        <thead><tr><th>Operation</th><th>Time</th><th>Space</th><th>Why</th></tr></thead>
+        <tbody>
+          <tr><td>Access by index</td><td class="o-best">O(1)</td><td>O(1)</td><td>Direct address arithmetic</td></tr>
+          <tr><td>Search (unsorted)</td><td class="o-bad">O(n)</td><td>O(1)</td><td>Must scan every element</td></tr>
+          <tr><td>Search (sorted)</td><td class="o-ok">O(log n)</td><td>O(1)</td><td>Binary search on sorted order</td></tr>
+          <tr><td>Insert at end (dynamic)</td><td class="o-best">O(1) amort.</td><td>—</td><td>Doubling strategy</td></tr>
+          <tr><td>Insert at middle</td><td class="o-bad">O(n)</td><td>—</td><td>Must shift all elements right</td></tr>
+          <tr><td>Delete at middle</td><td class="o-bad">O(n)</td><td>—</td><td>Must shift elements left</td></tr>
+          <tr><td>Prefix sum query</td><td class="o-best">O(1)</td><td>O(n)</td><td>After O(n) preprocessing</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div id="array-patterns" class="tab-pane">
+      <ul class="patterns-list">
+        <li class="pattern-item">
+          <span class="pattern-arrow">→</span>
+          <div class="pattern-content"><strong>Two Pointers (converging)</strong><span>Start left=0, right=n-1, move toward each other. Works because sorted order makes direction decisions greedy-valid. Used in: two-sum sorted, container with most water, trapping rain water.</span></div>
+        </li>
+        <li class="pattern-item">
+          <span class="pattern-arrow">→</span>
+          <div class="pattern-content"><strong>Sliding Window</strong><span>Maintain a contiguous sub-array [l, r] whose cumulative property satisfies a constraint. Advance r to grow, advance l to shrink. O(n) because each pointer moves at most n times. Used in: max sum subarray, longest substring, min window.</span></div>
+        </li>
+        <li class="pattern-item">
+          <span class="pattern-arrow">→</span>
+          <div class="pattern-content"><strong>Prefix Sums / Difference Array</strong><span>precompute[i] = a[0]+...+a[i-1]. Range sum [l,r] = pre[r+1]-pre[l] in O(1). Difference array inverts this for range updates in O(1) each. Foundation for advanced structures like Fenwick trees.</span></div>
+        </li>
+        <li class="pattern-item">
+          <span class="pattern-arrow">→</span>
+          <div class="pattern-content"><strong>Binary Search on Sorted Arrays</strong><span>Monotonicity of sorted order means we can always eliminate half the search space. Also extends to "binary search on answer" — any problem with a monotone feasibility function.</span></div>
+        </li>
+        <li class="pattern-item">
+          <span class="pattern-arrow">→</span>
+          <div class="pattern-content"><strong>In-Place Partitioning (Dutch National Flag)</strong><span>Three-way partition in O(n) using two boundary pointers. Sorts 0s/1s/2s or extends to QuickSort's partition step. Key insight: elements before left boundary are "settled left," after right boundary "settled right."</span></div>
+        </li>
+        <li class="pattern-item">
+          <span class="pattern-arrow">→</span>
+          <div class="pattern-content"><strong>Matrix traversal & rotation</strong><span>2D array maps to 1D as row*cols+col. Rotations and transpositions become index transforms. Spiral traversal uses direction arrays. BFS/DFS on grid = graph traversal with (row,col) as nodes.</span></div>
+        </li>
+      </ul>
+    </div>
+
+    <div id="array-realworld" class="tab-pane">
+      <div class="realworld-panel">
+        <div class="rw-card"><div class="rw-icon">🖼️</div><div class="rw-title">Image Pixels</div><div class="rw-desc">Every image is a 2D array (matrix) of pixel values. GPU shaders are array operations at massive parallelism.</div></div>
+        <div class="rw-card"><div class="rw-icon">📊</div><div class="rw-title">Spreadsheets</div><div class="rw-desc">Excel / Google Sheets is a 2D array with formula evaluation. Prefix sums power running totals.</div></div>
+        <div class="rw-card"><div class="rw-icon">🧬</div><div class="rw-title">DNA Sequences</div><div class="rw-desc">Genome as string (array of chars). Sliding window algorithms detect gene patterns and mutations.</div></div>
+        <div class="rw-card"><div class="rw-icon">📈</div><div class="rw-title">Stock Prices</div><div class="rw-desc">Time-series as array. Maximum profit = max difference sub-problem. Sliding window for moving averages.</div></div>
+        <div class="rw-card"><div class="rw-icon">🎮</div><div class="rw-title">Game Boards</div><div class="rw-desc">Chess, Go, Minesweeper — all 2D arrays. BFS finds shortest paths; DFS explores game trees.</div></div>
+        <div class="rw-card"><div class="rw-icon">🤖</div><div class="rw-title">Neural Networks</div><div class="rw-desc">Weights are matrices. Forward pass is matrix multiplication. Backprop is array calculus.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 STRING -->
+  <section id="string" class="ds-section">
+    <div class="section-header">
+      <div class="section-number">02</div>
+      <div class="section-title-block">
+        <h2>String</h2>
+        <div class="tagline">Language compressed into indices</div>
+      </div>
+    </div>
+
+    <div class="principle-card">
+      <div class="principle-label">First Principle</div>
+      <div class="principle-text">
+        A string is an array of characters with a fixed encoding (ASCII / UTF-8 / UTF-16). Its immutability in most languages is a contract: the length and characters are sealed at creation. All string operations produce <em>new</em> strings by allocating fresh memory. Concatenation is O(n+m) because it copies both. Pattern matching is the canonical string problem — comparing two arrays simultaneously.
+      </div>
+    </div>
+
+    <div class="invariants">
+      <span class="badge badge-red">Immutable in Java, Python, Go, Rust (by default)</span>
+      <span class="badge badge-blue">Character encoding is an invariant — ASCII is 1 byte, UTF-8 is variable</span>
+      <span class="badge badge-green">Length is O(1) if stored, O(n) if computed (C-style null-terminated)</span>
+    </div>
+
+    <div class="tab-bar">
+      <button class="tab-btn active" onclick="switchTab(this,'string-complexity')">Complexity</button>
+      <button class="tab-btn" onclick="switchTab(this,'string-patterns')">Derived Patterns</button>
+      <button class="tab-btn" onclick="switchTab(this,'string-realworld')">Real World</button>
+    </div>
+
+    <div id="string-complexity" class="tab-pane active">
+      <table class="complexity-table">
+        <thead><tr><th>Operation</th><th>Time</th><th>Space</th><th>Why</th></tr></thead>
+        <tbody>
+          <tr><td>Access char[i]</td><td class="o-best">O(1)</td><td>O(1)</td><td>Array indexing</td></tr>
+          <tr><td>Substring</td><td class="o-bad">O(k)</td><td>O(k)</td><td>Copy k characters</td></tr>
+          <tr><td>Concatenation</td><td class="o-bad">O(n+m)</td><td>O(n+m)</td><td>New allocation + copy</td></tr>
+          <tr><td>Naive pattern match</td><td class="o-ugly">O(n·m)</td><td>O(1)</td><td>Try every start position</td></tr>
+          <tr><td>KMP pattern match</td><td class="o-ok">O(n+m)</td><td>O(m)</td><td>Failure function avoids re-scanning</td></tr>
+          <tr><td>Rolling hash match</td><td class="o-ok">O(n+m) avg</td><td>O(1)</td><td>Hash window, verify only on match</td></tr>
+          <tr><td>Palindrome (Manacher)</td><td class="o-ok">O(n)</td><td>O(n)</td><td>Exploits palindrome nesting</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div id="string-patterns" class="tab-pane">
+      <ul class="patterns-list">
+        <li class="pattern-item"><span class="pattern-arrow">→</span><div class="pattern-content"><strong>Two-pointer palindrome / reverse check</strong><span>l=0, r=n-1 converging. At each step, characters must match. O(n) time, O(1) space. Extends to "valid palindrome ignoring non-alphanumeric."</span></div></li>
+        <li class="pattern-item"><span class="pattern-arrow">→</span><div class="pattern-content"><strong>Sliding window for longest substring</strong><span>Frequency map in window. Advance right freely, shrink left when constraint violated. Classic: longest substring without repeating chars, min window substring.</span></div></li>
+        <li class="pattern-item"><span class="pattern-arrow">→</span><div class="pattern-content"><strong>HashMap for anagram / frequency matching</strong><span>Count chars in pattern, slide a window over string, compare frequency maps. O(n) with O(26) space for lowercase ASCII.</span></div></li>
+        <li class="pattern-item"><span class="pattern-arrow">→</span><div class="pattern-content"><strong>KMP / Z-array for pattern search</strong><span>Precompute "failure function" showing longest proper prefix that is also a suffix. Avoids rewinding the text pointer — O(n+m) total.</span></div></li>
+        <li class="pattern-item"><span class="pattern-arrow">→</span><div class="pattern-content"><strong>Trie-based prefix ops</strong><span>Store many strings in a shared prefix tree. Lookup, autocomplete, word search all become O(L) per query where L = length of query.</span></div></li>
+      </ul>
+    </div>
+
+    <div id="string-realworld" class="tab-pane">
+      <div class="realworld-panel">
+        <div class="rw-card"><div class="rw-icon">🔍</div><div class="rw-title">Search Engines</div><div class="rw-desc">Google indexes billions of strings. Inverted indexes map terms → document lists.</div></div>
+        <div class="rw-card"><div class="rw-icon">🧬</div><div class="rw-title">Bioinformatics</div><div class="rw-desc">DNA/RNA alignment is string matching. BLAST algorithm finds similar sequences across genomes.</div></div>
+        <div class="rw-card"><div class="rw-icon">🔐</div><div class="rw-title">Cryptography</div><div class="rw-desc">Passwords, hashes, digital signatures — all string transformations with mathematical constraints.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 LINKED LIST -->
+  <section id="linkedlist" class="ds-section">
+    <div class="section-header">
+      <div class="section-number">03</div>
+      <div class="section-title-block">
+        <h2>Linked List</h2>
+        <div class="tagline">Freedom from contiguity, paid in pointers</div>
+      </div>
+    </div>
+
+    <div class="principle-card">
+      <div class="principle-label">First Principle</div>
+      <div class="principle-text">
+        When elements cannot (or should not) live in contiguous memory, we use pointers to create logical adjacency. Each node stores its value <em>and</em> a reference to the next node. The price: no index arithmetic, so access is O(n). The gain: O(1) insert/delete at any point once you hold a pointer to it — no shifting.
+      </div>
+    </div>
+
+    <div class="invariants">
+      <span class="badge badge-red">Reachability only via pointer chain</span>
+      <span class="badge badge-blue">Head pointer is the "entry point" — lose it, lose the list</span>
+      <span class="badge badge-green">null terminates a singly linked list</span>
+      <span class="badge badge-gold">Doubly-linked: prev pointer trades space for O(1) backward traversal</span>
+    </div>
+
+    <div class="memory-viz">
+      <div class="viz-label">Singly linked list memory — nodes scattered, connected by pointers</div>
+      <div style="display:flex;align-items:center;gap:4px;flex-wrap:wrap;font-family:var(--mono);font-size:11px;">
+        <div class="mem-cell accent" style="min-width:64px;height:44px;flex-direction:row;gap:4px;padding:0 6px"><span>3</span><span style="color:#c8401a">→</span></div>
+        <div class="mem-cell accent2" style="min-width:64px;height:44px;flex-direction:row;gap:4px;padding:0 6px"><span>7</span><span style="color:#1a5c8f">→</span></div>
+        <div class="mem-cell accent3" style="min-width:64px;height:44px;flex-direction:row;gap:4px;padding:0 6px"><span>1</span><span style="color:#2d7a4f">→</span></div>
+        <div class="mem-cell accent" style="min-width:64px;height:44px;flex-direction:row;gap:4px;padding:0 6px"><span>9</span><span style="color:#c8401a">→</span></div>
+        <div class="mem-cell" style="min-width:52px;height:44px"><span style="color:#7a7060">null</span></div>
+      </div>
+      <div style="margin-top:10px;font-size:10px;color:#7a7060">Addresses: 0x1040, 0x20A0, 0x3018, 0x1880 — arbitrary, non-contiguous. Traversal must follow each pointer.</div>
+    </div>
+
+    <div class="tab-bar">
+      <button class="tab-btn active" onclick="switchTab(this,'ll-complexity')">Complexity</button>
+      <button class="tab-btn" onclick="switchTab(this,'ll-patterns')">Derived Patterns</button>
+      <button class="tab-btn" onclick="switchTab(this,'ll-realworld')">Real World</button>
+    </div>
+
+    <div id="ll-complexity" class="tab-pane active">
+      <table class="complexity-table">
+        <thead><tr><th>Operation</th><th>Time</th><th>Space</th><th>Why</th></tr></thead>
+        <tbody>
+          <tr><td>Access by index</td><td class="o-ugly">O(n)</td><td>O(1)</td><td>Must traverse from head</td></tr>
+          <tr><td>Insert/Delete at head</td><td class="o-best">O(1)</td><td>O(1)</td><td>Just update head pointer</td></tr>
+          <tr><td>Insert/Delete at tail</td><td class="o-bad">O(n) / O(1)*</td><td>O(1)</td><td>O(1) if tail pointer maintained</td></tr>
+          <tr><td>Insert/Delete at known node</td><td class="o-best">O(1)</td><td>O(1)</td><td>Redirect prev/next pointers</td></tr>
+          <tr><td>Search</td><td class="o-bad">O(n)</td><td>O(1)</td><td>Linear scan required</td></tr>
+          <tr><td>Reverse entire list</td><td class="o-bad">O(n)</td><td>O(1)</td><td>In-place pointer reversal</td></tr>
+          <tr><td>Find middle</td><td class="o-bad">O(n)</td><td>O(1)</td><td>Fast/slow pointer trick</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div id="ll-patterns" class="tab-pane">
+      <ul class="patterns-list">
+        <li class="pattern-item"><span class="pattern-arrow">→</span><div class="pattern-content"><strong>Floyd's Cycle Detection (Tortoise & Hare)</strong><span>slow moves 1 step, fast moves 2 steps per iteration. If a cycle exists, they must meet — like two runners on a circular track, the faster must lap the slower. Meeting point + math gives cycle length and entry.</span></div></li>
+        <li class="pattern-item"><span class="pattern-arrow">→</span><div class="pattern-content"><strong>In-place reversal</strong><span>Three pointers: prev=null, curr=head, next. Iterate: save next, redirect curr→prev, advance both. O(n) time, O(1) space. Extends to reversing sub-lists and k-groups.</span></div></li>
+        <li class="pattern-item"><span class="pattern-arrow">→</span><div class="pattern-content"><strong>Fast/Slow pointer (find middle, nth from end)</strong><span>Slow advances 1, fast advances 2. When fast reaches end, slow is at middle. For nth from end: advance fast n steps first, then move both — they stay n apart.</span></div></li>
+        <li class="pattern-item"><span class="pattern-arrow">→</span><div class="pattern-content"><strong>Merge two sorted lists</strong><span>Compare heads, take the smaller, recurse or iterate. O(n+m) time. Building block for merge sort on linked lists. K sorted lists → min-heap of k heads.</span></div></li>
+      </ul>
+    </div>
+
+    <div id="ll-realworld" class="tab-pane">
+      <div class="realworld-panel">
+        <div class="rw-card"><div class="rw-icon">↩️</div><div class="rw-title">Undo / Redo</div><div class="rw-desc">Text editors maintain doubly-linked list of states. O(1) undo = follow prev pointer.</div></div>
+        <div class="rw-card"><div class="rw-icon">🌐</div><div class="rw-title">Browser History</div><div class="rw-desc">Back/forward is a doubly-linked list. Each page = a node. New navigation truncates the forward chain.</div></div>
+        <div class="rw-card"><div class="rw-icon">⚙️</div><div class="rw-title">OS Memory Allocator</div><div class="rw-desc">Free blocks in heap stored as a linked list. malloc walks the list to find a fit. free re-links the freed block.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 STACK & QUEUE -->
+  <section id="stack" class="ds-section">
+    <div class="section-header">
+      <div class="section-number">04</div>
+      <div class="section-title-block">
+        <h2>Stack & Queue</h2>
+        <div class="tagline">Order as a constraint, not just a property</div>
+      </div>
+    </div>
+
+    <div class="principle-card">
+      <div class="principle-label">First Principle</div>
+      <div class="principle-text">
+        Stack (LIFO) and Queue (FIFO) are not new structures — they are arrays or linked lists with <em>restricted access</em>. The restriction is the design: you are forcing a specific ordering discipline onto insertions and removals. This discipline is powerful because many real problems (function calls, task scheduling, BFS) naturally obey LIFO or FIFO order.
+      </div>
+    </div>
+
+    <div class="invariants">
+      <span class="badge badge-red">Stack: last in, first out — access only the top</span>
+      <span class="badge badge-blue">Queue: first in, first out — insert at back, remove from front</span>
+      <span class="badge badge-green">Monotonic stack maintains sorted order in the stack at all times</span>
+    </div>
+
+    <div class="tab-bar">
+      <button class="tab-btn active" onclick="switchTab(this,'sq-complexity')">Complexity</button>
+      <button class="tab-btn" onclick="switchTab(this,'sq-patterns')">Derived Patterns</button>
+      <button class="tab-btn" onclick="switchTab(this,'sq-realworld')">Real World</button>
+    </div>
+
+    <div id="sq-complexity" class="tab-pane active">
+      <table class="complexity-table">
+        <thead><tr><th>Operation</th><th>Stack</th><th>Queue</th><th>Why</th></tr></thead>
+        <tbody>
+          <tr><td>Push / Enqueue</td><td class="o-best">O(1)</td><td class="o-best">O(1)</td><td>Append to end</td></tr>
+          <tr><td>Pop / Dequeue</td><td class="o-best">O(1)</td><td class="o-best">O(1)</td><td>Remove from defined end</td></tr>
+          <tr><td>Peek / Front</td><td class="o-best">O(1)</td><td class="o-best">O(1)</td><td>Read without removing</td></tr>
+          <tr><td>Search</td><td class="o-bad">O(n)</td><td class="o-bad">O(n)</td><td>No random access</td></tr>
+          <tr><td>Space</td><td class="o-bad">O(n)</td><td class="o-bad">O(n)</td><td>Holds n elements</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div id="sq-patterns" class="tab-pane">
+      <ul class="patterns-list">
+        <li class="pattern-item"><span class="pattern-arrow">→</span><div class="pattern-content"><strong>Monotonic Stack (next greater element)</strong><span>Process elements left→right. Maintain stack that is always increasing (or decreasing). When a new element pops something, that's the answer for the popped element. Single pass O(n). Used in: stock span, largest rectangle in histogram, daily temperatures.</span></div></li>
+        <li class="pattern-item"><span class="pattern-arrow">→</span><div class="pattern-content"><strong>Bracket / Expression Parsing</strong><span>Push opening brackets. When closing bracket arrives, pop and verify match. The LIFO invariant perfectly mirrors the nesting structure of expressions.</span></div></li>
+        <li class="pattern-item"><span class="pattern-arrow">→</span><div class="pattern-content"><strong>BFS with Queue</strong><span>Queue enforces level-by-level exploration. Each node's neighbors are enqueued; nodes dequeued in the order they were discovered. Guarantees shortest path in unweighted graphs.</span></div></li>
+        <li class="pattern-item"><span class="pattern-arrow">→</span><div class="pattern-content"><strong>Min-Stack (stack with O(1) minimum)</strong><span>Maintain a second "min-stack" that pushes a new min only when the incoming element ≤ current min. Pop from both in sync. Interview classic that tests invariant thinking.</span></div></li>
+      </ul>
+    </div>
+
+    <div id="sq-realworld" class="tab-pane">
+      <div class="realworld-panel">
+        <div class="rw-card"><div class="rw-icon">📞</div><div class="rw-title">Call Stack</div><div class="rw-desc">CPU maintains a call stack. Each function call pushes a frame; return pops it. Stack overflow = exhausted stack space.</div></div>
+        <div class="rw-card"><div class="rw-icon">🖨️</div><div class="rw-title">Print Queue</div><div class="rw-desc">Print jobs are queued. FIFO ensures fairness. Priority queue adds urgency ordering.</div></div>
+        <div class="rw-card"><div class="rw-icon">🚦</div><div class="rw-title">BFS / Web Crawlers</div><div class="rw-desc">Web crawlers use a queue of URLs to visit. BFS discovers all reachable pages layer by layer.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 HASHMAP -->
+  <section id="hashmap" class="ds-section">
+    <div class="section-header">
+      <div class="section-number">05</div>
+      <div class="section-title-block">
+        <h2>HashMap / HashSet</h2>
+        <div class="tagline">The miracle of amortised O(1)</div>
+      </div>
+    </div>
+
+    <div class="principle-card">
+      <div class="principle-label">First Principle</div>
+      <div class="principle-text">
+        If we want O(1) access by key, we need key → index arithmetic like an array. A hash function converts any key into an integer, then we take it modulo the array size to get a bucket index. Collisions (two keys → same bucket) are resolved by chaining (linked list in bucket) or open addressing. With a good hash and load factor ≤ 0.75, average chain length ≈ 1.
+      </div>
+    </div>
+
+    <div class="invariants">
+      <span class="badge badge-red">Hash function must be deterministic and uniform</span>
+      <span class="badge badge-blue">Load factor = n/capacity; resize (rehash) when it exceeds threshold</span>
+      <span class="badge badge-green">Average O(1) all ops; worst case O(n) on hash collision</span>
+      <span class="badge badge-gold">Iteration order NOT guaranteed (unless LinkedHashMap)</span>
+    </div>
+
+    <div class="tab-bar">
+      <button class="tab-btn active" onclick="switchTab(this,'hm-complexity')">Complexity</button>
+      <button class="tab-btn" onclick="switchTab(this,'hm-patterns')">Derived Patterns</button>
+      <button class="tab-btn" onclick="switchTab(this,'hm-realworld')">Real World</button>
+    </div>
+
+    <div id="hm-complexity" class="tab-pane active">
+      <table class="complexity-table">
+        <thead><tr><th>Operation</th><th>Average</th><th>Worst</th><th>Why worst case</th></tr></thead>
+        <tbody>
+          <tr><td>Get(key)</td><td class="o-best">O(1)</td><td class="o-ugly">O(n)</td><td>All keys hash to same bucket</td></tr>
+          <tr><td>Put(key, val)</td><td class="o-best">O(1)</td><td class="o-ugly">O(n)</td><td>Bucket chain scan + possible resize</td></tr>
+          <tr><td>Delete(key)</td><td class="o-best">O(1)</td><td class="o-ugly">O(n)</td><td>Same as get</td></tr>
+          <tr><td>Contains(key)</td><td class="o-best">O(1)</td><td class="o-ugly">O(n)</td><td>Same as get</td></tr>
+          <tr><td>Rehash / resize</td><td class="o-best">O(n) amort.</td><td class="o-bad">O(n)</td><td>Rare, amortised over all inserts</td></tr>
+          <tr><td>Iteration</td><td class="o-bad">O(n+capacity)</td><td class="o-bad">O(n+capacity)</td><td>Must scan all buckets</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div id="hm-patterns" class="tab-pane">
+      <ul class="patterns-list">
+        <li class="pattern-item"><span class="pattern-arrow">→</span><div class="pattern-content"><strong>Frequency counting</strong><span>Build freq[element] = count. Then query in O(1). Foundation for: majority element, top-K frequent, anagram detection, histogram equalization.</span></div></li>
+        <li class="pattern-item"><span class="pattern-arrow">→</span><div class="pattern-content"><strong>Complement / existence lookup (Two Sum)</strong><span>For each element x, check if (target - x) exists in the map before inserting x. Single pass O(n). Generalises to any problem where you need "have I seen a related value before?"</span></div></li>
+        <li class="pattern-item"><span class="pattern-arrow">→</span><div class="pattern-content"><strong>Caching / Memoization</strong><span>Map function arguments → computed result. First call computes and stores; subsequent calls retrieve in O(1). Transforms exponential recursion into linear DP.</span></div></li>
+        <li class="pattern-item"><span class="pattern-arrow">→</span><div class="pattern-content"><strong>Graph adjacency representation</strong><span>Map<Node, List<Node>> for adjacency list. Faster than 2D matrix for sparse graphs. Also used to map parent → children in tree problems.</span></div></li>
+      </ul>
+    </div>
+
+    <div id="hm-realworld" class="tab-pane">
+      <div class="realworld-panel">
+        <div class="rw-card"><div class="rw-icon">🌐</div><div class="rw-title">DNS Cache</div><div class="rw-desc">Maps domain → IP. Lookup in O(1). TTL-based expiry with LRU eviction when cache is full.</div></div>
+        <div class="rw-card"><div class="rw-icon">🛒</div><div class="rw-title">Shopping Cart</div><div class="rw-desc">productId → quantity. O(1) updates, O(1) total calculation with running sum.</div></div>
+        <div class="rw-card"><div class="rw-icon">🔒</div><div class="rw-title">Session Tokens</div><div class="rw-desc">Auth servers map sessionToken → userId in a hash table. O(1) authentication per request.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 06 HEAP -->
+  <section id="heap" class="ds-section">
+    <div class="section-header">
+      <div class="section-number">06</div>
+      <div class="section-title-block">
+        <h2>Heap / Priority Queue</h2>
+        <div class="tagline">Always know the minimum (or maximum)</div>
+      </div>
+    </div>
+
+    <div class="principle-card">
+      <div class="principle-label">First Principle</div>
+      <div class="principle-text">
+        A heap is a complete binary tree stored in an array where the parent is always ≤ (min-heap) or ≥ (max-heap) its children. Storing a tree in an array is possible because completeness means no gaps: node at index i has children at 2i+1 and 2i+2, parent at ⌊(i-1)/2⌋. Insert (bubble up) and extract (bubble down) both take O(log n) because the tree height is ⌊log₂ n⌋.
+      </div>
+    </div>
+
+    <div class="invariants">
+      <span class="badge badge-red">Heap property: every parent ≤ children (min) or ≥ children (max)</span>
+      <span class="badge badge-blue">Complete binary tree: all levels full except last, filled left to right</span>
+      <span class="badge badge-green">Root is always the global min/max — O(1) peek</span>
+    </div>
+
+    <div class="memory-viz">
+      <div class="viz-label">Min-heap stored as array: parent(i)=⌊(i-1)/2⌋, children(i)=2i+1, 2i+2</div>
+      <div class="mem-cells">
+        <div class="mem-cell highlight"><span class="cell-idx">0</span>1</div>
+        <div class="mem-cell accent"><span class="cell-idx">1</span>3</div>
+        <div class="mem-cell accent2"><span class="cell-idx">2</span>2</div>
+        <div class="mem-cell accent3"><span class="cell-idx">3</span>7</div>
+        <div class="mem-cell accent"><span class="cell-idx">4</span>6</div>
+        <div class="mem-cell accent2"><span class="cell-idx">5</span>5</div>
+        <div class="mem-cell accent"><span class="cell-idx">6</span>4</div>
+      </div>
+      <div style="margin-top:10px;font-size:10px;color:#7a7060">Root=1 (min). Children of index 1 are at indices 3,4 (values 7,6). Parent of index 5 is at ⌊(5-1)/2⌋=2 (value 2).</div>
+    </div>
+
+    <div class="tab-bar">
+      <button class="tab-btn active" onclick="switchTab(this,'heap-complexity')">Complexity</button>
+      <button class="tab-btn" onclick="switchTab(this,'heap-patterns')">Derived Patterns</button>
+      <button class="tab-btn" onclick="switchTab(this,'heap-realworld')">Real World</button>
+    </div>
+
+    <div id="heap-complexity" class="tab-pane active">
+      <table class="complexity-table">
+        <thead><tr><th>Operation</th><th>Time</th><th>Space</th><th>Why</th></tr></thead>
+        <tbody>
+          <tr><td>Peek min/max</td><td class="o-best">O(1)</td><td>O(1)</td><td>Root is always the extreme</td></tr>
+          <tr><td>Insert</td><td class="o-ok">O(log n)</td><td>O(1)</td><td>Bubble up through tree height</td></tr>
+          <tr><td>Extract min/max</td><td class="o-ok">O(log n)</td><td>O(1)</td><td>Bubble down after root removal</td></tr>
+          <tr><td>Build from n elements</td><td class="o-bad">O(n)</td><td>O(n)</td><td>Floyd's heapify — not n·log(n)!</td></tr>
+          <tr><td>Heap sort</td><td class="o-bad">O(n log n)</td><td>O(1)</td><td>n extractions × O(log n) each</td></tr>
+          <tr><td>Decrease key</td><td class="o-ok">O(log n)</td><td>O(1)</td><td>Bubble up from modified node</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div id="heap-patterns" class="tab-pane">
+      <ul class="patterns-list">
+        <li class="pattern-item"><span class="pattern-arrow">→</span><div class="pattern-content"><strong>Top-K elements</strong><span>Maintain a min-heap of size K. For each new element, if it's greater than the heap's min (root), pop and push. After all elements, heap contains K largest. O(n log K).</span></div></li>
+        <li class="pattern-item"><span class="pattern-arrow">→</span><div class="pattern-content"><strong>Running median (two-heap trick)</strong><span>Max-heap for the lower half, min-heap for the upper half. Median is the root of the larger heap (or average of both roots). Rebalance after each insert. O(log n) per insert, O(1) median query.</span></div></li>
+        <li class="pattern-item"><span class="pattern-arrow">→</span><div class="pattern-content"><strong>Dijkstra's shortest path</strong><span>Min-heap of (distance, node). Extract minimum distance node, relax its neighbors, push updated distances. The heap ensures we always process the globally closest unvisited node. O((V+E) log V).</span></div></li>
+        <li class="pattern-item"><span class="pattern-arrow">→</span><div class="pattern-content"><strong>K-way merge</strong><span>Put the first element of each of K sorted lists into a min-heap. Extract min, output it, push the next element from that list. O(N log K) total where N = total elements.</span></div></li>
+      </ul>
+    </div>
+
+    <div id="heap-realworld" class="tab-pane">
+      <div class="realworld-panel">
+        <div class="rw-card"><div class="rw-icon">🚑</div><div class="rw-title">Hospital Triage</div><div class="rw-desc">Priority queue orders patients by severity. O(log n) to admit/discharge while always treating the most critical.</div></div>
+        <div class="rw-card"><div class="rw-icon">📡</div><div class="rw-title">Network Routing</div><div class="rw-desc">Dijkstra with a min-heap powers OSPF routing — routers compute shortest paths across the internet.</div></div>
+        <div class="rw-card"><div class="rw-icon">⏰</div><div class="rw-title">Task Scheduling</div><div class="rw-desc">OS schedulers use priority queues. CPU-bound vs I/O-bound tasks get different priorities. Next task = O(1) peek.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 07 TREE -->
+  <section id="tree" class="ds-section">
+    <div class="section-header">
+      <div class="section-number">07</div>
+      <div class="section-title-block">
+        <h2>Tree & BST</h2>
+        <div class="tagline">Hierarchy without cycles</div>
+      </div>
+    </div>
+
+    <div class="principle-card">
+      <div class="principle-label">First Principle</div>
+      <div class="principle-text">
+        A tree is a connected, acyclic graph. Exactly N-1 edges for N nodes. The root has no parent; every other node has exactly one parent. Trees model hierarchical relationships naturally. A Binary Search Tree adds the <em>ordering invariant</em>: left subtree values &lt; node &lt; right subtree values. This invariant makes every comparison a decision that halves the remaining search space — O(log n) average.
+      </div>
+    </div>
+
+    <div class="invariants">
+      <span class="badge badge-red">No cycles — unique path between any two nodes</span>
+      <span class="badge badge-blue">BST ordering: left &lt; node &lt; right — must hold at every subtree</span>
+      <span class="badge badge-green">In-order traversal of BST yields sorted sequence</span>
+      <span class="badge badge-gold">Height-balanced (AVL/Red-Black) trees guarantee O(log n) worst case</span>
+    </div>
+
+    <div class="tab-bar">
+      <button class="tab-btn active" onclick="switchTab(this,'tree-complexity')">Complexity</button>
+      <button class="tab-btn" onclick="switchTab(this,'tree-patterns')">Derived Patterns</button>
+      <button class="tab-btn" onclick="switchTab(this,'tree-realworld')">Real World</button>
+    </div>
+
+    <div id="tree-complexity" class="tab-pane active">
+      <table class="complexity-table">
+        <thead><tr><th>Operation</th><th>BST avg</th><th>BST worst</th><th>Balanced BST</th></tr></thead>
+        <tbody>
+          <tr><td>Search</td><td class="o-ok">O(log n)</td><td class="o-ugly">O(n)</td><td class="o-ok">O(log n)</td></tr>
+          <tr><td>Insert</td><td class="o-ok">O(log n)</td><td class="o-ugly">O(n)</td><td class="o-ok">O(log n)</td></tr>
+          <tr><td>Delete</td><td class="o-ok">O(log n)</td><td class="o-ugly">O(n)</td><td class="o-ok">O(log n)</td></tr>
+          <tr><td>Min / Max</td><td class="o-ok">O(log n)</td><td class="o-ugly">O(n)</td><td class="o-ok">O(log n)</td></tr>
+          <tr><td>Kth smallest</td><td class="o-ok">O(log n+k)</td><td class="o-ugly">O(n)</td><td class="o-ok">O(log n+k)</td></tr>
+          <tr><td>DFS traversal</td><td class="o-bad">O(n)</td><td class="o-bad">O(n)</td><td class="o-bad">O(n)</td></tr>
+          <tr><td>LCA query</td><td class="o-ok">O(log n)</td><td class="o-ugly">O(n)</td><td class="o-ok">O(log n)</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div id="tree-patterns" class="tab-pane">
+      <ul class="patterns-list">
+        <li class="pattern-item"><span class="pattern-arrow">→</span><div class="pattern-content"><strong>DFS traversal families</strong><span>Pre-order (root, left, right): serialize/copy tree. In-order (left, root, right): sorted output for BST. Post-order (left, right, root): delete/evaluate expression trees. Morris traversal eliminates recursion stack with O(1) space.</span></div></li>
+        <li class="pattern-item"><span class="pattern-arrow">→</span><div class="pattern-content"><strong>BFS / Level-order traversal</strong><span>Queue-based, visits nodes level by level. Used for: level averages, zigzag traversal, connecting nodes at same level, minimum depth (first leaf encountered = shortest).</span></div></li>
+        <li class="pattern-item"><span class="pattern-arrow">→</span><div class="pattern-content"><strong>Lowest Common Ancestor (LCA)</strong><span>First node in DFS where left subtree contains one target and right contains the other (or node itself is a target). O(n) naive, O(log n) with binary lifting for repeated queries.</span></div></li>
+        <li class="pattern-item"><span class="pattern-arrow">→</span><div class="pattern-content"><strong>Tree DP (diameter, max path sum)</strong><span>Define f(node) = optimal value of subtree rooted at node. Compute bottom-up in post-order. At each node, combine left and right children results. Diameter = max over all nodes of (left height + right height).</span></div></li>
+      </ul>
+    </div>
+
+    <div id="tree-realworld" class="tab-pane">
+      <div class="realworld-panel">
+        <div class="rw-card"><div class="rw-icon">📁</div><div class="rw-title">File System</div><div class="rw-desc">Directories are tree nodes. Files are leaves. DFS powers find; BFS powers ls -R level by level.</div></div>
+        <div class="rw-card"><div class="rw-icon">🗄️</div><div class="rw-title">Database Indexes</div><div class="rw-desc">B-Trees (generalized BST) index database rows. Every SQL range query walks a B-Tree. O(log n) per lookup, disk-optimized branching factor.</div></div>
+        <div class="rw-card"><div class="rw-icon">🤖</div><div class="rw-title">Decision Trees / AI</div><div class="rw-desc">Random forests and gradient boosted trees are ensembles of binary decision trees. Classification = tree traversal.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 08 TRIE -->
+  <section id="trie" class="ds-section">
+    <div class="section-header">
+      <div class="section-number">08</div>
+      <div class="section-title-block">
+        <h2>Trie</h2>
+        <div class="tagline">A tree where paths are words</div>
+      </div>
+    </div>
+
+    <div class="principle-card">
+      <div class="principle-label">First Principle</div>
+      <div class="principle-text">
+        In a Trie (re<em>trie</em>val tree), edges represent characters and paths from root to nodes represent prefixes. Storing many strings with common prefixes shares the prefix's memory — "cat", "car", "card" all share the path c→a. Search time is O(L) where L is the length of the key — completely independent of how many strings are stored. This makes Trie asymptotically superior to HashMap for prefix operations.
+      </div>
+    </div>
+
+    <div class="invariants">
+      <span class="badge badge-red">Each node has up to |alphabet| children (26 for lowercase English)</span>
+      <span class="badge badge-blue">Nodes marked isEnd=true represent complete words</span>
+      <span class="badge badge-green">All strings with a common prefix share nodes — O(L) search regardless of n</span>
+    </div>
+
+    <div class="tab-bar">
+      <button class="tab-btn active" onclick="switchTab(this,'trie-complexity')">Complexity</button>
+      <button class="tab-btn" onclick="switchTab(this,'trie-patterns')">Derived Patterns</button>
+      <button class="tab-btn" onclick="switchTab(this,'trie-realworld')">Real World</button>
+    </div>
+
+    <div id="trie-complexity" class="tab-pane active">
+      <table class="complexity-table">
+        <thead><tr><th>Operation</th><th>Time</th><th>Space</th><th>Why</th></tr></thead>
+        <tbody>
+          <tr><td>Insert word of length L</td><td class="o-ok">O(L)</td><td>O(L·|Σ|)</td><td>Create L nodes, each with |Σ| children slots</td></tr>
+          <tr><td>Search word of length L</td><td class="o-ok">O(L)</td><td>O(1)</td><td>Follow L edges, check isEnd</td></tr>
+          <tr><td>Starts-with prefix P</td><td class="o-ok">O(|P|)</td><td>O(1)</td><td>Follow |P| edges, no isEnd check</td></tr>
+          <tr><td>Delete word</td><td class="o-ok">O(L)</td><td>O(1)</td><td>Unmark isEnd, prune dangling nodes</td></tr>
+          <tr><td>Autocomplete (all words with prefix)</td><td class="o-bad">O(|P| + output)</td><td>O(output)</td><td>Navigate to prefix node, DFS from there</td></tr>
+          <tr><td>Space (n words, avg length L)</td><td>—</td><td class="o-bad">O(n·L·|Σ|)</td><td>Worst case: no shared prefixes</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div id="trie-patterns" class="tab-pane">
+      <ul class="patterns-list">
+        <li class="pattern-item"><span class="pattern-arrow">→</span><div class="pattern-content"><strong>Autocomplete / Typeahead</strong><span>Navigate to the prefix node, then DFS/BFS to collect all descendant words. Add word frequency to nodes to return top-K completions efficiently.</span></div></li>
+        <li class="pattern-item"><span class="pattern-arrow">→</span><div class="pattern-content"><strong>Word search on board (Trie + DFS)</strong><span>Build a trie of all target words. DFS on the grid, traversing the trie simultaneously. If trie node has no child for current char, prune. Eliminates redundant searches for shared prefixes.</span></div></li>
+        <li class="pattern-item"><span class="pattern-arrow">→</span><div class="pattern-content"><strong>Maximum XOR pair (Bit Trie)</strong><span>Store integers as 32-bit binary strings in a trie. For each number, greedily traverse to find the number whose bits are most "opposite." O(32) per query = O(1) per query for 32-bit integers.</span></div></li>
+      </ul>
+    </div>
+
+    <div id="trie-realworld" class="tab-pane">
+      <div class="realworld-panel">
+        <div class="rw-card"><div class="rw-icon">🔎</div><div class="rw-title">Search Autocomplete</div><div class="rw-desc">Google's suggestion box. Trie of all indexed queries, navigated character by character as you type.</div></div>
+        <div class="rw-card"><div class="rw-icon">📖</div><div class="rw-title">Spell Checker</div><div class="rw-desc">Dictionary stored as trie. Levenshtein distance computed via BFS on trie. Suggestions = nearest words.</div></div>
+        <div class="rw-card"><div class="rw-icon">🌐</div><div class="rw-title">IP Routing (Radix Trie)</span></div><div class="rw-desc">Network prefixes stored in a compressed trie. Longest-prefix matching finds the correct route for any packet.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 09 SEGMENT TREE -->
+  <section id="segtree" class="ds-section">
+    <div class="section-header">
+      <div class="section-number">09</div>
+      <div class="section-title-block">
+        <h2>Segment & Fenwick Tree</h2>
+        <div class="tagline">Answering range questions in logarithmic time</div>
+      </div>
+    </div>
+
+    <div class="principle-card">
+      <div class="principle-label">First Principle</div>
+      <div class="principle-text">
+        A Segment Tree precomputes aggregates (sum, min, max) for every possible contiguous sub-array — but cleverly, using only O(n) space by storing them in a complete binary tree where each node covers a range. Any query range [l, r] decomposes into O(log n) pre-stored segments. A Fenwick Tree (Binary Indexed Tree) is a more compact, bit-trick-based structure for the specific case of prefix sums — O(log n) update and query with a fraction of the code.
+      </div>
+    </div>
+
+    <div class="invariants">
+      <span class="badge badge-red">Segment tree node covers range [l,r]; stores aggregate of that range</span>
+      <span class="badge badge-blue">Fenwick tree uses i & (-i) bit trick to define parent/child relationships</span>
+      <span class="badge badge-green">Lazy propagation defers range updates until child is queried</span>
+    </div>
+
+    <div class="tab-bar">
+      <button class="tab-btn active" onclick="switchTab(this,'seg-complexity')">Complexity</button>
+      <button class="tab-btn" onclick="switchTab(this,'seg-patterns')">Derived Patterns</button>
+      <button class="tab-btn" onclick="switchTab(this,'seg-realworld')">Real World</button>
+    </div>
+
+    <div id="seg-complexity" class="tab-pane active">
+      <table class="complexity-table">
+        <thead><tr><th>Operation</th><th>Segment Tree</th><th>Fenwick Tree</th><th>Naive array</th></tr></thead>
+        <tbody>
+          <tr><td>Build</td><td class="o-bad">O(n)</td><td class="o-bad">O(n log n)</td><td class="o-bad">O(n)</td></tr>
+          <tr><td>Point update</td><td class="o-ok">O(log n)</td><td class="o-ok">O(log n)</td><td class="o-best">O(1)</td></tr>
+          <tr><td>Range query</td><td class="o-ok">O(log n)</td><td class="o-ok">O(log n)</td><td class="o-bad">O(n)</td></tr>
+          <tr><td>Range update</td><td class="o-ok">O(log n)*</td><td class="o-ok">O(log n)*</td><td class="o-bad">O(n)</td></tr>
+          <tr><td>Space</td><td class="o-bad">O(4n)</td><td class="o-bad">O(n)</td><td class="o-bad">O(n)</td></tr>
+        </tbody>
+      </table>
+      <p style="font-size:12px;color:var(--muted);margin-top:-16px">*Range update requires lazy propagation (Seg Tree) or difference array trick (Fenwick)</p>
+    </div>
+
+    <div id="seg-patterns" class="tab-pane">
+      <ul class="patterns-list">
+        <li class="pattern-item"><span class="pattern-arrow">→</span><div class="pattern-content"><strong>Range sum / min / max queries with updates</strong><span>The canonical use. Given array with point updates, answer arbitrary [l,r] aggregate queries. Fenwick suffices for sum; Segment Tree needed for min/max.</span></div></li>
+        <li class="pattern-item"><span class="pattern-arrow">→</span><div class="pattern-content"><strong>Count inversions (Fenwick + coordinate compression)</strong><span>Compress values to indices. Process right-to-left: for each element, count elements already seen that are smaller using Fenwick prefix sum. O(n log n) — same complexity as merge sort inversion count but more flexible.</span></div></li>
+      </ul>
+    </div>
+
+    <div id="seg-realworld" class="tab-pane">
+      <div class="realworld-panel">
+        <div class="rw-card"><div class="rw-icon">📊</div><div class="rw-title">Database Analytics</div><div class="rw-desc">Range aggregations (SUM, MIN, MAX over date ranges) on time-series. Segment trees power OLAP cubes.</div></div>
+        <div class="rw-card"><div class="rw-icon">🎮</div><div class="rw-title">Game Leaderboards</div><div class="rw-desc">Fenwick tree maintains score-sorted leaderboard. Rank queries and updates both O(log n).</div></div>
+        <div class="rw-card"><div class="rw-icon">📡</div><div class="rw-title">Signal Processing</div><div class="rw-desc">Windowed statistics over streaming data. Fenwick trees power sliding-window algorithms in real-time analytics.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10 GRAPH -->
+  <section id="graph" class="ds-section">
+    <div class="section-header">
+      <div class="section-number">10</div>
+      <div class="section-title-block">
+        <h2>Graph</h2>
+        <div class="tagline">The universal structure — everything is a graph</div>
+      </div>
+    </div>
+
+    <div class="principle-card">
+      <div class="principle-label">First Principle</div>
+      <div class="principle-text">
+        All other data structures are special cases of graphs. A tree is a connected acyclic graph. A linked list is a path graph. An array is a path graph with direct address arithmetic. Graphs model any pairwise relationship: V vertices (entities) and E edges (relationships). The two representations are an adjacency matrix (O(V²) space, O(1) edge lookup) and an adjacency list (O(V+E) space, efficient for sparse graphs).
+      </div>
+    </div>
+
+    <div class="invariants">
+      <span class="badge badge-red">Undirected: edges are symmetric. Directed: edges have direction</span>
+      <span class="badge badge-blue">Weighted: edges carry a cost. Unweighted: all edges equal</span>
+      <span class="badge badge-green">Connected: path exists between every pair. Disconnected: isolated components</span>
+      <span class="badge badge-gold">DAG (Directed Acyclic Graph): directed, no cycles — models dependencies</span>
+    </div>
+
+    <div class="tab-bar">
+      <button class="tab-btn active" onclick="switchTab(this,'graph-complexity')">Complexity</button>
+      <button class="tab-btn" onclick="switchTab(this,'graph-patterns')">Derived Patterns</button>
+      <button class="tab-btn" onclick="switchTab(this,'graph-realworld')">Real World</button>
+    </div>
+
+    <div id="graph-complexity" class="tab-pane active">
+      <table class="complexity-table">
+        <thead><tr><th>Algorithm</th><th>Time</th><th>Space</th><th>Use case</th></tr></thead>
+        <tbody>
+          <tr><td>BFS</td><td class="o-bad">O(V+E)</td><td class="o-bad">O(V)</td><td>Shortest path, level-order, component detection</td></tr>
+          <tr><td>DFS</td><td class="o-bad">O(V+E)</td><td class="o-bad">O(V)</td><td>Cycle detection, topo sort, connected components</td></tr>
+          <tr><td>Dijkstra (heap)</td><td class="o-bad">O((V+E) log V)</td><td class="o-bad">O(V)</td><td>Single-source shortest path, non-negative weights</td></tr>
+          <tr><td>Bellman-Ford</td><td class="o-ugly">O(V·E)</td><td class="o-bad">O(V)</td><td>Negative weights, negative cycle detection</td></tr>
+          <tr><td>Union-Find</td><td class="o-best">O(α(n)) ≈ O(1)</td><td class="o-bad">O(V)</td><td>Dynamic connectivity, Kruskal's MST</td></tr>
+          <tr><td>Topological sort</td><td class="o-bad">O(V+E)</td><td class="o-bad">O(V)</td><td>Dependency ordering (build systems, courses)</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div id="graph-patterns" class="tab-pane">
+      <ul class="patterns-list">
+        <li class="pattern-item"><span class="pattern-arrow">→</span><div class="pattern-content"><strong>BFS for shortest path (unweighted)</strong><span>Queue-based layer-by-layer expansion. The first time you reach a node, that path is the shortest. Extends to multi-source BFS (start with all sources in queue simultaneously) for problems like "distance to nearest gate."</span></div></li>
+        <li class="pattern-item"><span class="pattern-arrow">→</span><div class="pattern-content"><strong>Union-Find for dynamic connectivity</strong><span>Two operations: union(a,b) merges components; find(a) returns root. With path compression + union-by-rank, both are nearly O(1). Powers: Kruskal's MST, detecting redundant connections, percolation theory.</span></div></li>
+        <li class="pattern-item"><span class="pattern-arrow">→</span><div class="pattern-content"><strong>Topological sort (Kahn's BFS)</strong><span>Count in-degrees. Start with all zero-in-degree nodes. Process: output, then decrement neighbors' in-degrees; enqueue those that reach zero. Cycle exists iff output count &lt; V.</span></div></li>
+        <li class="pattern-item"><span class="pattern-arrow">→</span><div class="pattern-content"><strong>Dijkstra's algorithm</strong><span>Greedy: always relax the closest unvisited node (min-heap priority queue). Invariant: once extracted, a node's distance is final (no negative edges allowed to violate this). Backbone of GPS routing, network path selection.</span></div></li>
+        <li class="pattern-item"><span class="pattern-arrow">→</span><div class="pattern-content"><strong>Bipartite check / graph coloring</strong><span>BFS/DFS with 2-coloring. Assign alternating colors to neighbors. If you ever need to assign both colors to a node, the graph is not bipartite. Used in: matching problems, scheduling, conflict detection.</span></div></li>
+      </ul>
+    </div>
+
+    <div id="graph-realworld" class="tab-pane">
+      <div class="realworld-panel">
+        <div class="rw-card"><div class="rw-icon">🗺️</div><div class="rw-title">Maps & Navigation</div><div class="rw-desc">Cities are nodes; roads are edges with weights (distance/time). Dijkstra/A* finds optimal routes in Google Maps.</div></div>
+        <div class="rw-card"><div class="rw-icon">👥</div><div class="rw-title">Social Networks</div><div class="rw-desc">Users = nodes; friendships = edges. BFS finds degrees of separation. Community detection finds clusters.</div></div>
+        <div class="rw-card"><div class="rw-icon">📦</div><div class="rw-title">Package Managers</div><div class="rw-desc">npm/pip dependency graphs are DAGs. Topological sort determines install order. Circular dependency = cycle in DAG.</div></div>
+        <div class="rw-card"><div class="rw-icon">🌐</div><div class="rw-title">The Internet</div><div class="rw-desc">Routers and links form a weighted graph. BGP protocol finds optimal paths across the global internet graph.</div></div>
+        <div class="rw-card"><div class="rw-icon">🧠</div><div class="rw-title">Neural Networks</div><div class="rw-desc">Neurons are nodes; synapses are weighted directed edges. The whole brain is a massive graph. Inference = forward pass on a DAG.</div></div>
+        <div class="rw-card"><div class="rw-icon">🧬</div><div class="rw-title">Knowledge Graphs</div><div class="rw-desc">Google's Knowledge Graph: entities are nodes, relationships are edges. Enables semantic search and reasoning.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11 PATTERNS ATLAS -->
+  <section id="patterns" class="ds-section">
+    <div class="section-header">
+      <div class="section-number">11</div>
+      <div class="section-title-block">
+        <h2>Algorithm Patterns Atlas</h2>
+        <div class="tagline">The moves that cut across all structures</div>
+      </div>
+    </div>
+
+    <div class="principle-card">
+      <div class="principle-label">First Principle</div>
+      <div class="principle-text">
+        Patterns are not structure-specific — they are <em>reasoning templates</em> that apply wherever their preconditions hold. Two Pointers works wherever there is linear order. Binary Search works wherever there is monotonicity. Dynamic Programming works wherever there are overlapping subproblems. Recognising the pattern is the first half of solving any problem.
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:32px;">
+
+      <div style="padding:20px;border:1px solid var(--rule);border-radius:3px;background:var(--card-bg)">
+        <div class="prop-label" style="font-family:var(--mono);font-size:9px;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);margin-bottom:10px">Algorithm Patterns</div>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:8px;font-size:13px;">
+          <li>→ <strong>Two Pointers</strong> — sorted/converging linear structure</li>
+          <li>→ <strong>Sliding Window</strong> — contiguous sub-array with constraint</li>
+          <li>→ <strong>Binary Search</strong> — monotone function or sorted array</li>
+          <li>→ <strong>Bit Manipulation</strong> — integer as fixed-width binary</li>
+          <li>→ <strong>Prefix Sums</strong> — range aggregates from precomputed array</li>
+          <li>→ <strong>Monotonic Stack/Queue</strong> — maintain sorted invariant in stack</li>
+          <li>→ <strong>Fast & Slow Pointers</strong> — cycle detection, midpoint</li>
+        </ul>
+      </div>
+
+      <div style="padding:20px;border:1px solid var(--rule);border-radius:3px;background:var(--card-bg)">
+        <div class="prop-label" style="font-family:var(--mono);font-size:9px;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);margin-bottom:10px">Algorithmic Paradigms</div>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:8px;font-size:13px;">
+          <li>→ <strong>Greedy</strong> — local optimal + greedy choice property</li>
+          <li>→ <strong>Divide & Conquer</strong> — split, solve, merge (MergeSort, QuickSort)</li>
+          <li>→ <strong>Dynamic Programming</strong> — overlapping subproblems + optimal substructure</li>
+          <li>→ <strong>Backtracking</strong> — DFS with pruning, build-undo state</li>
+          <li>→ <strong>Graph BFS/DFS</strong> — systematic exploration with visited set</li>
+          <li>→ <strong>Union-Find</strong> — near-O(1) dynamic connectivity</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="divider">DP subpattern map</div>
+
+    <ul class="patterns-list">
+      <li class="pattern-item"><span class="pattern-arrow">→</span><div class="pattern-content"><strong>Linear DP</strong><span>State = suffix/prefix of input. dp[i] depends on dp[i-1..i-k]. Examples: Fibonacci, climbing stairs, house robber, coin change, LIS (Longest Increasing Subsequence).</span></div></li>
+      <li class="pattern-item"><span class="pattern-arrow">→</span><div class="pattern-content"><strong>2D / Knapsack DP</strong><span>State = (index, remaining_capacity). dp[i][w] = best value using first i items with weight limit w. Covers: 0/1 knapsack, partition equal subset sum, target sum.</span></div></li>
+      <li class="pattern-item"><span class="pattern-arrow">→</span><div class="pattern-content"><strong>Interval DP</strong><span>State = (l, r) range. dp[l][r] depends on dp[l][k] and dp[k+1][r] for all k in [l,r]. Fill by increasing interval length. Examples: matrix chain multiplication, palindromic substrings (Manacher is better), burst balloons.</span></div></li>
+      <li class="pattern-item"><span class="pattern-arrow">→</span><div class="pattern-content"><strong>Subsequence DP (LCS, Edit Distance)</strong><span>State = (i,j) = prefixes of both strings. dp[i][j] depends on dp[i-1][j], dp[i][j-1], dp[i-1][j-1]. Covers: LCS, edit distance (Levenshtein), shortest common supersequence, regex matching.</span></div></li>
+      <li class="pattern-item"><span class="pattern-arrow">→</span><div class="pattern-content"><strong>Tree DP</strong><span>Compute dp values bottom-up in post-order. Each node combines children's values. Examples: diameter, max path sum, number of nodes in largest BST, tree independence number.</span></div></li>
+      <li class="pattern-item"><span class="pattern-arrow">→</span><div class="pattern-content"><strong>Bitmask DP</strong><span>State includes a bitmask representing subset of elements used. dp[mask][last] = optimal for visiting exactly the nodes in mask, ending at last. Used for: TSP, minimum cost to visit all nodes, assignment problems with n ≤ 20.</span></div></li>
+    </ul>
+
+  </section>
+
+</main>
+
+<script>
+function showSection(id) {
+  document.querySelectorAll('.ds-section').forEach(s => s.classList.remove('visible'));
+  document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+  document.getElementById(id).classList.add('visible');
+
+  const map = { home:0, array:1, string:2, linkedlist:3, stack:4, hashmap:5, heap:6, tree:7, trie:8, segtree:9, graph:10, patterns:11 };
+  const items = document.querySelectorAll('.nav-item');
+  if (map[id] !== undefined && items[map[id]]) items[map[id]].classList.add('active');
+
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  document.getElementById('main').scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function switchTab(btn, paneId) {
+  const tabBar = btn.closest('.tab-bar');
+  const section = tabBar.closest('section') || tabBar.parentElement;
+  tabBar.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  section.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
+  const pane = document.getElementById(paneId);
+  if (pane) pane.classList.add('active');
+}
+</script>
+</body>
+</html>

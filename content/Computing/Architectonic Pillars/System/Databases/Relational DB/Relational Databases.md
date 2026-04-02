@@ -40,7 +40,7 @@ RDBMS 
 | Information Model vs Data Model |     |
 | 1. IM is an abstract, formal rep of entities that includes properties, relationships and the operations. <br>2. Entities being modeled can be from the real world, such as library. <br>3. IM is at conceptual leve and defines rel b/w objects. <br>4. E.g. Hierarchical Info Model - organizes data using tree structure ; parent node followed by child node ; child node cannot have more than one parent, however parent node can have multiple children . First was IBM's Information Management System, released in 1968. It was originally built as the DB for the Apollo Space Mission. | 1. DM are concrete, specific model for implementation. <br>2. E.g. Relational Model is most used DM. Data is stored in tables. Provides for logical data independence, physical data independence and physical storage independence. <br>3. E.g. Entity Relationship DM<br>	1. Alternative to ER Data Model.<br>	2. ERD(ER Diagram) rep entities(called tables) and their relationships. ERD are the foundation for designing a database. <br>	3. Used as a tool to design relational DB.<br>	4. Entities are objects like a noun. It exist independently of any other entities in DB.<br>	5. ERD can be converted into a collection of tables. <br>	6. ERD building blocks are entities & attributes. <br>	7. Entities have attributes. Attributes are the data elements that characterize the entity.<br>	8. In ERD, entities are drawn as rectangle and attributes are drawn as oval. <br>	9. Entity becomes a table in the DB and attributes become the columns. |
 
-![[Computer Science/Databases/_resources/Relational_Databases.resources/unknown_filename.1.jpeg]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/Relational_Databases.resources/unknown_filename.1.jpeg]]
 
 * * *
 
@@ -62,19 +62,19 @@ One to One 
 
 1. One entity is associated one and only one instance of another entity. 
 
-![[Computer Science/Databases/_resources/Relational_Databases.resources/image.png]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/Relational_Databases.resources/image.png]]
 
 One to Many
 
 1. One book written by many authors 
 
-![[Computer Science/Databases/_resources/Relational_Databases.resources/image (1).png]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/Relational_Databases.resources/image (1).png]]
 
 Many to Many
 
 1. Many authors writing many books or many books written by many authors 
 
-![[Computer Science/Databases/_resources/Relational_Databases.resources/image (2).png]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/Relational_Databases.resources/image (2).png]]
 
 * * *
 
@@ -109,7 +109,7 @@ Commonly used Data types in RDBMS 
 	1. Date
 	2. Time 
 	3. Timestamp 
-	4. ![[Computer Science/Databases/_resources/Relational_Databases.resources/image (3).png]]
+	4. ![[Computing/Architectonic Pillars/System/Databases/_resources/Relational_Databases.resources/image (3).png]]
 4. Boolean 
 5. Binary String 
 	1. Rep image, voice or other media data 
@@ -148,7 +148,7 @@ RM, first proposed in 1970. Based on mathematical model and terms. Building bloc
 Relation Schema 
 
 1. specifies name of a rel, name and datatype of each column(attributes) 
-2. ![[Computer Science/Databases/_resources/Relational_Databases.resources/image (4).png]]
+2. ![[Computing/Architectonic Pillars/System/Databases/_resources/Relational_Databases.resources/image (4).png]]
 
 Relation Instance 
 
@@ -300,16 +300,16 @@ Client / Server 
 		1. Data Access Layer server includes interfaces for diff types of clients, which can include data industry std APIs such as JDBC, ODBC; CLP(command line processor) interfaces; vendor specific or proprietary interfaces  
 		2. Database Engine Layer compiles queries, and retrieves and processes the data and returns the result set 
 		3. Database Storage Layer or Persistent Layer is where data is stored which may on local storage or resides physically on network storage or specialized storage appliances 
-		4. ![[Computer Science/Databases/_resources/Relational_Databases.resources/image (7).png]]
+		4. ![[Computing/Architectonic Pillars/System/Databases/_resources/Relational_Databases.resources/image (7).png]]
 5. 3 Tier DB Architecture 
 	1. Application Presentation Layer and Business Logic Layer resides in different tiers 
 	2. User interacts with a client presentation layer such as mobile application, 
 	3. Client Application communicates with application server over the network. Application server encapsulates the application and business logic and communicates with the db server through a db API or driver. 
-	4. ![[Computer Science/Databases/_resources/Relational_Databases.resources/image (8).png]]
+	4. ![[Computing/Architectonic Pillars/System/Databases/_resources/Relational_Databases.resources/image (8).png]]
 6. use case
 	1. commonly used for multi user scenario and typical of production environments. 
 
-                    ![[Computer Science/Databases/_resources/Relational_Databases.resources/image (5).png]]
+                    ![[Computing/Architectonic Pillars/System/Databases/_resources/Relational_Databases.resources/image (5).png]]
 
 Cloud 
 
@@ -319,7 +319,7 @@ Cloud 
 4. Client access db through an application server layer or interface in the cloud 
 5. Very flexible, used for development, testing and full production environments. 
 
-            ![[Computer Science/Databases/_resources/Relational_Databases.resources/image (6).png]]
+            ![[Computing/Architectonic Pillars/System/Databases/_resources/Relational_Databases.resources/image (6).png]]
 
 * * *
 
@@ -372,7 +372,7 @@ Application Developers and Programmers 
 * * *
 
 History of RDB 
-![[Computer Science/Databases/_resources/Relational_Databases.resources/image (12).png]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/Relational_Databases.resources/image (12).png]]
 
 Open Souce DB 
 
@@ -423,7 +423,7 @@ Normalization 
 1. Most OLTP Systems are N to 3rd NF for optimal transaction performance. 
 2. OLP systems are denormalized to enhance performance. 
 
-![[Computer Science/Databases/_resources/Relational_Databases.resources/Normalization, Keys and Constraints.pdf]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/Relational_Databases.resources/Normalization, Keys and Constraints.pdf]]
 
 * * *
 
@@ -486,60 +486,60 @@ LD
 	4. Things 
 4. Many to many relationship can lead to ambiguity in db. Can be solved by introducing associative entity 
 5. After LD, Normalization is carried out. 
-6. ![[Computer Science/Databases/_resources/Relational_Databases.resources/unknown_filename.3.png]]
-7. ![[Computer Science/Databases/_resources/Relational_Databases.resources/unknown_filename.png]]However, above will not adhere to 2NF. 
-8. ![[Computer Science/Databases/_resources/Relational_Databases.resources/unknown_filename.12.png]]
+6. ![[Computing/Architectonic Pillars/System/Databases/_resources/Relational_Databases.resources/unknown_filename.3.png]]
+7. ![[Computing/Architectonic Pillars/System/Databases/_resources/Relational_Databases.resources/unknown_filename.png]]However, above will not adhere to 2NF. 
+8. ![[Computing/Architectonic Pillars/System/Databases/_resources/Relational_Databases.resources/unknown_filename.12.png]]
 
 PD
 
 1. Impact of choice of your design on DBMS 
 2. e.g datatypes it support, naming rules it implement, indexes and constraints it supports 
-3. ![[Computer Science/Databases/_resources/Relational_Databases.resources/unknown_filename.6.png]]
+3. ![[Computing/Architectonic Pillars/System/Databases/_resources/Relational_Databases.resources/unknown_filename.6.png]]
 
 * * *
 
 API Calls
-![[Computer Science/Databases/_resources/Relational_Databases.resources/unknown_filename.7.png]]
-![[Computer Science/Databases/_resources/Relational_Databases.resources/unknown_filename.4.png]]
-![[Computer Science/Databases/_resources/Relational_Databases.resources/unknown_filename.2.png]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/Relational_Databases.resources/unknown_filename.7.png]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/Relational_Databases.resources/unknown_filename.4.png]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/Relational_Databases.resources/unknown_filename.2.png]]
 
-![[Computer Science/Databases/_resources/Relational_Databases.resources/unknown_filename.14.png]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/Relational_Databases.resources/unknown_filename.14.png]]
 
-![[Computer Science/Databases/_resources/Relational_Databases.resources/unknown_filename.8.png]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/Relational_Databases.resources/unknown_filename.8.png]]
 
 The ibm\_db API provides a variety of useful Python functions for accessing and manipulating data in an IBM data server database, including functions for connecting to a database, preparing and issuing SQL statements, fetching rows from result sets, calling stored procedures, committing and rolling back transactions, handling errors and retrieving metadata.
 
 Connecting to the DB2 requires the following information: a driver name, a database name, a host DNS name or IP address, a host port, a connection protocol, a user ID, and a user password.
 
-![[Computer Science/Databases/_resources/Relational_Databases.resources/unknown_filename.5.png]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/Relational_Databases.resources/unknown_filename.5.png]]
 
-![[Computer Science/Databases/_resources/Relational_Databases.resources/unknown_filename.10.png]]
-![[Computer Science/Databases/_resources/Relational_Databases.resources/unknown_filename.13.png]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/Relational_Databases.resources/unknown_filename.10.png]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/Relational_Databases.resources/unknown_filename.13.png]]
 
-![[Computer Science/Databases/_resources/Relational_Databases.resources/unknown_filename.9.png]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/Relational_Databases.resources/unknown_filename.9.png]]
 
 Stored Procedures 
-![[Computer Science/Databases/_resources/Relational_Databases.resources/unknown_filename.11.png]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/Relational_Databases.resources/unknown_filename.11.png]]
 
 CALL UPDATED\_SAL('E1001', 1) 
 
-![[Computer Science/Databases/_resources/Relational_Databases.resources/unknown_filename.15.png]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/Relational_Databases.resources/unknown_filename.15.png]]
 
-![[Computer Science/Databases/_resources/Relational_Databases.resources/unknown_filename.21.png]]
-![[Computer Science/Databases/_resources/Relational_Databases.resources/unknown_filename.17.png]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/Relational_Databases.resources/unknown_filename.21.png]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/Relational_Databases.resources/unknown_filename.17.png]]
 
-![[Computer Science/Databases/_resources/Relational_Databases.resources/unknown_filename.18.png]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/Relational_Databases.resources/unknown_filename.18.png]]
 
-![[Computer Science/Databases/_resources/Relational_Databases.resources/unknown_filename.16.png]]
-![[Computer Science/Databases/_resources/Relational_Databases.resources/unknown_filename.20.png]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/Relational_Databases.resources/unknown_filename.16.png]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/Relational_Databases.resources/unknown_filename.20.png]]
 
-![[Computer Science/Databases/_resources/Relational_Databases.resources/unknown_filename.19.png]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/Relational_Databases.resources/unknown_filename.19.png]]
 
-![[Computer Science/Databases/_resources/Relational_Databases.resources/unknown_filename.23.png]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/Relational_Databases.resources/unknown_filename.23.png]]
 
-![[Computer Science/Databases/_resources/Relational_Databases.resources/unknown_filename.24.png]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/Relational_Databases.resources/unknown_filename.24.png]]
 
-![[Computer Science/Databases/_resources/Relational_Databases.resources/unknown_filename.22.png]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/Relational_Databases.resources/unknown_filename.22.png]]
 
 * * *
 
@@ -561,6 +561,6 @@ CALL UPDATED\_SAL('E1001', 1) 
 
 Essentially, applying **GROUPING SETS** to the two dimensions, salespersonname and autoclassname, provides the same result that you would get by appending the two individual results of applying GROUP BY to each dimension separately
 
-![[Computer Science/Databases/_resources/Relational_Databases.resources/unknown_filename.26.png]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/Relational_Databases.resources/unknown_filename.26.png]]
 
-![[Computer Science/Databases/_resources/Relational_Databases.resources/unknown_filename.25.png]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/Relational_Databases.resources/unknown_filename.25.png]]

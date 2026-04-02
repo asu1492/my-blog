@@ -476,7 +476,7 @@ and by setting hive.auto.convert.join to true and Hive will automatically use Ma
 Mapjoins have a limitation in that the same table or alias cannot be used to join on different columns in the same query. (This makes sense because presumably Hive uses a HashMap keyed on the column(s) used in the join, and such a HashMap would be of no use for a join on different keys).
 Bucket Map Join
 Join is done in Mapper only. The mapper processing bucket 1 for table A will only fetch bucket 1 of table B.
-![[Computer Science/Data Engineering/_resources/Hive.resources/unknown_filename.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/Hive.resources/unknown_filename.png]]
 
 Use case:
 When all tables are:

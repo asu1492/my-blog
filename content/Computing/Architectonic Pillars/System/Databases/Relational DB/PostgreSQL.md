@@ -90,13 +90,13 @@ JOINS 
 
 * * *
 
-![[Computer Science/Databases/_resources/PostgreSQL.resources/unknown_filename.2.png]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/PostgreSQL.resources/unknown_filename.2.png]]
 
 |     |     |
 | --- | --- |
 |     | SELECT comment\_id, user\_id, LEFT(comment, 20) AS preview FROM comments WHERE board\_id = 39; <br><br>Note: <br><br>* Left will give first 20 char of comments |
 |     | SELECT comment\_id, user\_id, RIGHT(comment, 20) AS preview FROM comments WHERE board\_id = 39;<br><br>NOte: we are using user\_id as foreign key and not username as username may be changed by user, compromising data integrity |
-| Inner Join | SELECT comment\_id, comments.user\_id, username, time, LEFT(comment, 20) AS preview <br>FROM comments<br>INNER JOIN users ON comments.user\_id = users.user\_id<br>WHERE board\_id=39;<br>![[Computer Science/Databases/_resources/PostgreSQL.resources/Image.png]]<br>\| Note: we have used comments.user\_id to remove ambiguity as it exist in multiple tables<br><br>Note: POSTgreSQL has natural inner join that intelligently matches up across without referencing foreign key... e.g we can re write above query as <br><br>SELECT comment\_id, comments.user\_id, username, time, LEFT(comment, 20) AS preview<br>FROM comments<br>NATURAL INNER JOIN users <br>WHERE board\_id=39; |
+| Inner Join | SELECT comment\_id, comments.user\_id, username, time, LEFT(comment, 20) AS preview <br>FROM comments<br>INNER JOIN users ON comments.user\_id = users.user\_id<br>WHERE board\_id=39;<br>![[Computing/Architectonic Pillars/System/Databases/_resources/PostgreSQL.resources/Image.png]]<br>\| Note: we have used comments.user\_id to remove ambiguity as it exist in multiple tables<br><br>Note: POSTgreSQL has natural inner join that intelligently matches up across without referencing foreign key... e.g we can re write above query as <br><br>SELECT comment\_id, comments.user\_id, username, time, LEFT(comment, 20) AS preview<br>FROM comments<br>NATURAL INNER JOIN users <br>WHERE board\_id=39; |
 
 * * *
 
@@ -119,7 +119,7 @@ Group by  (boards with most comments)
 4. GROUP BY boards.board\_name
 5. ORDER BY comment\_count DESC
 6. LIMIT 10;
-7. ![[Computer Science/Databases/_resources/PostgreSQL.resources/unknown_filename.png]]
+7. ![[Computing/Architectonic Pillars/System/Databases/_resources/PostgreSQL.resources/unknown_filename.png]]
 
 * * *
 
@@ -134,7 +134,7 @@ JSON in PostgreSQL 
 	2. SELECT DISTINCT content ->> 'type'AS content\_type FROM rich\_content;
 4. SELECT content -> 'dimensions' AS content\_type FROM rich\_content;
 	1. SELECT content -> 'dimensions' AS content\_type FROM rich\_content WHERE content ->> 'dimensions'IS NOT NULL;
-	2. ![[Computer Science/Databases/_resources/PostgreSQL.resources/unknown_filename.1.png]]
+	2. ![[Computing/Architectonic Pillars/System/Databases/_resources/PostgreSQL.resources/unknown_filename.1.png]]
 
 * * *
 
@@ -152,7 +152,7 @@ SQL Injections
 
 1. Ned
 
-![[Computer Science/Databases/_resources/PostgreSQL.resources/instructions.md.pdf]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/PostgreSQL.resources/instructions.md.pdf]]
 
 * * *
 

@@ -11,21 +11,21 @@ source: https://www.coursera.org/learn/introduction-to-nosql-databases/supplemen
 	2. Table 
 	3. CRUD 
 
-![[Computer Science/Databases/_resources/Apache_Cassandra.resources/unknown_filename.5.png]]
-![[Computer Science/Databases/_resources/Apache_Cassandra.resources/unknown_filename.24.png]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/Apache_Cassandra.resources/unknown_filename.5.png]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/Apache_Cassandra.resources/unknown_filename.24.png]]
 
-![[Computer Science/Databases/_resources/Apache_Cassandra.resources/unknown_filename.23.png]]![[Computer Science/Databases/_resources/Apache_Cassandra.resources/unknown_filename.18.png]]![[Computer Science/Databases/_resources/Apache_Cassandra.resources/unknown_filename.22.png]]![[Computer Science/Databases/_resources/Apache_Cassandra.resources/unknown_filename.29.png]]![[Computer Science/Databases/_resources/Apache_Cassandra.resources/unknown_filename.11.png]]![[Computer Science/Databases/_resources/Apache_Cassandra.resources/unknown_filename.1.png]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/Apache_Cassandra.resources/unknown_filename.23.png]]![[Computing/Architectonic Pillars/System/Databases/_resources/Apache_Cassandra.resources/unknown_filename.18.png]]![[Computing/Architectonic Pillars/System/Databases/_resources/Apache_Cassandra.resources/unknown_filename.22.png]]![[Computing/Architectonic Pillars/System/Databases/_resources/Apache_Cassandra.resources/unknown_filename.29.png]]![[Computing/Architectonic Pillars/System/Databases/_resources/Apache_Cassandra.resources/unknown_filename.11.png]]![[Computing/Architectonic Pillars/System/Databases/_resources/Apache_Cassandra.resources/unknown_filename.1.png]]
 
 **Apache Cassandra Topology** 
 Cassandra is based on a distributed system architecture. In its simplest form, Cassandra can be installed on a single machine or container. A single Cassandra instance is called a node. Cassandra supports horizontal scalability achieved by adding more than one node as a part of a Cassandra cluster.  
-![[Computer Science/Databases/_resources/Apache_Cassandra.resources/unknown_filename.6.png]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/Apache_Cassandra.resources/unknown_filename.6.png]]
  As well as being a distributed system, Cassandra is designed to be a peer-to-peer architecture, with each node connected to all other nodes. Each Cassandra node can perform all database operations and can serve client requests without the need for a primary node.  
-![[Computer Science/Databases/_resources/Apache_Cassandra.resources/unknown_filename.16.png]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/Apache_Cassandra.resources/unknown_filename.16.png]]
 How do the nodes in this peer-to-peer architecture (no primary node) know to which node to route a request and if a certain node is down or up? Through Gossip.  
 Gossip is the protocol used by Cassandra nodes for peer-to-peer communication. The gossip protocol informs a node about the state of all other nodes. A node performs gossip communications with up to three other nodes every second. The gossip messages follow a specific format and use version numbers to make efficient communication, thus shortly each node can build the entire metadata of the cluster (which nodes are up/down, what are the tokens allocated to each node, etc..). 
 **Multi Data Centers Deployment**  
 A Cassandra cluster can be a single data center deployment (like in the above pics), but most of the time Cassandra clusters are deployed in multiple data centers. A multi data-center deployment looks like below – where you can see depicted a 12 nodes Cassandra cluster, topology wise installed in 2 datacenters. Since [[Data Replication]] is being set at keyspace level, demo keyspace specifies a [[Data Replication]] factor 5: 2 in data center 1 and 3 in data center 2.   
-![[Computer Science/Databases/_resources/Apache_Cassandra.resources/unknown_filename.20.png]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/Apache_Cassandra.resources/unknown_filename.20.png]]
 **Note**: since a Cassandra node can be as well a coordinator of operations, in our example since the operation came in data center 2 the node receiving the operation becomes the coordinator of the operation, while a node in data center 1 will become the remote coordinator – taking care of the operation in only data center 1.  
 **Components of a Cassandra Node** 
 There are several components in Cassandra nodes that are involved in the write and read operations. Some of them are listed below:  
@@ -57,7 +57,7 @@ Cassandra processes data at several stages on the write path, starting with the 
 * Flushing data from the Memtable 
 * Storing data on disk in SSTables 
 
-![[Computer Science/Databases/_resources/Apache_Cassandra.resources/unknown_filename.21.png]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/Apache_Cassandra.resources/unknown_filename.21.png]]
 **Read at node level**  
 While writes in Cassandra are very simple and fast operations, done in memory, the read is a bit more complicated, since it needs to consolidate data from both memory (Memtable) and disk (SSTables). Since data on disk can be fragmented in several SSTables, the read process needs to identify which SSTables most likely contain info about the partitions we are querying - this selection is done by the Bloom Filter information. The steps are described below: 
 
@@ -70,24 +70,24 @@ While writes in Cassandra are very simple and fast operations, done in memory, t
 * Fetches the data from the SSTable on disk 
 * Data is consolidated from Memtable and SSTables before being sent to coordinator     
 
-![[Computer Science/Databases/_resources/Apache_Cassandra.resources/unknown_filename.31.png]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/Apache_Cassandra.resources/unknown_filename.31.png]]
 
-![[Computer Science/Databases/_resources/Apache_Cassandra.resources/unknown_filename.9.png]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/Apache_Cassandra.resources/unknown_filename.9.png]]
 
-![[Computer Science/Databases/_resources/Apache_Cassandra.resources/unknown_filename.30.png]]![[Computer Science/Databases/_resources/Apache_Cassandra.resources/unknown_filename.19.png]]![[Computer Science/Databases/_resources/Apache_Cassandra.resources/unknown_filename.10.png]]![[Computer Science/Databases/_resources/Apache_Cassandra.resources/unknown_filename.png]]![[Computer Science/Databases/_resources/Apache_Cassandra.resources/unknown_filename.3.png]]![[Computer Science/Databases/_resources/Apache_Cassandra.resources/unknown_filename.4.png]]![[Computer Science/Databases/_resources/Apache_Cassandra.resources/unknown_filename.13.png]]![[Computer Science/Databases/_resources/Apache_Cassandra.resources/unknown_filename.12.png]]![[Computer Science/Databases/_resources/Apache_Cassandra.resources/unknown_filename.28.png]]![[Computer Science/Databases/_resources/Apache_Cassandra.resources/unknown_filename.26.png]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/Apache_Cassandra.resources/unknown_filename.30.png]]![[Computing/Architectonic Pillars/System/Databases/_resources/Apache_Cassandra.resources/unknown_filename.19.png]]![[Computing/Architectonic Pillars/System/Databases/_resources/Apache_Cassandra.resources/unknown_filename.10.png]]![[Computing/Architectonic Pillars/System/Databases/_resources/Apache_Cassandra.resources/unknown_filename.png]]![[Computing/Architectonic Pillars/System/Databases/_resources/Apache_Cassandra.resources/unknown_filename.3.png]]![[Computing/Architectonic Pillars/System/Databases/_resources/Apache_Cassandra.resources/unknown_filename.4.png]]![[Computing/Architectonic Pillars/System/Databases/_resources/Apache_Cassandra.resources/unknown_filename.13.png]]![[Computing/Architectonic Pillars/System/Databases/_resources/Apache_Cassandra.resources/unknown_filename.12.png]]![[Computing/Architectonic Pillars/System/Databases/_resources/Apache_Cassandra.resources/unknown_filename.28.png]]![[Computing/Architectonic Pillars/System/Databases/_resources/Apache_Cassandra.resources/unknown_filename.26.png]]
 
-![[Computer Science/Databases/_resources/Apache_Cassandra.resources/unknown_filename.8.png]]
-![[Computer Science/Databases/_resources/Apache_Cassandra.resources/unknown_filename.14.png]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/Apache_Cassandra.resources/unknown_filename.8.png]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/Apache_Cassandra.resources/unknown_filename.14.png]]
 
-![[Computer Science/Databases/_resources/Apache_Cassandra.resources/unknown_filename.15.png]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/Apache_Cassandra.resources/unknown_filename.15.png]]
 
-![[Computer Science/Databases/_resources/Apache_Cassandra.resources/unknown_filename.25.png]]![[Computer Science/Databases/_resources/Apache_Cassandra.resources/unknown_filename.7.png]]![[Computer Science/Databases/_resources/Apache_Cassandra.resources/unknown_filename.17.png]]![[Computer Science/Databases/_resources/Apache_Cassandra.resources/unknown_filename.2.png]]![[Computer Science/Databases/_resources/Apache_Cassandra.resources/unknown_filename.27.png]]![[Computer Science/Databases/_resources/Apache_Cassandra.resources/unknown_filename.44.png]]![[Computer Science/Databases/_resources/Apache_Cassandra.resources/unknown_filename.32.png]]![[Computer Science/Databases/_resources/Apache_Cassandra.resources/unknown_filename.37.png]]![[Computer Science/Databases/_resources/Apache_Cassandra.resources/unknown_filename.34.png]]![[Computer Science/Databases/_resources/Apache_Cassandra.resources/unknown_filename.49.png]]![[Computer Science/Databases/_resources/Apache_Cassandra.resources/unknown_filename.53.png]]![[Computer Science/Databases/_resources/Apache_Cassandra.resources/unknown_filename.57.png]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/Apache_Cassandra.resources/unknown_filename.25.png]]![[Computing/Architectonic Pillars/System/Databases/_resources/Apache_Cassandra.resources/unknown_filename.7.png]]![[Computing/Architectonic Pillars/System/Databases/_resources/Apache_Cassandra.resources/unknown_filename.17.png]]![[Computing/Architectonic Pillars/System/Databases/_resources/Apache_Cassandra.resources/unknown_filename.2.png]]![[Computing/Architectonic Pillars/System/Databases/_resources/Apache_Cassandra.resources/unknown_filename.27.png]]![[Computing/Architectonic Pillars/System/Databases/_resources/Apache_Cassandra.resources/unknown_filename.44.png]]![[Computing/Architectonic Pillars/System/Databases/_resources/Apache_Cassandra.resources/unknown_filename.32.png]]![[Computing/Architectonic Pillars/System/Databases/_resources/Apache_Cassandra.resources/unknown_filename.37.png]]![[Computing/Architectonic Pillars/System/Databases/_resources/Apache_Cassandra.resources/unknown_filename.34.png]]![[Computing/Architectonic Pillars/System/Databases/_resources/Apache_Cassandra.resources/unknown_filename.49.png]]![[Computing/Architectonic Pillars/System/Databases/_resources/Apache_Cassandra.resources/unknown_filename.53.png]]![[Computing/Architectonic Pillars/System/Databases/_resources/Apache_Cassandra.resources/unknown_filename.57.png]]
 
 * In CQL, insert, update and delete are done in memory itself. 
 
-![[Computer Science/Databases/_resources/Apache_Cassandra.resources/unknown_filename.48.png]]![[Computer Science/Databases/_resources/Apache_Cassandra.resources/unknown_filename.54.png]]![[Computer Science/Databases/_resources/Apache_Cassandra.resources/unknown_filename.42.png]]![[Computer Science/Databases/_resources/Apache_Cassandra.resources/unknown_filename.35.png]]![[Computer Science/Databases/_resources/Apache_Cassandra.resources/unknown_filename.40.png]]
-![[Computer Science/Databases/_resources/Apache_Cassandra.resources/unknown_filename.51.png]]
-![[Computer Science/Databases/_resources/Apache_Cassandra.resources/unknown_filename.56.png]]![[Computer Science/Databases/_resources/Apache_Cassandra.resources/unknown_filename.36.png]]![[Computer Science/Databases/_resources/Apache_Cassandra.resources/unknown_filename.46.png]]![[Computer Science/Databases/_resources/Apache_Cassandra.resources/unknown_filename.39.png]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/Apache_Cassandra.resources/unknown_filename.48.png]]![[Computing/Architectonic Pillars/System/Databases/_resources/Apache_Cassandra.resources/unknown_filename.54.png]]![[Computing/Architectonic Pillars/System/Databases/_resources/Apache_Cassandra.resources/unknown_filename.42.png]]![[Computing/Architectonic Pillars/System/Databases/_resources/Apache_Cassandra.resources/unknown_filename.35.png]]![[Computing/Architectonic Pillars/System/Databases/_resources/Apache_Cassandra.resources/unknown_filename.40.png]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/Apache_Cassandra.resources/unknown_filename.51.png]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/Apache_Cassandra.resources/unknown_filename.56.png]]![[Computing/Architectonic Pillars/System/Databases/_resources/Apache_Cassandra.resources/unknown_filename.36.png]]![[Computing/Architectonic Pillars/System/Databases/_resources/Apache_Cassandra.resources/unknown_filename.46.png]]![[Computing/Architectonic Pillars/System/Databases/_resources/Apache_Cassandra.resources/unknown_filename.39.png]]
 
 * Apache Cassandra is an open source, distributed, decentralized, elastically scalable, highly available, fault tolerant, and tunable and consistent database. 
 * Apache Cassandra is best used by "always available" type of applications that require a database that is always available. 
@@ -100,19 +100,19 @@ While writes in Cassandra are very simple and fast operations, done in memory, t
 * CQL is the primary language for communicating with Apache Cassandra clusters. 
 * CQL queries can be run programmatically using a licensed Cassandra client driver, or they can be run on the Python-based CQL shell client provided with Cassandra
 
-![[Computer Science/Databases/_resources/Apache_Cassandra.resources/unknown_filename.43.png]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/Apache_Cassandra.resources/unknown_filename.43.png]]
 
-![[Computer Science/Databases/_resources/Apache_Cassandra.resources/unknown_filename.33.png]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/Apache_Cassandra.resources/unknown_filename.33.png]]
 
-![[Computer Science/Databases/_resources/Apache_Cassandra.resources/unknown_filename.52.png]]
-![[Computer Science/Databases/_resources/Apache_Cassandra.resources/unknown_filename.45.png]]
-![[Computer Science/Databases/_resources/Apache_Cassandra.resources/unknown_filename.55.png]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/Apache_Cassandra.resources/unknown_filename.52.png]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/Apache_Cassandra.resources/unknown_filename.45.png]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/Apache_Cassandra.resources/unknown_filename.55.png]]
 
-![[Computer Science/Databases/_resources/Apache_Cassandra.resources/unknown_filename.41.png]]![[Computer Science/Databases/_resources/Apache_Cassandra.resources/unknown_filename.50.png]]![[Computer Science/Databases/_resources/Apache_Cassandra.resources/unknown_filename.47.png]]![[Computer Science/Databases/_resources/Apache_Cassandra.resources/unknown_filename.38.png]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/Apache_Cassandra.resources/unknown_filename.41.png]]![[Computing/Architectonic Pillars/System/Databases/_resources/Apache_Cassandra.resources/unknown_filename.50.png]]![[Computing/Architectonic Pillars/System/Databases/_resources/Apache_Cassandra.resources/unknown_filename.47.png]]![[Computing/Architectonic Pillars/System/Databases/_resources/Apache_Cassandra.resources/unknown_filename.38.png]]
 
-![[Computer Science/Databases/_resources/Apache_Cassandra.resources/unknown_filename.73.png]]![[Computer Science/Databases/_resources/Apache_Cassandra.resources/unknown_filename.70.png]]![[Computer Science/Databases/_resources/Apache_Cassandra.resources/unknown_filename.63.png]]![[Computer Science/Databases/_resources/Apache_Cassandra.resources/unknown_filename.58.png]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/Apache_Cassandra.resources/unknown_filename.73.png]]![[Computing/Architectonic Pillars/System/Databases/_resources/Apache_Cassandra.resources/unknown_filename.70.png]]![[Computing/Architectonic Pillars/System/Databases/_resources/Apache_Cassandra.resources/unknown_filename.63.png]]![[Computing/Architectonic Pillars/System/Databases/_resources/Apache_Cassandra.resources/unknown_filename.58.png]]
 
 	replicas are placed clockwise and not in same rack . 
 	
 
-![[Computer Science/Databases/_resources/Apache_Cassandra.resources/unknown_filename.60.png]]![[Computer Science/Databases/_resources/Apache_Cassandra.resources/unknown_filename.71.png]]![[Computer Science/Databases/_resources/Apache_Cassandra.resources/unknown_filename.64.png]]![[Computer Science/Databases/_resources/Apache_Cassandra.resources/unknown_filename.72.png]]![[Computer Science/Databases/_resources/Apache_Cassandra.resources/unknown_filename.66.png]]![[Computer Science/Databases/_resources/Apache_Cassandra.resources/unknown_filename.68.png]]![[Computer Science/Databases/_resources/Apache_Cassandra.resources/unknown_filename.59.png]]![[Computer Science/Databases/_resources/Apache_Cassandra.resources/unknown_filename.62.png]]![[Computer Science/Databases/_resources/Apache_Cassandra.resources/unknown_filename.65.png]]![[Computer Science/Databases/_resources/Apache_Cassandra.resources/unknown_filename.67.png]]![[Computer Science/Databases/_resources/Apache_Cassandra.resources/unknown_filename.61.png]]![[Computer Science/Databases/_resources/Apache_Cassandra.resources/unknown_filename.69.png]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/Apache_Cassandra.resources/unknown_filename.60.png]]![[Computing/Architectonic Pillars/System/Databases/_resources/Apache_Cassandra.resources/unknown_filename.71.png]]![[Computing/Architectonic Pillars/System/Databases/_resources/Apache_Cassandra.resources/unknown_filename.64.png]]![[Computing/Architectonic Pillars/System/Databases/_resources/Apache_Cassandra.resources/unknown_filename.72.png]]![[Computing/Architectonic Pillars/System/Databases/_resources/Apache_Cassandra.resources/unknown_filename.66.png]]![[Computing/Architectonic Pillars/System/Databases/_resources/Apache_Cassandra.resources/unknown_filename.68.png]]![[Computing/Architectonic Pillars/System/Databases/_resources/Apache_Cassandra.resources/unknown_filename.59.png]]![[Computing/Architectonic Pillars/System/Databases/_resources/Apache_Cassandra.resources/unknown_filename.62.png]]![[Computing/Architectonic Pillars/System/Databases/_resources/Apache_Cassandra.resources/unknown_filename.65.png]]![[Computing/Architectonic Pillars/System/Databases/_resources/Apache_Cassandra.resources/unknown_filename.67.png]]![[Computing/Architectonic Pillars/System/Databases/_resources/Apache_Cassandra.resources/unknown_filename.61.png]]![[Computing/Architectonic Pillars/System/Databases/_resources/Apache_Cassandra.resources/unknown_filename.69.png]]

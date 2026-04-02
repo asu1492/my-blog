@@ -79,9 +79,9 @@ Before MCP, every AI app hand-rolled its own function-calling glue. MCP standard
 - **Composability** — swap tools without changing the host; mix servers from multiple vendors.
 
 Cross-pillar links:
-- `[[../System/Infrastructure/Message Queue]]` — MCP over SSE shares pub/sub patterns
-- `[[../System/API Design]]` — MCP uses JSON-RPC 2.0 over HTTP; same API design concerns apply
-- `[[../Emergent Tech/Agent Transition]]` — MCP is a key enabler of agentic pipelines
+- `[[Computing/Architectonic Pillars/System/Infrastructure/Message Queue]]` — MCP over SSE shares pub/sub patterns
+- `[[Computing/Architectonic Pillars/System/API Design]]` — MCP uses JSON-RPC 2.0 over HTTP; same API design concerns apply
+- `[[Computing/Architectonic Pillars/Emergent Tech/Agent Transition]]` — MCP is a key enabler of agentic pipelines
 
 ---
 

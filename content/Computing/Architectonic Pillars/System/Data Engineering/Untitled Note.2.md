@@ -11,16 +11,16 @@ Event format
 * key value pair ; list, tuples, json 
 * key value pair with a timestamp 
 
-![[Computer Science/Data Engineering/_resources/Untitled_Note.2.resources/unknown_filename.1.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/Untitled_Note.2.resources/unknown_filename.1.png]]
 
-![[Computer Science/Data Engineering/_resources/Untitled_Note.2.resources/unknown_filename.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/Untitled_Note.2.resources/unknown_filename.png]]
 
 ESP acts as middle ware 
-![[Computer Science/Data Engineering/_resources/Untitled_Note.2.resources/unknown_filename.2.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/Untitled_Note.2.resources/unknown_filename.2.png]]
 
-![[Computer Science/Data Engineering/_resources/Untitled_Note.2.resources/unknown_filename.3.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/Untitled_Note.2.resources/unknown_filename.3.png]]
 
-![[Computer Science/Data Engineering/_resources/Untitled_Note.2.resources/unknown_filename.4.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/Untitled_Note.2.resources/unknown_filename.4.png]]
 
 Event Streaming Platform
 

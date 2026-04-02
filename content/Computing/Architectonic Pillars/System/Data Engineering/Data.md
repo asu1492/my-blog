@@ -14,7 +14,7 @@ Small Data vs Big Data
 * Fifth Value : better decisions and new market opportunity 
 * ![[image (32).png]]![[image (31).png]]![[image (30).png]]
 
-![[Computer Science/Data Engineering/_resources/Data.resources/unknown_filename.2.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/Data.resources/unknown_filename.2.png]]
 
 BD Use Case
 
@@ -68,7 +68,7 @@ Data Sources
 2. machine data
 3. transactional data 
 
-![[Computer Science/Data Engineering/_resources/Data.resources/Image.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/Data.resources/Image.png]]
 
 * * *
 
@@ -203,6 +203,6 @@ OS Platforms 
 
 * * *
 
-![[Computer Science/Data Engineering/_resources/Data.resources/unknown_filename.1.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/Data.resources/unknown_filename.1.png]]
 
-![[Computer Science/Data Engineering/_resources/Data.resources/unknown_filename.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/Data.resources/unknown_filename.png]]

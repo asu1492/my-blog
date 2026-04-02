@@ -30,41 +30,41 @@ What is MongoDb 
 1. Document and NOSQL database. 
 2. prioritise availability over consistency. (CAP Theorem) 
 	
-3. ![[Computer Science/Databases/_resources/MongoDB.resources/unknown_filename.22.png]]
-4. ![[Computer Science/Databases/_resources/MongoDB.resources/unknown_filename.10.png]]
+3. ![[Computing/Architectonic Pillars/System/Databases/_resources/MongoDB.resources/unknown_filename.22.png]]
+4. ![[Computing/Architectonic Pillars/System/Databases/_resources/MongoDB.resources/unknown_filename.10.png]]
 
-![[Computer Science/Databases/_resources/MongoDB.resources/unknown_filename.21.png]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/MongoDB.resources/unknown_filename.21.png]]
 
-![[Computer Science/Databases/_resources/MongoDB.resources/unknown_filename.16.png]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/MongoDB.resources/unknown_filename.16.png]]
 
-![[Computer Science/Databases/_resources/MongoDB.resources/unknown_filename.30.png]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/MongoDB.resources/unknown_filename.30.png]]
 
-![[Computer Science/Databases/_resources/MongoDB.resources/unknown_filename.20.png]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/MongoDB.resources/unknown_filename.20.png]]
 
-![[Computer Science/Databases/_resources/MongoDB.resources/unknown_filename.18.png]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/MongoDB.resources/unknown_filename.18.png]]
 
-![[Computer Science/Databases/_resources/MongoDB.resources/unknown_filename.32.png]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/MongoDB.resources/unknown_filename.32.png]]
 
 * * *
 
 Adv of MongoDB
-![[Computer Science/Databases/_resources/MongoDB.resources/unknown_filename.28.png]]
-![[Computer Science/Databases/_resources/MongoDB.resources/unknown_filename.25.png]]
-![[Computer Science/Databases/_resources/MongoDB.resources/unknown_filename.17.png]]
-![[Computer Science/Databases/_resources/MongoDB.resources/unknown_filename.23.png]]
-![[Computer Science/Databases/_resources/MongoDB.resources/unknown_filename.19.png]]
-![[Computer Science/Databases/_resources/MongoDB.resources/unknown_filename.24.png]]
-![[Computer Science/Databases/_resources/MongoDB.resources/unknown_filename.9.png]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/MongoDB.resources/unknown_filename.28.png]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/MongoDB.resources/unknown_filename.25.png]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/MongoDB.resources/unknown_filename.17.png]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/MongoDB.resources/unknown_filename.23.png]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/MongoDB.resources/unknown_filename.19.png]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/MongoDB.resources/unknown_filename.24.png]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/MongoDB.resources/unknown_filename.9.png]]
 
 * * *
 
-![[Computer Science/Databases/_resources/MongoDB.resources/unknown_filename.12.png]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/MongoDB.resources/unknown_filename.12.png]]
 
-![[Computer Science/Databases/_resources/MongoDB.resources/unknown_filename.14.png]]
-![[Computer Science/Databases/_resources/MongoDB.resources/unknown_filename.31.png]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/MongoDB.resources/unknown_filename.14.png]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/MongoDB.resources/unknown_filename.31.png]]
 
-![[Computer Science/Databases/_resources/MongoDB.resources/unknown_filename.11.png]]
-![[Computer Science/Databases/_resources/MongoDB.resources/unknown_filename.26.png]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/MongoDB.resources/unknown_filename.11.png]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/MongoDB.resources/unknown_filename.26.png]]
 
 * MongoDB is a document and NoSQL database. 
 * It is easy to access by indexing. 
@@ -87,32 +87,32 @@ Adv of MongoDB
 * MongoClient is a class that helps you interact with MongoDB
 
 Indexes
-![[Computer Science/Databases/_resources/MongoDB.resources/unknown_filename.52.png]]
-![[Computer Science/Databases/_resources/MongoDB.resources/unknown_filename.39.png]]
-![[Computer Science/Databases/_resources/MongoDB.resources/unknown_filename.45.png]]
-![[Computer Science/Databases/_resources/MongoDB.resources/unknown_filename.44.png]]
-![[Computer Science/Databases/_resources/MongoDB.resources/unknown_filename.49.png]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/MongoDB.resources/unknown_filename.52.png]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/MongoDB.resources/unknown_filename.39.png]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/MongoDB.resources/unknown_filename.45.png]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/MongoDB.resources/unknown_filename.44.png]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/MongoDB.resources/unknown_filename.49.png]]
 
 * MongoDB stores indexes in tree form 
 
-![[Computer Science/Databases/_resources/MongoDB.resources/unknown_filename.35.png]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/MongoDB.resources/unknown_filename.35.png]]
 
-![[Computer Science/Databases/_resources/MongoDB.resources/unknown_filename.37.png]]
-![[Computer Science/Databases/_resources/MongoDB.resources/unknown_filename.41.png]]
-![[Computer Science/Databases/_resources/MongoDB.resources/unknown_filename.47.png]]
-![[Computer Science/Databases/_resources/MongoDB.resources/unknown_filename.53.png]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/MongoDB.resources/unknown_filename.37.png]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/MongoDB.resources/unknown_filename.41.png]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/MongoDB.resources/unknown_filename.47.png]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/MongoDB.resources/unknown_filename.53.png]]
 
-![[Computer Science/Databases/_resources/MongoDB.resources/unknown_filename.48.png]]![[Computer Science/Databases/_resources/MongoDB.resources/unknown_filename.51.png]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/MongoDB.resources/unknown_filename.48.png]]![[Computing/Architectonic Pillars/System/Databases/_resources/MongoDB.resources/unknown_filename.51.png]]
 
-![[Computer Science/Databases/_resources/MongoDB.resources/unknown_filename.36.png]]
-![[Computer Science/Databases/_resources/MongoDB.resources/unknown_filename.43.png]]
-![[Computer Science/Databases/_resources/MongoDB.resources/unknown_filename.33.png]]
-![[Computer Science/Databases/_resources/MongoDB.resources/unknown_filename.46.png]]
-![[Computer Science/Databases/_resources/MongoDB.resources/unknown_filename.54.png]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/MongoDB.resources/unknown_filename.36.png]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/MongoDB.resources/unknown_filename.43.png]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/MongoDB.resources/unknown_filename.33.png]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/MongoDB.resources/unknown_filename.46.png]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/MongoDB.resources/unknown_filename.54.png]]
 
-![[Computer Science/Databases/_resources/MongoDB.resources/unknown_filename.40.png]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/MongoDB.resources/unknown_filename.40.png]]
 
-![[Computer Science/Databases/_resources/MongoDB.resources/unknown_filename.42.png]]![[Computer Science/Databases/_resources/MongoDB.resources/unknown_filename.50.png]]![[Computer Science/Databases/_resources/MongoDB.resources/unknown_filename.55.png]]![[Computer Science/Databases/_resources/MongoDB.resources/unknown_filename.34.png]]![[Computer Science/Databases/_resources/MongoDB.resources/unknown_filename.38.png]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/MongoDB.resources/unknown_filename.42.png]]![[Computing/Architectonic Pillars/System/Databases/_resources/MongoDB.resources/unknown_filename.50.png]]![[Computing/Architectonic Pillars/System/Databases/_resources/MongoDB.resources/unknown_filename.55.png]]![[Computing/Architectonic Pillars/System/Databases/_resources/MongoDB.resources/unknown_filename.34.png]]![[Computing/Architectonic Pillars/System/Databases/_resources/MongoDB.resources/unknown_filename.38.png]]
 
 * * *
 
@@ -143,18 +143,18 @@ docker exec \-it test-mongo mongo
 
 **Create Operations** 
 
-db.collectionName.insertOne() -- insertOne is function to add record or a doc in our database. ![[Computer Science/Databases/_resources/MongoDB.resources/unknown_filename.png]]
-![[Computer Science/Databases/_resources/MongoDB.resources/unknown_filename.27.png]]
+db.collectionName.insertOne() -- insertOne is function to add record or a doc in our database. ![[Computing/Architectonic Pillars/System/Databases/_resources/MongoDB.resources/unknown_filename.png]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/MongoDB.resources/unknown_filename.27.png]]
 
 db.collectionName.insertMany()
-![[Computer Science/Databases/_resources/MongoDB.resources/unknown_filename.8.png]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/MongoDB.resources/unknown_filename.8.png]]
 
 **Read Operations**
 
 1. \_\_\_.findOne() : return first thing that matches query || findOne({type='dog"})
 2. .find()
-3. ![[Computer Science/Databases/_resources/MongoDB.resources/unknown_filename.13.png]]
-4. ![[Computer Science/Databases/_resources/MongoDB.resources/unknown_filename.29.png]]
+3. ![[Computing/Architectonic Pillars/System/Databases/_resources/MongoDB.resources/unknown_filename.13.png]]
+4. ![[Computing/Architectonic Pillars/System/Databases/_resources/MongoDB.resources/unknown_filename.29.png]]
 
 **Count** 
 
@@ -165,11 +165,11 @@ db.collectionName.insertMany()
 
 **Updates** 
 
-1. db.pets.updateOne(); ![[Computer Science/Databases/_resources/MongoDB.resources/unknown_filename.2.png]]
+1. db.pets.updateOne(); ![[Computing/Architectonic Pillars/System/Databases/_resources/MongoDB.resources/unknown_filename.2.png]]
 2. db.pets.updateMany() 
-3. Increment age by 1![[Computer Science/Databases/_resources/MongoDB.resources/unknown_filename.1.png]]
+3. Increment age by 1![[Computing/Architectonic Pillars/System/Databases/_resources/MongoDB.resources/unknown_filename.1.png]]
 4. Constructing Changes document for update 
-	1. ![[Computer Science/Databases/_resources/MongoDB.resources/unknown_filename.15.png]]
+	1. ![[Computing/Architectonic Pillars/System/Databases/_resources/MongoDB.resources/unknown_filename.15.png]]
 	2. 
 
 1. <https://docs.mongodb.com/manual/reference/operator/update/>
@@ -179,7 +179,7 @@ db.collectionName.insertMany()
 3. For better visualization, can append .toarray() -- db.collectionName.limit(5).toArray()
 4. Age greater than 12 --- $gt
 5. Query Operator : $gt | $gte | $lt | $lte | $eq | $ne -- can also be used with strings 
-	1. ![[Computer Science/Databases/_resources/MongoDB.resources/unknown_filename.4.png]]
+	1. ![[Computing/Architectonic Pillars/System/Databases/_resources/MongoDB.resources/unknown_filename.4.png]]
 6. Logical operators 
 	1. db.pets.count({type: "bird", **$and:** \[{age: {$gte: 4}}, {age: {$lte: 8}}\]})
 7. Sorting
@@ -190,18 +190,18 @@ db.collectionName.insertMany()
 	1. db.pets.find({type: "dog"}, **{name: 1}**).limit(5) -- it will only pull name from database
 	2. lesser bandwidth + added security 
 	3. can disallow even id through : db.pets.find({type: "dog"}, {name: 1, \_id: 0}).limit(5)
-	4. ![[Computer Science/Databases/_resources/MongoDB.resources/unknown_filename.3.png]]
+	4. ![[Computing/Architectonic Pillars/System/Databases/_resources/MongoDB.resources/unknown_filename.3.png]]
 
 +++++++
 upsert
 +++++++
 
-1. update if exist, else insert ![[Computer Science/Databases/_resources/MongoDB.resources/unknown_filename.5.png]]
+1. update if exist, else insert ![[Computing/Architectonic Pillars/System/Databases/_resources/MongoDB.resources/unknown_filename.5.png]]
 
 +++++++
 delete
 +++++++
-![[Computer Science/Databases/_resources/MongoDB.resources/unknown_filename.6.png]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/MongoDB.resources/unknown_filename.6.png]]
 
 * * *
 
@@ -268,7 +268,7 @@ Indexes
         },
         "ok" : 1
 
-![[Computer Science/Databases/_resources/MongoDB.resources/unknown_filename.7.png]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/MongoDB.resources/unknown_filename.7.png]]
 
 * * *
 

@@ -34,7 +34,7 @@ Running SQL Query
 3. Aggregation Data 
 	1. DF has inbuilt commonly used aggregation functions - count(), countDistinct(), avg(), max(), min(), and others. 
 	2. Aggregation using SQL queries and tableview 
-	3. ![[Computer Science/Data Engineering/Apache Spark/_resources/Spark_SQL.resources/image (2).png]]
+	3. ![[Computing/Architectonic Pillars/System/Data Engineering/Apache Spark/_resources/Spark_SQL.resources/image (2).png]]
 	4. sdf.select('column').show(5)
 
 SPARK SQL Optimization 
@@ -51,7 +51,7 @@ SPARK SQL Optimization 
 		2. Logical Optimization - evolution of LP to Optimized logical plan. OLP is rule based optimization and rules such as folding, push down and pruning are applied.  
 		3. Physical Planning -- based on OLP. Multiple PP are generated with computation requirement. PP with least cost is than given go ahead. 
 		4. Code Generation - Java byte code is generated on selected Physical Plan.  
-	7. ![[Computer Science/Data Engineering/Apache Spark/_resources/Spark_SQL.resources/image (3).png]]
+	7. ![[Computing/Architectonic Pillars/System/Data Engineering/Apache Spark/_resources/Spark_SQL.resources/image (3).png]]
 3. Rule based optimization 
 	1. defines how to run the query 
 	2. e.g. is table indexed, does query contain only the required columns ? 

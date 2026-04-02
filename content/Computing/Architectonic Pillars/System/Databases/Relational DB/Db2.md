@@ -31,14 +31,14 @@ Db2 on Cloud 
 
 Db2 scalability with partitioning 
 
-![[Computer Science/Databases/_resources/Db2.resources/unknown_filename.png]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/Db2.resources/unknown_filename.png]]
 
 * * *
 
 * Remainder or Mod Operator 
 	* WHERE mod(ID,2) = 0
 
-![[Computer Science/Databases/_resources/Db2.resources/instructions.md.pdf]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/Db2.resources/instructions.md.pdf]]
 
 * * *
 

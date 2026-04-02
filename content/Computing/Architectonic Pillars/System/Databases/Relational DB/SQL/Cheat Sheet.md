@@ -1,3 +1,3 @@
 ---
 ---
-![[Computer Science/Databases/_resources/Cheat_Sheet.resources/unknown_filename.png]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/Cheat_Sheet.resources/unknown_filename.png]]

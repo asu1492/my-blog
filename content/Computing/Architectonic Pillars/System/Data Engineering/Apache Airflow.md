@@ -22,7 +22,7 @@ Challenges 
 
 DAG
 
-1. ![[Computer Science/Data Engineering/_resources/Apache_Airflow.resources/unknown_filename.7.png]]
+1. ![[Computing/Architectonic Pillars/System/Data Engineering/_resources/Apache_Airflow.resources/unknown_filename.7.png]]
 2. Data in graph stored in form of nodes and connections
 3. Acyclic graph avoid cycles
 4. Directed as flow has defined direction
@@ -49,13 +49,13 @@ Features
 3. Extensible 
 4. Lean 
 
-![[Computer Science/Data Engineering/_resources/Apache_Airflow.resources/unknown_filename.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/Apache_Airflow.resources/unknown_filename.png]]
 
-![[Computer Science/Data Engineering/_resources/Apache_Airflow.resources/unknown_filename.1.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/Apache_Airflow.resources/unknown_filename.1.png]]
 
-![[Computer Science/Data Engineering/_resources/Apache_Airflow.resources/unknown_filename.2.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/Apache_Airflow.resources/unknown_filename.2.png]]
 
-![[Computer Science/Data Engineering/_resources/Apache_Airflow.resources/unknown_filename.3.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/Apache_Airflow.resources/unknown_filename.3.png]]
 
 Key adv of AA
 
@@ -75,9 +75,9 @@ AA Logs 
 
 * * *
 
-![[Computer Science/Data Engineering/_resources/Apache_Airflow.resources/unknown_filename.4.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/Apache_Airflow.resources/unknown_filename.4.png]]
 
-![[Computer Science/Data Engineering/_resources/Apache_Airflow.resources/unknown_filename.5.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/Apache_Airflow.resources/unknown_filename.5.png]]
 
 * * *
 
@@ -91,7 +91,7 @@ AA Logs 
 
 ![[Getting started with Apache Airflow.md.pdf]]
 
-![[Computer Science/Data Engineering/_resources/Apache_Airflow.resources/unknown_filename.6.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/Apache_Airflow.resources/unknown_filename.6.png]]
 
 Recent Tasks
 

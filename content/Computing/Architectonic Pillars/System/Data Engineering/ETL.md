@@ -1,9 +1,9 @@
 ---
 source: https://www.coursera.org/learn/etl-and-data-pipelines-shell-airflow-kafka/supplement/tyIMH/etl-techniques
 ---
-![[Computer Science/Data Engineering/_resources/ETL.resources/unknown_filename.7.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/ETL.resources/unknown_filename.7.png]]
 
-![[Computer Science/Data Engineering/_resources/ETL.resources/Image.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/ETL.resources/Image.png]]
 Following techniques are used to bring your data into your cloud datastore / data pipeline deployment
 
 1. ETL 
@@ -61,7 +61,7 @@ ETL
 
 Traditionally, the overall accuracy of the ETL workflow has been a more important requirement than speed, although efficiency is usually an important factor in minimizing resource costs. To boost efficiency, data is fed through a data pipeline in smaller packets (see Figure 2). While one packet is being extracted, an earlier packet is being transformed, and another is being loaded. In this way, data can keep moving through the workflow without interruption. Any remaining bottlenecks within the pipeline can often be handled by parallelizing slower tasks.
 
-![[Computer Science/Data Engineering/_resources/ETL.resources/unknown_filename.6.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/ETL.resources/unknown_filename.6.png]]
 
 * * *
 
@@ -97,7 +97,7 @@ ETL vs ELT 
 | largely used for relational data, on premise, scalability is difficult | Make use of on demand scalability of cloud and handles both structured and unstructured data |
 | Workflows development takes time | Real time in interactive env |
 
-![[Computer Science/Data Engineering/_resources/ETL.resources/unknown_filename.5.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/ETL.resources/unknown_filename.5.png]]
 
 1. ELT emerge as result of bigdata processing 
 2. In ELT, all data resides in data lake(raw data, purpose of data is not defined) 
@@ -107,16 +107,16 @@ ETL vs ELT 
 
 ETL using shell scripting
 
-![[Computer Science/Data Engineering/_resources/ETL.resources/unknown_filename.1.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/ETL.resources/unknown_filename.1.png]]
 
-![[Computer Science/Data Engineering/_resources/ETL.resources/unknown_filename.4.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/ETL.resources/unknown_filename.4.png]]
 
-![[Computer Science/Data Engineering/_resources/ETL.resources/unknown_filename.jpeg]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/ETL.resources/unknown_filename.jpeg]]
 
 Cloud Based ELT Operations 
-![[Computer Science/Data Engineering/_resources/ETL.resources/unknown_filename.3.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/ETL.resources/unknown_filename.3.png]]
 
-![[Computer Science/Data Engineering/_resources/ETL.resources/unknown_filename.2.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/ETL.resources/unknown_filename.2.png]]
 
 * * *
 

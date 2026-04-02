@@ -9,7 +9,7 @@
 
 Spark Architecture has driver and executor processes, coordinated by the Spark Context in the Driver. Driver creates jobs and the Spark Context spits them into tasks which can be run in parallel in the executors on the cluster. 
 
-![[Computer Science/Data Engineering/Apache Spark/_resources/Apache_Architecture.resources/unknown_filename.4.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/Apache Spark/_resources/Apache_Architecture.resources/unknown_filename.4.png]]
 
 Spark : Two Main Processes
 
@@ -21,7 +21,7 @@ Spark : Two Main Processes
 	1. process running multiple threads that perform work concurrently 
 	2. multiple processes throughout the cluster that carries out work in parallel  
 	3. They works independently, 
-	4. ![[Computer Science/Data Engineering/Apache Spark/_resources/Apache_Architecture.resources/unknown_filename.3.png]]
+	4. ![[Computing/Architectonic Pillars/System/Data Engineering/Apache Spark/_resources/Apache_Architecture.resources/unknown_filename.3.png]]
 
 Spark Context 
 
@@ -29,7 +29,7 @@ Spark Context 
 2. must be created in driver before RDD or DF
 3. Communicates with the cluster manager 
 4. One SC per Spark Application 
-5. ![[Computer Science/Data Engineering/Apache Spark/_resources/Apache_Architecture.resources/unknown_filename.png]]
+5. ![[Computing/Architectonic Pillars/System/Data Engineering/Apache Spark/_resources/Apache_Architecture.resources/unknown_filename.png]]
 
 Spark Jobs
 
@@ -44,7 +44,7 @@ Spark Tasks
 3. Each executor is allocated local resources in terms of memory and cores 
 4. Executor outputs result to RDD or return to Driver 
 5. Increasing cores and executors increases parallelism
-6. ![[Computer Science/Data Engineering/Apache Spark/_resources/Apache_Architecture.resources/unknown_filename.1.png]]
+6. ![[Computing/Architectonic Pillars/System/Data Engineering/Apache Spark/_resources/Apache_Architecture.resources/unknown_filename.1.png]]
 
 Spark Stages and Shuffle 
 
@@ -67,4 +67,4 @@ Executor - Core combination
 
 1. Ideal - 1 x 8 
 
-![[Computer Science/Data Engineering/Apache Spark/_resources/Apache_Architecture.resources/unknown_filename.2.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/Apache Spark/_resources/Apache_Architecture.resources/unknown_filename.2.png]]

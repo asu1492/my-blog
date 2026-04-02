@@ -12,9 +12,9 @@ In your scenario, you will be working with data from the following sources:
 * Customer data output as a CSV file from a bespoke customer relationship management system
 * Product information maintained in a spreadsheet exported from your supplier's database
 
-![[Computer Science/Databases/_resources/Project_Overview__Coursera.resources/unknown_filename.1.png]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/Project_Overview__Coursera.resources/unknown_filename.1.png]]
 
 ![[1652698550680.jpg]]
 
-![[Computer Science/Databases/_resources/Project_Overview__Coursera.resources/unknown_filename.2.png]]
-![[Computer Science/Databases/_resources/Project_Overview__Coursera.resources/unknown_filename.png]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/Project_Overview__Coursera.resources/unknown_filename.2.png]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/Project_Overview__Coursera.resources/unknown_filename.png]]

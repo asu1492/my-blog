@@ -85,7 +85,7 @@ The tables in the mysql database fall into several categories, some of which i
 * Log System Tables
 * Server-Side Help System Tables
 
-![[Computer Science/Databases/_resources/MySQL.resources/instructions.md.pdf]]
+![[Computing/Architectonic Pillars/System/Databases/_resources/MySQL.resources/instructions.md.pdf]]
 
 ![[MYSQL1.pdf]]
 

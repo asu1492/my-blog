@@ -1,15 +1,15 @@
 ---
 source: https://www.coursera.org/learn/introduction-to-data-engineering/supplement/3U6dW/summary-and-highlights
 ---
-![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.15.png]]
-![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.19.png]]![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.18.png]]![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.3.png]]![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.33.png]]![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.20.png]]![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.34.png]]![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.8.png]]![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.31.png]]![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.29.png]]![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.32.png]]![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.21.png]]![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.2.png]]![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.7.png]]![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.png]]![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.14.png]]![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.25.png]]![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.24.png]]![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.12.png]]![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.11.png]]![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.1.png]]![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.9.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.15.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.19.png]]![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.18.png]]![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.3.png]]![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.33.png]]![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.20.png]]![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.34.png]]![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.8.png]]![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.31.png]]![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.29.png]]![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.32.png]]![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.21.png]]![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.2.png]]![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.7.png]]![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.png]]![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.14.png]]![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.25.png]]![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.24.png]]![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.12.png]]![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.11.png]]![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.1.png]]![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.9.png]]
 
 Data Engineering 
-![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.22.png]]![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.13.png]]![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.16.png]]![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.17.png]]![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.30.png]]![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.5.png]]![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.35.png]]![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.28.png]]![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.23.png]]![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.4.png]]![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.27.png]]![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.6.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.22.png]]![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.13.png]]![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.16.png]]![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.17.png]]![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.30.png]]![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.5.png]]![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.35.png]]![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.28.png]]![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.23.png]]![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.4.png]]![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.27.png]]![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.6.png]]
 
-![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.10.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.10.png]]
 
-![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.26.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.26.png]]
 
 Modern data ecosystem includes a network of interconnected and continually evolving entities that include:
 \* Data, that is available in a host of different ==formats, structures, and sources.==
@@ -19,47 +19,47 @@ Emerging technologies such as Cloud Computing, Machine Learning, and Big Data, a
 Data Engineers, Data Analysts, Data Scientists, Business Analysts, and Business Intelligence Analysts, all play a vital role in the ecosystem for deriving insights and business results from data.
 The goal of Data Engineering is to make quality data available for analytics and decision-making. And it does this by collecting raw source data, processing data so it becomes usable, storing data, and making quality data available to users securely.
 
-![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.83.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.83.png]]
 
-![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.78.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.78.png]]
 
-![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.37.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.37.png]]
 
-![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.51.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.51.png]]
 
-![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.54.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.54.png]]
 
-![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.90.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.90.png]]
 
-![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.58.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.58.png]]
 
-![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.63.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.63.png]]
 
-![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.53.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.53.png]]
 
-![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.36.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.36.png]]
 
-![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.52.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.52.png]]
 
-![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.77.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.77.png]]
 
-![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.59.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.59.png]]
 
-![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.87.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.87.png]]
 
-![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.57.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.57.png]]
 
-![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.38.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.38.png]]
 
-![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.75.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.75.png]]
 
-![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.55.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.55.png]]
 
-![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.85.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.85.png]]
 
-![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.92.png]]![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.93.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.92.png]]![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.93.png]]
 
-![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.62.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.62.png]]
 The role of a Data Engineer includes:
 
 * Gathering data from disparate sources.
@@ -91,61 +91,61 @@ Data comes in a wide-ranging variety of file formats, such as, delimited text fi
 
 Data is extracted from multiple data sources, ranging from relational and non-relational databases, to APIs, web services, data streams, social platforms, and sensor devices.
 
-![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.69.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.69.png]]
 
-![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.88.png]] 
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.88.png]] 
 
-![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.74.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.74.png]]
 
-![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.45.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.45.png]]
 
-![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.60.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.60.png]]
 
-![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.49.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.49.png]]
 
-![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.46.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.46.png]]
 
-![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.41.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.41.png]]
 
-![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.47.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.47.png]]
 
-![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.96.png]]![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.48.png]]![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.64.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.96.png]]![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.48.png]]![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.64.png]]
 
-![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.61.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.61.png]]
 
-![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.84.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.84.png]]
 
-![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.72.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.72.png]]
 
-![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.39.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.39.png]]
 
-![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.95.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.95.png]]
 
-![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.79.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.79.png]]
 
-![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.70.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.70.png]]
 
-![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.89.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.89.png]]
 
-![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.86.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.86.png]]
 
-![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.43.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.43.png]]
 
-![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.56.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.56.png]]
 
-![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.66.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.66.png]]
 
-![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.44.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.44.png]]
 
-![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.67.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.67.png]]
 
-![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.91.png]]![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.71.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.91.png]]![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.71.png]]
 
-![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.50.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.50.png]]
 
-![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.65.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.65.png]]
 
-![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.73.png]]![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.81.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.73.png]]![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.81.png]]
 
 Once the data is identified and gathered from different sources, it needs to be staged in a data repository so that it can be prepared for analysis. The type, format, and sources of data influence the type of data repository that can be used.
 
@@ -153,12 +153,12 @@ Data professionals need a host of languages that can help them extract, prepare,
 \* Querying languages, such as SQL, used for accessing and manipulating data from databases.
 \* Programming languages such as Python, R, and Java, for developing applications and controlling application behavior.
 \* Shell and Scripting languages, such as Unix/Linux Shell, and PowerShell, for automating repetitive operational tasks.
-![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.40.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.40.png]]
 
-![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.42.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.42.png]]
 
-![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.94.png]]![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.82.png]]![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.76.png]]![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.68.png]]
-![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.80.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.94.png]]![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.82.png]]![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.76.png]]![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.68.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.80.png]]
 
 \* Metadata is data that provides information about other data, and includes three main types: technical, process, and business metadata
 \* The technical metadata for relational databases is typically stored in specialized tables in the database called the system catalog
@@ -186,20 +186,20 @@ The different types of Data Repositories include:
 
 ![[unknown_filename.207.png]]
 
-![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.130.png]]![[unknown_filename.171.png]]![[unknown_filename.261.png]]![[unknown_filename.218.png]]![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.139.png]]![[unknown_filename.166.png]]![[unknown_filename.237.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.130.png]]![[unknown_filename.171.png]]![[unknown_filename.261.png]]![[unknown_filename.218.png]]![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.139.png]]![[unknown_filename.166.png]]![[unknown_filename.237.png]]
 
 ![[unknown_filename.335.png]]![[unknown_filename.202.png]]
 
-![[unknown_filename.310.png]]![[unknown_filename.178.png]]![[unknown_filename.236.png]]![[unknown_filename.205.png]]![[unknown_filename.280.png]]![[unknown_filename.256.png]]![[unknown_filename.337.png]]![[unknown_filename.328.png]]![[unknown_filename.215.png]]![[unknown_filename.247.png]]![[unknown_filename.251.png]]![[unknown_filename.326.png]]![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.102.png]]![[unknown_filename.227.png]]![[unknown_filename.158.png]]![[unknown_filename.313.png]]
+![[unknown_filename.310.png]]![[unknown_filename.178.png]]![[unknown_filename.236.png]]![[unknown_filename.205.png]]![[unknown_filename.280.png]]![[unknown_filename.256.png]]![[unknown_filename.337.png]]![[unknown_filename.328.png]]![[unknown_filename.215.png]]![[unknown_filename.247.png]]![[unknown_filename.251.png]]![[unknown_filename.326.png]]![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.102.png]]![[unknown_filename.227.png]]![[unknown_filename.158.png]]![[unknown_filename.313.png]]
 ![[unknown_filename.235.png]]![[unknown_filename.244.png]]
 
-![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.135.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.135.png]]
 
 ![[unknown_filename.303.png]]
 
-![[unknown_filename.208.png]]![[unknown_filename.262.png]]![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.112.png]]![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.121.png]]
+![[unknown_filename.208.png]]![[unknown_filename.262.png]]![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.112.png]]![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.121.png]]
 
-![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.123.png]]![[unknown_filename.316.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.123.png]]![[unknown_filename.316.png]]
 
 ![[unknown_filename.321.png]]![[unknown_filename.299.png]]![[unknown_filename.268.png]]![[unknown_filename.197.png]]
 
@@ -208,7 +208,7 @@ The different types of Data Repositories include:
 ![[unknown_filename.298.png]]
 ![[unknown_filename.254.png]]
 
-![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.119.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.119.png]]
 
 ![[unknown_filename.242.png]]
 
@@ -228,13 +228,13 @@ The ETL, or Extract Transform and Load, Process is an automated process that con
 The ELT, or Extract Load and Transfer, Process is a variation of the ETL Process. In this process, extracted data is loaded into the target system before the transformations are applied. This process is ideal for Data Lakes and working with Big Data.
 Data Pipeline, sometimes used interchangeably with ETL and ELT, encompasses the entire journey of moving data from its source to a destination data lake or application, using the ETL or ELT process.
 
-![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.147.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.147.png]]
 
-![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.136.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.136.png]]
 
 ![[unknown_filename.252.png]]![[unknown_filename.173.png]]
 
-![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.120.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.120.png]]
 
 ![[unknown_filename.155.png]]
 
@@ -242,7 +242,7 @@ Data Pipeline, sometimes used interchangeably with ETL and ELT, encompasses the 
 
 ![[unknown_filename.164.png]]
 
-![[unknown_filename.322.png]]![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.146.png]]
+![[unknown_filename.322.png]]![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.146.png]]
 
 ![[unknown_filename.153.png]]
 
@@ -259,7 +259,7 @@ Data Integration Platforms combine disparate sources of data, physically or logi
 
 ![[unknown_filename.293.png]]
 
-![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.103.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.103.png]]
 
 ![[unknown_filename.274.png]]
 ![[unknown_filename.234.png]]
@@ -278,7 +278,7 @@ Data Integration Platforms combine disparate sources of data, physically or logi
 
 ![[unknown_filename.187.png]]
 
-![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.107.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.107.png]]
 
 ![[unknown_filename.238.png]]
 
@@ -295,19 +295,19 @@ Data Integration Platforms combine disparate sources of data, physically or logi
 
 ![[unknown_filename.246.png]]
 
-![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.142.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.142.png]]
 
 ![[unknown_filename.183.png]]
 
 ![[unknown_filename.270.png]]![[unknown_filename.330.png]]![[unknown_filename.201.png]]
 
-![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.129.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.129.png]]
 
-![[unknown_filename.257.png]]![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.114.png]]![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.110.png]]
+![[unknown_filename.257.png]]![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.114.png]]![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.110.png]]
 
 Data locality minimizes congestion and increases throughput 
 
-![[unknown_filename.196.png]]![[unknown_filename.311.png]] ![[unknown_filename.184.png]]![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.131.png]]
+![[unknown_filename.196.png]]![[unknown_filename.311.png]] ![[unknown_filename.184.png]]![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.131.png]]
 
 ![[unknown_filename.264.png]]
 
@@ -328,9 +328,9 @@ A well-designed data repository is essential for building a system that is scala
 
 ![[unknown_filename.345.png]]![[unknown_filename.346.png]]![[unknown_filename.336.png]]
 
-![[unknown_filename.243.png]]![[unknown_filename.297.png]]![[unknown_filename.245.png]]![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.128.png]]![[unknown_filename.329.png]]![[unknown_filename.250.png]]
+![[unknown_filename.243.png]]![[unknown_filename.297.png]]![[unknown_filename.245.png]]![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.128.png]]![[unknown_filename.329.png]]![[unknown_filename.250.png]]
 
-![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.117.png]]![[unknown_filename.287.png]]![[unknown_filename.165.png]]![[unknown_filename.149.png]]![[unknown_filename.193.png]]![[unknown_filename.318.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.117.png]]![[unknown_filename.287.png]]![[unknown_filename.165.png]]![[unknown_filename.149.png]]![[unknown_filename.193.png]]![[unknown_filename.318.png]]
 
 ![[unknown_filename.192.png]]
 
@@ -338,16 +338,16 @@ A well-designed data repository is essential for building a system that is scala
 
 ![[unknown_filename.289.png]]![[unknown_filename.169.png]]![[unknown_filename.206.png]]![[unknown_filename.211.png]]
 
-![[unknown_filename.302.png]]![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.105.png]]![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.122.png]]![[unknown_filename.334.png]]
+![[unknown_filename.302.png]]![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.105.png]]![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.122.png]]![[unknown_filename.334.png]]
 
-![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.108.png]]![[unknown_filename.163.png]]![[unknown_filename.226.png]]![[unknown_filename.224.png]]![[unknown_filename.285.png]]![[unknown_filename.331.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.108.png]]![[unknown_filename.163.png]]![[unknown_filename.226.png]]![[unknown_filename.224.png]]![[unknown_filename.285.png]]![[unknown_filename.331.png]]
 
 **Security** 
 The CIA, or Confidentiality, Integrity, and Availability triad are three key components of an effective strategy for information security. The CIA triad is applicable to all facets of security, be it infrastructure, network, application, or data security.
 
-![[unknown_filename.327.png]]![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.140.png]]![[unknown_filename.338.png]]![[unknown_filename.315.png]]![[unknown_filename.269.png]]![[unknown_filename.223.png]]![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.125.png]]![[unknown_filename.179.png]]![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.132.png]]![[unknown_filename.305.png]]![[unknown_filename.181.png]]
+![[unknown_filename.327.png]]![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.140.png]]![[unknown_filename.338.png]]![[unknown_filename.315.png]]![[unknown_filename.269.png]]![[unknown_filename.223.png]]![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.125.png]]![[unknown_filename.179.png]]![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.132.png]]![[unknown_filename.305.png]]![[unknown_filename.181.png]]
 
-![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.109.png]]![[unknown_filename.159.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.109.png]]![[unknown_filename.159.png]]
 
 * * *
 
@@ -356,7 +356,7 @@ The CIA, or Confidentiality, Integrity, and Availability triad are three key com
 Depending on where the data must be sourced from, there are a number of methods and tools available for gathering data. These include query languages for extracting data from databases, APIs, Web Scraping, Data Streams, RSS Feeds, and Data Exchanges.
 
 A variety of software and tools are available for the data wrangling process. Some of the popularly used ones include Excel Power Query, Spreadsheets, OpenRefine, Google DataPrep, Watson Studio Refinery, Trifacta Wrangler, Python, and R, each with their own set of features, strengths, limitations, and applications
-![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.111.png]]![[unknown_filename.260.png]]![[unknown_filename.219.png]]![[unknown_filename.284.png]]![[unknown_filename.248.png]]![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.99.png]]![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.124.png]]![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.101.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.111.png]]![[unknown_filename.260.png]]![[unknown_filename.219.png]]![[unknown_filename.284.png]]![[unknown_filename.248.png]]![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.99.png]]![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.124.png]]![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.101.png]]
 
 ![[unknown_filename.306.png]]
 
@@ -384,7 +384,7 @@ Cleansing activities include:
 
 ![[unknown_filename.278.png]]
 
-![[unknown_filename.151.png]]![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.113.png]]![[unknown_filename.314.png]]![[unknown_filename.154.png]]![[unknown_filename.225.png]]![[unknown_filename.258.png]]
+![[unknown_filename.151.png]]![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.113.png]]![[unknown_filename.314.png]]![[unknown_filename.154.png]]![[unknown_filename.225.png]]![[unknown_filename.258.png]]
 
 ![[unknown_filename.272.png]]![[unknown_filename.277.png]]![[unknown_filename.239.png]]![[unknown_filename.199.png]]
 
@@ -399,23 +399,23 @@ One of the ways in which you can explore your dataset is to query it.
 
 **![[unknown_filename.265.png]]**
 
-**![[unknown_filename.240.png]]****![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.118.png]]****![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.115.png]]****![[unknown_filename.308.png]]****![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.145.png]]****![[unknown_filename.214.png]]****![[unknown_filename.188.png]]****![[unknown_filename.319.png]]****![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.144.png]]**
+**![[unknown_filename.240.png]]****![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.118.png]]****![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.115.png]]****![[unknown_filename.308.png]]****![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.145.png]]****![[unknown_filename.214.png]]****![[unknown_filename.188.png]]****![[unknown_filename.319.png]]****![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.144.png]]**
 
 **Performance Tuning**
 \* In a data engineering lifecycle, the performance of data pipelines, platforms, databases, applications, tools, queries, and scheduled jobs, need to be constantly monitored for performance and availability.
 \* The performance of a data pipeline can get impacted if the workload increases significantly, or there are application failures, or a scheduled job does not work as expected, or some of the tools in the pipeline run into compatibility issues.
 ![[unknown_filename.340.png]]
 
-![[unknown_filename.273.png]]![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.137.png]]![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.126.png]]
+![[unknown_filename.273.png]]![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.137.png]]![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.126.png]]
 
 \* Databases are susceptible to outages, capacity overutilization, application slowdown, and conflicting activities and queries being executed simultaneously.
 \* Monitoring and alerting systems collect quantitative data in real time to give visibility into the performance of data pipelines, platforms, databases, applications, tools, queries, scheduled jobs, and more.
 \* Time-based and condition-based maintenance schedules generate data that helps identify systems and procedures responsible for faults and low availability.
-![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.97.png]]![[unknown_filename.266.png]]![[unknown_filename.222.png]]![[unknown_filename.320.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.97.png]]![[unknown_filename.266.png]]![[unknown_filename.222.png]]![[unknown_filename.320.png]]
 
-![[unknown_filename.344.png]]![[unknown_filename.186.png]]![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.100.png]]
+![[unknown_filename.344.png]]![[unknown_filename.186.png]]![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.100.png]]
 
-![[unknown_filename.301.png]]![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.138.png]]![[unknown_filename.232.png]]![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.104.png]]![[unknown_filename.296.png]]
+![[unknown_filename.301.png]]![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.138.png]]![[unknown_filename.232.png]]![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.104.png]]![[unknown_filename.296.png]]
 
 * * *
 
@@ -434,7 +434,7 @@ Tools and technologies play a critical role in the implementation of a governanc
 \* Monitoring and Alerting functionalities.
 \* Data erasure tools that ensure deleted data cannot be retrieved.
 
-![[unknown_filename.180.png]]![[unknown_filename.300.png]]![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.133.png]]![[unknown_filename.189.png]]![[unknown_filename.177.png]]![[unknown_filename.325.png]]![[unknown_filename.276.png]]![[unknown_filename.212.png]]![[unknown_filename.194.png]]![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.134.png]]![[unknown_filename.170.png]]![[unknown_filename.291.png]]![[unknown_filename.282.png]]![[unknown_filename.259.png]]![[unknown_filename.294.png]]![[unknown_filename.309.png]]![[unknown_filename.195.png]]![[unknown_filename.263.png]]![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.127.png]]
+![[unknown_filename.180.png]]![[unknown_filename.300.png]]![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.133.png]]![[unknown_filename.189.png]]![[unknown_filename.177.png]]![[unknown_filename.325.png]]![[unknown_filename.276.png]]![[unknown_filename.212.png]]![[unknown_filename.194.png]]![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.134.png]]![[unknown_filename.170.png]]![[unknown_filename.291.png]]![[unknown_filename.282.png]]![[unknown_filename.259.png]]![[unknown_filename.294.png]]![[unknown_filename.309.png]]![[unknown_filename.195.png]]![[unknown_filename.263.png]]![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.127.png]]
 
 * * *
 
@@ -497,11 +497,11 @@ Interestingly, it also opens up additional career opportunities for you as a dat
 
 * * *
 
-![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.141.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.141.png]]
 
-![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.98.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.98.png]]
 
-![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.116.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.116.png]]
 
 ![[unknown_filename.228.png]]
 
@@ -515,7 +515,7 @@ Interestingly, it also opens up additional career opportunities for you as a dat
 
 ![[unknown_filename.217.png]]
 
-![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.143.png]]
+![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.143.png]]
 
 ![[unknown_filename.204.png]]
 
@@ -530,4 +530,4 @@ Interestingly, it also opens up additional career opportunities for you as a dat
 ![[unknown_filename.172.png]]![[unknown_filename.162.png]]
 
 ![[unknown_filename.342.png]]
-![[unknown_filename.339.png]]![[unknown_filename.210.png]]![[Computer Science/Data Engineering/_resources/DE.resources/unknown_filename.106.png]]
+![[unknown_filename.339.png]]![[unknown_filename.210.png]]![[Computing/Architectonic Pillars/System/Data Engineering/_resources/DE.resources/unknown_filename.106.png]]
