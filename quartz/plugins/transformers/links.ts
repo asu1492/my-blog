@@ -148,12 +148,22 @@ export const CrawlLinks: QuartzTransformerPlugin<Partial<Options>> = (userOpts) 
                 }
 
                 if (!isAbsoluteUrl(node.properties.src, { httpOnly: false })) {
-                  let dest = node.properties.src as RelativeURL
-                  dest = node.properties.src = transformLink(
+                  const originalSrc = node.properties.src as string
+                  let dest = transformLink(
                     file.data.slug!,
-                    dest,
+                    originalSrc as RelativeURL,
                     transformOptions,
-                  )
+                  ) as string
+                  // GitHub Pages and other hosts serve extensionless paths with the wrong MIME type;
+                  // iframes then download instead of rendering. Preserve `.html` when the author asked for it.
+                  if (
+                    node.tagName === "iframe" &&
+                    originalSrc.split(/[#?]/)[0].endsWith(".html") &&
+                    !dest.split(/[#?]/)[0].endsWith(".html")
+                  ) {
+                    const hash = dest.includes("#") ? dest.slice(dest.indexOf("#")) : ""
+                    dest = dest.split(/[#?]/)[0] + ".html" + hash
+                  }
                   node.properties.src = dest
                 }
               }
