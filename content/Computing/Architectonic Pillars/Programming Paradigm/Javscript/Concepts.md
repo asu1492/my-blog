@@ -1,6 +1,0 @@
-1. Closures & Scope 2. Event Loop & Async 3. Promises & Async/Await 4. Hoisting & This Keyword 5. Prototypes & Inheritance React: 6. useState & useEffect 7. Context API & useContext 8. Custom Hooks 9. Component Lifecycle 10. State Management (Redux/Zustand) Performance & Optimization: 11. Code Splitting & Lazy Loading 12. Memoization (useMemo, useCallback) 13. Virtual DOM & Reconciliation 14. Bundle Optimization 15. Web Vitals & Performance Metrics Essential Concepts: 16. Event Delegation & Bubbling 17. Debouncing & Throttling 18. Error Boundaries & Error Handling 19. Browser Storage (localStorage, sessionStorage) 20. REST APIs & HTTP Methods
-
-2. What is Closure
-	1. A closure is created when an inner function captures variables from its outer lexical environment, keeping them alive even after the outer function has returned.
-3. What closure does
-	1. A closure allows an inner function to remember variables and the lexical scope of its outer function, even after the outer function has finished executing.

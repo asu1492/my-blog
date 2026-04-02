@@ -1,1 +1,0 @@
-1. When it comes to problem solving fortune favours the prepared mind - Louis Pasteur #quote 
