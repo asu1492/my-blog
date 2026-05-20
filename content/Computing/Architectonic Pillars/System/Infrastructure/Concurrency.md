@@ -1,5 +1,17 @@
+# Concurrency
+
+**Summary**: Covers Concurrency in system infrastructure, including key concepts, trade-offs, and practical usage.
+**Tags**: #system-design #infrastructure #concurrency
+**Created**: Unknown
+**Last Updated**: 2026-05-20
+
+---
+
 Related Notes 
-1. [[Concurrency in Java]]
+1. [[Concurrency in Java]] — Java-specific: `ReentrantLock`, `volatile`, `CompletableFuture`, `ExecutorService`
+2. [[Message Queue]] — producer-consumer coordination is a concurrency problem at the infrastructure level
+3. [[Caching]] — cache stampede / thundering herd is a concurrency problem (atomic rebuild, single-flight)
+4. Used in: [[Booking]] · [[Rate Limiter]]
 
 Why Concurrency 
 
@@ -282,3 +294,9 @@ public Result query(String sql){
 
 list of concurrency problems I solved from leetcode. 1. Print in Order 2. FooBar 3. Print FooBar Alternately 4. Print Zero Even Odd 5. Building H2O 6. Traffic Light Controlled Intersection 7. Dining Philosophers 8. The Dining Philosophers (lock ordering variant) 9. Design Bounded Blocking Queue 10. Web Crawler Multithreaded 11. Fizz Buzz Multithreaded 12. Print Numbers Alternately 13. Semaphore Example (Zero Even Odd) 14. Producer Consumer (Bounded Buffer) 15. Thread Safe Counter 16. Concurrent HashMap (conceptual) 17. Read Write Lock Implementation 18. Barrier / Cyclic Barrier 19. Countdown Latch 20. Thread Pool Design You can go through the course “Java Multithreading for Senior Engineering Interviews“ to learn multithreading in deep.
 
+---
+
+## Related Notes
+
+- [[00. Master Knowledge Map]]
+- [[System/00. Overview|System Overview]]

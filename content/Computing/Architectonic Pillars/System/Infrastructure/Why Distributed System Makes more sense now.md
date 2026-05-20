@@ -1,3 +1,11 @@
+# Why Distributed System Makes more sense now
+
+**Summary**: Covers Why Distributed System Makes more sense now in system infrastructure, including key concepts, trade-offs, and practical usage.
+**Tags**: #system-design #infrastructure #why-distributed-system-makes-more-sense-now
+**Created**: Unknown
+**Last Updated**: 2026-05-20
+
+---
 
 ### 1. CPU Clock Speeds Are Barely Increasing
 
@@ -78,3 +86,10 @@ The book emphasizes that modern applications must deal with:
 - **Data consistency across nodes**
 
 This shift is why distributed systems concepts (replication, partitioning, consensus, fault tolerance) are central to modern software architecture.
+
+---
+
+## Related Notes
+
+- [[00. Master Knowledge Map]]
+- [[System/00. Overview|System Overview]]

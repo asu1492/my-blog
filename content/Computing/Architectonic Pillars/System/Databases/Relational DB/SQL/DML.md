@@ -1,3 +1,12 @@
+# DML
+
+**Summary**: Covers DML in databases and data storage, including concepts, trade-offs, and practical usage.
+**Tags**: #system-design #databases #dml
+**Created**: Unknown
+**Last Updated**: 2026-05-20
+
+---
+
 ---
 ---
 <https://docs.google.com/spreadsheets/d/1Jr9mdVUlmL3BPa-vSl5IBZFCQ48zTxTkbvbLxMRDUQk/edit#gid=614167753>
@@ -12,16 +21,16 @@
 | LIMIT | to get the general layout of the table |
 | BETWEEN <br>  dates BETWEEN YYYY-MM-DD AND YYYY-MM-DD (ISO 8601 standard)<br><br>NOT BETWEEN |     |
 | IN <br><br>SELECT colour FROM tableName <br>WHERE colour IN ('red', 'blue', 'green')<br><br>NOT IN | enable putting together bunch of ORs |
-| LIKE(case sensitive) vs ILIKE(not case sensitive)<br><br>Underscore -- WHERE Value LIKE 'Version\_ \_'<br><br>WHERE name LIKE '\_her%' | ![[Computing/Architectonic Pillars/System/Databases/_resources/DML.resources/unknown_filename.4.png]] |
+| LIKE(case sensitive) vs ILIKE(not case sensitive)<br><br>Underscore -- WHERE Value LIKE 'Version\_ \_'<br><br>WHERE name LIKE '\_her%' | ![[Computer Science/Databases/_resources/DML.resources/unknown_filename.4.png]] |
 | REGEX | <https://www.postgresql.org/docs/current/functions-matching.html><https://www.postgresql.org/docs/9.5/functions-aggregate.html> |
-| Aggregate Function <br><br>* only happen in SELECT or HAVING CLAUSE <br><br>Can use ROUND() with AVG() function to specify precision after the decimal <br><br>MIN(Column\_Name) <br><br>SELECT ROUND (AVG(col\_name), 2) FROM tableName ; | ![[Computing/Architectonic Pillars/System/Databases/_resources/DML.resources/unknown_filename.3.png]] |
+| Aggregate Function <br><br>* only happen in SELECT or HAVING CLAUSE <br><br>Can use ROUND() with AVG() function to specify precision after the decimal <br><br>MIN(Column\_Name) <br><br>SELECT ROUND (AVG(col\_name), 2) FROM tableName ; | ![[Computer Science/Databases/_resources/DML.resources/unknown_filename.3.png]] |
 | AS  | get executed at the very end of a query -- cannot uses alias inside a where operator |
 
 **Comparison Operators** 
-![[Computing/Architectonic Pillars/System/Databases/_resources/DML.resources/unknown_filename.png]]
+![[Computer Science/Databases/_resources/DML.resources/unknown_filename.png]]
 
 Logical Operators 
-![[Computing/Architectonic Pillars/System/Databases/_resources/DML.resources/unknown_filename.2.png]]![[Computing/Architectonic Pillars/System/Databases/_resources/DML.resources/unknown_filename.1.png]]
+![[Computer Science/Databases/_resources/DML.resources/unknown_filename.2.png]]![[Computer Science/Databases/_resources/DML.resources/unknown_filename.1.png]]
 
 GROUP BY 
 
@@ -73,3 +82,10 @@ END CASE
 ```
 
 You see how they are similar, but the statement _does not_ evaluate to a value and can be used on its own, while the expression needs to be a part of an expression, e.g. a query or an assignment. You cannot use the statement in a query, since a query cannot contain statements, only expressions that need to evaluate to something (the query itself is a statement, in a way), e.g. `SELECT CASE WHEN condition THEN UPDATE table SET something; END CASE` makes no sense.
+
+---
+
+## Related Notes
+
+- [[00. Master Knowledge Map]]
+- [[System/00. Overview|System Overview]]

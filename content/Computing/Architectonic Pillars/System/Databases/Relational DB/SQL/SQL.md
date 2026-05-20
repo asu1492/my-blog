@@ -1,3 +1,12 @@
+# SQL
+
+**Summary**: Covers SQL in databases and data storage, including concepts, trade-offs, and practical usage.
+**Tags**: #system-design #databases #sql
+**Created**: Unknown
+**Last Updated**: 2026-05-20
+
+---
+
 ---
 source: https://app.slack.com/client/T022QFTP49L/C02V7HRCJE6
 ---
@@ -87,3 +96,10 @@ SELECT * FROM FilmLocations LIMIT 15 OFFSET 10;
 1. DML 
 2. DELETE FROM TableName Where ColumnName IN ('colval1', 'colval2'); 
 3. If we do not specify where clause, all the rows n the table is removed.
+
+---
+
+## Related Notes
+
+- [[00. Master Knowledge Map]]
+- [[System/00. Overview|System Overview]]

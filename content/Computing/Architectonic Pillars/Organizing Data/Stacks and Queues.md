@@ -1,3 +1,13 @@
+# Stacks and Queues
+
+**Summary**: Covers stack, queue, deque, monotonic stack, and BFS queue patterns for interview problem solving.
+**Tags**: #dsa #stacks #queues #interview
+**Created**: Unknown
+**Last Updated**: 2026-05-20
+
+---
+
+← [[00. Data Structure]] · [[Computing/Architectonic Pillars/Organizing Data/00. Overview|Organizing Data]]
 
 ## Stacks & Queues — 3 patterns
 - **Monotonic Structure**  
@@ -43,7 +53,7 @@
 
 
 
-# **1. High-Priority Stack Problems (these appear the most in ServiceNow rounds)**
+## **1. High-Priority Stack Problems (these appear the most in ServiceNow rounds)**
 
 ### **A. Next Greater / Smaller Element Family**
 
@@ -144,7 +154,7 @@ Simulate recursion.
 
 ---
 
-# **2. High-Priority Queue Problems**
+## **2. High-Priority Queue Problems**
 
 ### **A. BFS / Level Order**
 
@@ -205,7 +215,7 @@ Min-heap or max-heap for ordering.
 
 ---
 
-# **3. What You Should Prioritize (Based on Your JD & Past Feedback)**
+## **3. What You Should Prioritize (Based on Your JD & Past Feedback)**
 
 ### **Priority Level 1 (Must Know)**
 
@@ -247,3 +257,10 @@ This prioritization is enough for ServiceNow’s typical bar.
     
 
 ---
+
+## Related Notes
+
+- [[00. Overview]]
+- [[00. Data Structure]]
+- [[Graph, Trees and Heap]]
+- [[Two Pointers and Sliding Window]]

@@ -1,3 +1,14 @@
+# Binary Search and Greedy
+
+**Summary**: Study note for binary search variants, binary search on answer, and greedy decision patterns.
+**Tags**: #dsa #binary-search #greedy #interview
+**Created**: Unknown
+**Last Updated**: 2026-05-20
+
+---
+
+← [[00. Data Structure]] · [[Computing/Architectonic Pillars/Organizing Data/00. Overview|Organizing Data]]
+
 Resources: 
 1. [Binary Search Playlist Striver](https://www.youtube.com/playlist?list=PLF6ChxadzFf8vjafLIxxbKUfarW4V4IOh) 
 2. [Greedy Algo Playlist Striver ](https://www.youtube.com/playlist?list=PLgUwDviBIf0rF1w2Koyh78zafB0cz7tea)
@@ -129,3 +140,10 @@ return count;
     
 
 Solve: implement, test, explain complexity, and state invariants.
+
+## Related Notes
+
+- [[00. Overview]]
+- [[Arrays]]
+- [[Dynamic Programming]]
+- [[Time and Space Complexity]]

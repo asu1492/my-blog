@@ -1,3 +1,12 @@
+# Data Modeling
+
+**Summary**: Covers Data Modeling in system design, architecture, or backend engineering, with key concepts and trade-offs.
+**Tags**: #system-design #data-modeling
+**Created**: Unknown
+**Last Updated**: 2026-05-20
+
+---
+
 | References 
 1. https://app.excalidraw.com/l/56zGeHiLyKZ/AjAIb7q1lP8
 
@@ -62,3 +71,10 @@ When you draw the DB box in your system design answer, systematically do:
 5. Add indexes driven from each API’s query patterns.​
 6. Decide if any denormalization is needed (often in cache only) and state why.​
 7. If data size demands it, specify sharding key and reasoning (keep related data colocated, avoid cross-shard joins).
+
+---
+
+## Related Notes
+
+- [[00. Master Knowledge Map]]
+- [[System/00. Overview|System Overview]]

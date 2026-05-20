@@ -1,3 +1,12 @@
+# Rate Limiter
+
+**Summary**: Captures the Rate Limiter system design case study, including the problem shape, design choices, and trade-offs.
+**Tags**: #system-design #case-study #rate-limiter
+**Created**: Unknown
+**Last Updated**: 2026-05-20
+
+---
+
 A rate limiter controls how many requests a client can make within a given timeframe to protect services from overload and abuse.
 
 ![[Pasted image 20260319130940.png]]
@@ -289,4 +298,19 @@ public class RateLimiterAudit{
     private LocalDateTime timeStamp
 }
 
+---
+
+## Concepts Exercised
+- [[Caching]] — Redis atomic counters (`INCR` + `EXPIRE`) for token bucket / sliding window state
+- [[Hashing]] — client ID hashed to shard counters across Redis nodes, avoiding hot keys
+- [[Computing/Architectonic Pillars/System/Infrastructure/Concurrency|Concurrency]] — atomic operations under concurrent load; `Lua` scripts in Redis for check-then-act atomicity
+- [[Computing/Architectonic Pillars/System/Design Principles/Design Pattern|Design Pattern]] — Strategy pattern for swappable algorithm (token bucket, sliding window, leaky bucket)
+
 public interface RateLimiterAuditRepository extends JpaRepository<RateLimiterAudit, Long> {}
+
+---
+
+## Related Notes
+
+- [[00. Master Knowledge Map]]
+- [[System/00. Overview|System Overview]]

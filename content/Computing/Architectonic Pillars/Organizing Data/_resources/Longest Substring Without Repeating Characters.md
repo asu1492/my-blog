@@ -1,3 +1,12 @@
+# Longest Substring Without Repeating Characters
+
+**Summary**: Worked example for the sliding-window pattern using LeetCode 3, Longest Substring Without Repeating Characters.
+**Tags**: #dsa #sliding-window #hashing #worked-example #interview
+**Created**: Unknown
+**Last Updated**: 2026-05-20
+
+---
+
 ```java 
 /**
      * Brute-force / quadratic approach based on the handwritten notes:
@@ -67,4 +76,10 @@ class Solution {
     }
 }
 ```
+
+## Related Notes
+
+- [[../Two Pointers and Sliding Window]]
+- [[../Hashing]]
+- [[../Arrays]]
 

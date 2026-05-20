@@ -1,3 +1,12 @@
+# Aggregation
+
+**Summary**: Covers Aggregation in Java, including the core concept, practical usage, and interview-relevant points.
+**Tags**: #programming #java #aggregation
+**Created**: Unknown
+**Last Updated**: 2026-05-20
+
+---
+
 1. Is a HAS-A relationship 
 2. child object exist independently of parent object, e.g. Customer Object exist independently of Order Object. 
 3. Carried out passing reference of the object through constructor or by using setter injection.
@@ -62,3 +71,11 @@
 		    }
 		}	
 		```
+
+---
+
+## Related Notes
+
+- [[00. Master Knowledge Map]]
+- [[Programming Paradigm & Framework/00. Overview|Programming Overview]]
+- [[Programming Paradigm & Framework/Java/0. Java Roadmap|Java Roadmap]]

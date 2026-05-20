@@ -1,3 +1,11 @@
+# Scaling
+
+**Summary**: Covers Scaling in databases and data storage, including concepts, trade-offs, and practical usage.
+**Tags**: #system-design #databases #scaling
+**Created**: Unknown
+**Last Updated**: 2026-05-20
+
+---
 
 Horizontal Scaling (scaling out)
 1. What is HS 
@@ -22,4 +30,11 @@ Vertical Scaling (scaling up)
 	1. Single Point of Failure (Do not have redundancy  and fault tolerance)
 	2. Limit with how much we can scale a single machine
 4. Benefits of VS
-	1. Simplicity 
+	1. Simplicity
+
+---
+
+## Related Notes
+
+- [[00. Master Knowledge Map]]
+- [[System/00. Overview|System Overview]]

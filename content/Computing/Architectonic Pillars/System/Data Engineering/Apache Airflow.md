@@ -1,3 +1,12 @@
+# Apache Airflow
+
+**Summary**: Covers Apache Airflow in data engineering, including core concepts, workflow patterns, and practical usage.
+**Tags**: #system-design #data-engineering #apache-airflow
+**Created**: Unknown
+**Last Updated**: 2026-05-20
+
+---
+
 ---
 source: https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DB0250EN-SkillsNetwork/labs/Apache%20Airflow/Monitoring%20a%20DAG/Hands-on_Lab-_Monitoring_a_DAG.md.html
 ---
@@ -22,7 +31,7 @@ Challenges 
 
 DAG
 
-1. ![[Computing/Architectonic Pillars/System/Data Engineering/_resources/Apache_Airflow.resources/unknown_filename.7.png]]
+1. ![[Computer Science/Data Engineering/_resources/Apache_Airflow.resources/unknown_filename.7.png]]
 2. Data in graph stored in form of nodes and connections
 3. Acyclic graph avoid cycles
 4. Directed as flow has defined direction
@@ -49,13 +58,13 @@ Features
 3. Extensible 
 4. Lean 
 
-![[Computing/Architectonic Pillars/System/Data Engineering/_resources/Apache_Airflow.resources/unknown_filename.png]]
+![[Computer Science/Data Engineering/_resources/Apache_Airflow.resources/unknown_filename.png]]
 
-![[Computing/Architectonic Pillars/System/Data Engineering/_resources/Apache_Airflow.resources/unknown_filename.1.png]]
+![[Computer Science/Data Engineering/_resources/Apache_Airflow.resources/unknown_filename.1.png]]
 
-![[Computing/Architectonic Pillars/System/Data Engineering/_resources/Apache_Airflow.resources/unknown_filename.2.png]]
+![[Computer Science/Data Engineering/_resources/Apache_Airflow.resources/unknown_filename.2.png]]
 
-![[Computing/Architectonic Pillars/System/Data Engineering/_resources/Apache_Airflow.resources/unknown_filename.3.png]]
+![[Computer Science/Data Engineering/_resources/Apache_Airflow.resources/unknown_filename.3.png]]
 
 Key adv of AA
 
@@ -75,9 +84,9 @@ AA Logs 
 
 * * *
 
-![[Computing/Architectonic Pillars/System/Data Engineering/_resources/Apache_Airflow.resources/unknown_filename.4.png]]
+![[Computer Science/Data Engineering/_resources/Apache_Airflow.resources/unknown_filename.4.png]]
 
-![[Computing/Architectonic Pillars/System/Data Engineering/_resources/Apache_Airflow.resources/unknown_filename.5.png]]
+![[Computer Science/Data Engineering/_resources/Apache_Airflow.resources/unknown_filename.5.png]]
 
 * * *
 
@@ -91,7 +100,7 @@ AA Logs 
 
 ![[Getting started with Apache Airflow.md.pdf]]
 
-![[Computing/Architectonic Pillars/System/Data Engineering/_resources/Apache_Airflow.resources/unknown_filename.6.png]]
+![[Computer Science/Data Engineering/_resources/Apache_Airflow.resources/unknown_filename.6.png]]
 
 Recent Tasks
 
@@ -205,3 +214,10 @@ Customizing AIRFLOW UI 
 8. Which block specifies the DAG start date?
 9. Which of the following Airflow metrics could fluctuate?
 10. Which of the following Apache Airflow basic components serves the interactive UI?
+
+---
+
+## Related Notes
+
+- [[00. Master Knowledge Map]]
+- [[System/00. Overview|System Overview]]

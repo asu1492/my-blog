@@ -1,3 +1,13 @@
+# Graphs, Trees and Heaps
+
+**Summary**: Covers graph, tree, and heap patterns including traversal, shortest paths, topological sort, and priority queues.
+**Tags**: #dsa #graphs #trees #heap #interview
+**Created**: Unknown
+**Last Updated**: 2026-05-20
+
+---
+
+← [[00. Data Structure]] · [[Computing/Architectonic Pillars/Organizing Data/00. Overview|Organizing Data]]
 
 ## Graphs — 7 patterns
 1. **DFS / BFS Traversal**  
@@ -122,3 +132,10 @@ Binary Search Tree
 - To exploit this "divide and conquer" idea in storage and retrieval
 - Time Complexity - O(log n)
 - BST was popularized by Donald Knuth in his legendary work "The Art of Computer Programming(1968)"
+
+## Related Notes
+
+- [[00. Overview]]
+- [[00. Data Structure]]
+- [[Dynamic Programming]]
+- [[Stacks and Queues]]

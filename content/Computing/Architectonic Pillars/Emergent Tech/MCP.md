@@ -1,5 +1,12 @@
 # Model Context Protocol (MCP)
 
+**Summary**: Explains MCP as a standard protocol for connecting LLM hosts to external tools, resources, and prompt templates.
+**Tags**: #emergent-tech #mcp #agents #api-design
+**Created**: Unknown
+**Last Updated**: 2026-05-20
+
+---
+
 MCP is an open standard (introduced by Anthropic, 2024) that defines how LLM-powered applications connect to external tools, data sources, and services through a uniform interface — analogous to what USB-C is to hardware peripherals.
 
 ---
@@ -79,9 +86,9 @@ Before MCP, every AI app hand-rolled its own function-calling glue. MCP standard
 - **Composability** — swap tools without changing the host; mix servers from multiple vendors.
 
 Cross-pillar links:
-- `[[Computing/Architectonic Pillars/System/Infrastructure/Message Queue]]` — MCP over SSE shares pub/sub patterns
-- `[[Computing/Architectonic Pillars/System/API Design]]` — MCP uses JSON-RPC 2.0 over HTTP; same API design concerns apply
-- `[[Computing/Architectonic Pillars/Emergent Tech/Agent Transition]]` — MCP is a key enabler of agentic pipelines
+- `[[../System/Infrastructure/Message Queue]]` — MCP over SSE shares pub/sub patterns
+- `[[../System/API Design]]` — MCP uses JSON-RPC 2.0 over HTTP; same API design concerns apply
+- `[[../Emergent Tech/Agent Transition]]` — MCP is a key enabler of agentic pipelines
 
 ---
 
@@ -90,3 +97,11 @@ Cross-pillar links:
 - [MCP Specification](https://spec.modelcontextprotocol.io)
 - [Anthropic MCP Introduction](https://www.anthropic.com/news/model-context-protocol)
 - [[Vishrut Inputs]] — tool inventory including MCP-compatible servers
+
+## Related Notes
+
+- [[00. Overview]]
+- [[Agent Transition]]
+- [[../System/API Design]]
+- [[../System/Infrastructure/Message Queue]]
+- [[Prompt Engineering/Vishrut Inputs]]

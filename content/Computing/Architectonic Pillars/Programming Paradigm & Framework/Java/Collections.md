@@ -1,3 +1,12 @@
+# Collections
+
+**Summary**: Java Collections study note covering maps, sets, stream operations, common utility methods, and codebase usage patterns.
+**Tags**: #java #collections #programming #interview
+**Created**: Unknown
+**Last Updated**: 2026-05-20
+
+---
+
 [[Study Right now]]
 
 
@@ -8,7 +17,7 @@ Collections API (List → Set → Map) → Iterator/Iterable → Comparator → 
 
 ---
 
-###### Map 
+## Map 
 
 HashMap
 1. compute() - use when new value depends on oldValue 
@@ -17,14 +26,13 @@ HashMap
 4. computeIfPresent() 
 
 
-
-##### Sets
+## Sets
 
 TreeSet 
 1. Keeps the elements sorted and prevents duplicate 
 
 
-##### Sets
+## Maps
 
 HashMap
 1. Store/Access element as name/value pair 
@@ -32,7 +40,7 @@ HashMap
 
 LinkedHasMap 
 1. Along with HasMap Attibutes, can remember the order in which elements(name/value pair) were inserted 
-###### Intermediate Operation
+## Intermediate Operation
 1. Stateless 
 	1. map
 	2. flatmap 
@@ -55,7 +63,7 @@ LinkedHasMap
 	6. flatMapToDouble()
 	7. `mapToObject()` / `boxed()` _(primitive → object)_
 
-###### Terminal Operation
+## Terminal Operation
 1. Aggregation 
 	1. Count
 	2. Collect 
@@ -110,4 +118,12 @@ If your goal is to “learn Collections using this codebase”, I’d suggest th
     - Pick one class (e.g. `FunctionCaller`) and re-implement a method in a scratch file:
         - First using plain loops.
         - Then rewrite using `stream()`/`Collectors.toList()`
+
+## Related Notes
+
+- [[../00. Overview]]
+- [[0. Java Roadmap]]
+- [[Arrays]]
+- [[Concurrency in Java]]
+- [[../../System/Infrastructure/Caching]]
 

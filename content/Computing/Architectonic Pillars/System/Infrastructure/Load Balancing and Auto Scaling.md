@@ -1,4 +1,11 @@
+# Load Balancing and Auto Scaling
 
+**Summary**: Covers Load Balancing and Auto Scaling in system infrastructure, including key concepts, trade-offs, and practical usage.
+**Tags**: #system-design #infrastructure #load-balancing-and-auto-scaling
+**Created**: Unknown
+**Last Updated**: 2026-05-20
+
+---
 
 **Load Balancing** - distributing incoming traffic across multiple servers 
 **Autoscaling** - automatically adjusting the number of servers based on demand
@@ -54,4 +61,11 @@ Would you like me to dive deeper into any specific area, or are you preparing fo
 
 
 
-Alert Notification -> 
+Alert Notification ->
+
+---
+
+## Related Notes
+
+- [[00. Master Knowledge Map]]
+- [[System/00. Overview|System Overview]]

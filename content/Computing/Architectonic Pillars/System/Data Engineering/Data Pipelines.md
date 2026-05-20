@@ -1,3 +1,12 @@
+# Data Pipelines
+
+**Summary**: Covers Data Pipelines in data engineering, including core concepts, workflow patterns, and practical usage.
+**Tags**: #system-design #data-engineering #data-pipelines
+**Created**: Unknown
+**Last Updated**: 2026-05-20
+
+---
+
 ---
 ---
 What is DP 
@@ -13,14 +22,14 @@ What is DP 
 * Packet -- broadly refers to units of data 
 
 DP performance 
-![[Computing/Architectonic Pillars/System/Data Engineering/_resources/Data_Pipelines.resources/unknown_filename.png]]
+![[Computer Science/Data Engineering/_resources/Data_Pipelines.resources/unknown_filename.png]]
 
 * Latency and throughput are key design considerations for data pipelines. 
 * Latency 
 	* total time it takes for a single packet of data to pass through the pipeline 
 	* Also, latency can be defined as sum of the individual times spent during each processing stage within the pipeline. 
 	* Overall latency is limited by the slowest process in the pipeline. 
-	* ![[Computing/Architectonic Pillars/System/Data Engineering/_resources/Data_Pipelines.resources/unknown_filename.1.png]]
+	* ![[Computer Science/Data Engineering/_resources/Data_Pipelines.resources/unknown_filename.1.png]]
 * Throughput 
 	* refers to how much data can be fed through the pipeline per unit of time. 
 	* processing large packets per unit time increases throughput 
@@ -79,7 +88,7 @@ DP Solutions for mitigating data flow bottlenecks 
 	* Buffers can also be used to regulate the output of stages having different or variable processing rates, thus can be used to improve throughput.
 
 Two main paradigms within data pipeline engineering
-![[Computing/Architectonic Pillars/System/Data Engineering/_resources/Data_Pipelines.resources/unknown_filename.2.png]]
+![[Computer Science/Data Engineering/_resources/Data_Pipelines.resources/unknown_filename.2.png]]
 
 1. Use case for Batch, streaming DP comes down to a trade off b/w
 	1. Accuracy
@@ -153,3 +162,10 @@ Streaming Data Pipeline tools 
 * SQL Stream 
 * Apache Kafka
 * Azure Stream
+
+---
+
+## Related Notes
+
+- [[00. Master Knowledge Map]]
+- [[System/00. Overview|System Overview]]

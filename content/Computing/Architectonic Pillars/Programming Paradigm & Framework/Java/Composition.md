@@ -1,3 +1,11 @@
+# Composition
+
+**Summary**: Covers Composition in Java, including the core concept, practical usage, and interview-relevant points.
+**Tags**: #programming #java #composition
+**Created**: Unknown
+**Last Updated**: 2026-05-20
+
+---
 
 1. HAS-A relationship, other related HAS-A relationship - [[Aggregation]]
 2. Composition is creating complex object using simpler object. E.g. Order Object is created using OrderItem. 
@@ -51,3 +59,11 @@
 	}	
 ```
 ![[Pasted image 20250201175228.png]]
+
+---
+
+## Related Notes
+
+- [[00. Master Knowledge Map]]
+- [[Programming Paradigm & Framework/00. Overview|Programming Overview]]
+- [[Programming Paradigm & Framework/Java/0. Java Roadmap|Java Roadmap]]

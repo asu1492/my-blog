@@ -1,3 +1,12 @@
+# PostgreSQL
+
+**Summary**: Covers PostgreSQL in databases and data storage, including concepts, trade-offs, and practical usage.
+**Tags**: #system-design #databases #postgresql
+**Created**: Unknown
+**Last Updated**: 2026-05-20
+
+---
+
 ---
 source: https://btholt.github.io/complete-intro-to-databases/complex-sql-queries
 ---
@@ -90,13 +99,13 @@ JOINS 
 
 * * *
 
-![[Computing/Architectonic Pillars/System/Databases/_resources/PostgreSQL.resources/unknown_filename.2.png]]
+![[Computer Science/Databases/_resources/PostgreSQL.resources/unknown_filename.2.png]]
 
 |     |     |
 | --- | --- |
 |     | SELECT comment\_id, user\_id, LEFT(comment, 20) AS preview FROM comments WHERE board\_id = 39; <br><br>Note: <br><br>* Left will give first 20 char of comments |
 |     | SELECT comment\_id, user\_id, RIGHT(comment, 20) AS preview FROM comments WHERE board\_id = 39;<br><br>NOte: we are using user\_id as foreign key and not username as username may be changed by user, compromising data integrity |
-| Inner Join | SELECT comment\_id, comments.user\_id, username, time, LEFT(comment, 20) AS preview <br>FROM comments<br>INNER JOIN users ON comments.user\_id = users.user\_id<br>WHERE board\_id=39;<br>![[Computing/Architectonic Pillars/System/Databases/_resources/PostgreSQL.resources/Image.png]]<br>\| Note: we have used comments.user\_id to remove ambiguity as it exist in multiple tables<br><br>Note: POSTgreSQL has natural inner join that intelligently matches up across without referencing foreign key... e.g we can re write above query as <br><br>SELECT comment\_id, comments.user\_id, username, time, LEFT(comment, 20) AS preview<br>FROM comments<br>NATURAL INNER JOIN users <br>WHERE board\_id=39; |
+| Inner Join | SELECT comment\_id, comments.user\_id, username, time, LEFT(comment, 20) AS preview <br>FROM comments<br>INNER JOIN users ON comments.user\_id = users.user\_id<br>WHERE board\_id=39;<br>![[Computer Science/Databases/_resources/PostgreSQL.resources/Image.png]]<br>\| Note: we have used comments.user\_id to remove ambiguity as it exist in multiple tables<br><br>Note: POSTgreSQL has natural inner join that intelligently matches up across without referencing foreign key... e.g we can re write above query as <br><br>SELECT comment\_id, comments.user\_id, username, time, LEFT(comment, 20) AS preview<br>FROM comments<br>NATURAL INNER JOIN users <br>WHERE board\_id=39; |
 
 * * *
 
@@ -119,7 +128,7 @@ Group by  (boards with most comments)
 4. GROUP BY boards.board\_name
 5. ORDER BY comment\_count DESC
 6. LIMIT 10;
-7. ![[Computing/Architectonic Pillars/System/Databases/_resources/PostgreSQL.resources/unknown_filename.png]]
+7. ![[Computer Science/Databases/_resources/PostgreSQL.resources/unknown_filename.png]]
 
 * * *
 
@@ -134,7 +143,7 @@ JSON in PostgreSQL 
 	2. SELECT DISTINCT content ->> 'type'AS content\_type FROM rich\_content;
 4. SELECT content -> 'dimensions' AS content\_type FROM rich\_content;
 	1. SELECT content -> 'dimensions' AS content\_type FROM rich\_content WHERE content ->> 'dimensions'IS NOT NULL;
-	2. ![[Computing/Architectonic Pillars/System/Databases/_resources/PostgreSQL.resources/unknown_filename.1.png]]
+	2. ![[Computer Science/Databases/_resources/PostgreSQL.resources/unknown_filename.1.png]]
 
 * * *
 
@@ -152,7 +161,7 @@ SQL Injections
 
 1. Ned
 
-![[Computing/Architectonic Pillars/System/Databases/_resources/PostgreSQL.resources/instructions.md.pdf]]
+![[Computer Science/Databases/_resources/PostgreSQL.resources/instructions.md.pdf]]
 
 * * *
 
@@ -166,3 +175,10 @@ SQL Injections
 However, in the example you posted I believe that the naming conflict you are having problems with is not with the schema name but with the **function parameter name account\_category and the table name account\_category. You could rename your parameter name to avoid this conflict.** **==In databases with many schemas, for clarities sake I often explicitly specify public at the start of database object names.==**
 
 Regarding your second question, I don't think PostgreSQL is unique in its usage of public, but I do know that many other databases do their schemas in a different way.
+
+---
+
+## Related Notes
+
+- [[00. Master Knowledge Map]]
+- [[System/00. Overview|System Overview]]

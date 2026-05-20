@@ -1,3 +1,12 @@
+# What Is a Message Broker  IBM
+
+**Summary**: Covers What Is a Message Broker  IBM in data engineering, including core concepts, workflow patterns, and practical usage.
+**Tags**: #system-design #data-engineering #what-is-a-message-broker-ibm
+**Created**: Unknown
+**Last Updated**: 2026-05-20
+
+---
+
 ## What is a message broker?
 
 A message broker is software that enables applications, systems and services to communicate with each other and exchange information.
@@ -92,3 +101,10 @@ Middleware speeds development of distributed applications by simplifying connect
 What is iPaaS (intergration-Platform-as-a-Service)?
 
 iPaaS is a cloud-based solution that standardizes and simplifies integration across on-premises and cloud environments.
+
+---
+
+## Related Notes
+
+- [[00. Master Knowledge Map]]
+- [[System/00. Overview|System Overview]]

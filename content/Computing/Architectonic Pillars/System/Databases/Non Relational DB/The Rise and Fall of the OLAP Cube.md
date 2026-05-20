@@ -1,3 +1,12 @@
+# The Rise and Fall of the OLAP Cube
+
+**Summary**: Covers The Rise and Fall of the OLAP Cube in databases and data storage, including concepts, trade-offs, and practical usage.
+**Tags**: #system-design #databases #the-rise-and-fall-of-the-olap-cube
+**Created**: Unknown
+**Last Updated**: 2026-05-20
+
+---
+
 ---
 source: https://www.holistics.io/blog/the-rise-and-fall-of-the-olap-cube/
 ---
@@ -199,3 +208,10 @@ I started this piece with a focus on the OLAP cube as a way to understand a core
 _**Follow up:** We've published a follow up post titled: [OLAP != OLAP Cube](https://www.holistics.io/blog/olap-is-not-olap-cube/)._
 
 ## Sources
+
+---
+
+## Related Notes
+
+- [[00. Master Knowledge Map]]
+- [[System/00. Overview|System Overview]]

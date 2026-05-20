@@ -1,3 +1,11 @@
+# Concurrency in Java
+
+**Summary**: Covers Concurrency in Java in Java, including the core concept, practical usage, and interview-relevant points.
+**Tags**: #programming #java #concurrency-in-java
+**Created**: Unknown
+**Last Updated**: 2026-05-20
+
+---
 
 ##### Reentrant Lock vs Synchronized 
 ![[Pasted image 20260303065212.png]]
@@ -181,3 +189,11 @@ Thread A         Thread B          Thread C
 39. Difference between `notify()` and `notifyAll()`.
     
 40. Can deadlock occur with a single thread?
+
+---
+
+## Related Notes
+
+- [[00. Master Knowledge Map]]
+- [[Programming Paradigm & Framework/00. Overview|Programming Overview]]
+- [[Programming Paradigm & Framework/Java/0. Java Roadmap|Java Roadmap]]

@@ -1,3 +1,12 @@
+# JPA
+
+**Summary**: Covers JPA in Java, including the core concept, practical usage, and interview-relevant points.
+**Tags**: #programming #java #jpa
+**Created**: Unknown
+**Last Updated**: 2026-05-20
+
+---
+
 1. managing relational data in Java applications
 2. Supports transaction 
 3. Transactions are used to group a set of database operations(CRUD) into a single unit of work, ensuring that they either succeed or fail together, thus maintaining data consistency and integrity. 
@@ -11,3 +20,11 @@ Here's a basic overview of how JPA transactions work:
 4. **Exception Handling**: JPA transactions can throw exceptions if an operation fails or if there's a conflict with another transaction. Proper exception handling is crucial to ensure that transactions are rolled back when necessary and that resources are released properly.
 5. **Transaction Scopes**: Transactions can have different scopes, such as `REQUIRED`, `REQUIRES_NEW`, `SUPPORTS`, `NOT_SUPPORTED`, and `MANDATORY`. These scopes define how transactions should be managed within different contexts, such as method invocations or bean lifecycles.
 6. **EntityManager Lifecycle**: The `EntityManager` interface represents a JPA persistence context, which encapsulates the state of entities and manages their interactions with the database. The lifecycle of the `EntityManager` is closely tied to that of transactions, typically being created at the beginning of a transaction and closed at the end.
+
+---
+
+## Related Notes
+
+- [[00. Master Knowledge Map]]
+- [[Programming Paradigm & Framework/00. Overview|Programming Overview]]
+- [[Programming Paradigm & Framework/Java/0. Java Roadmap|Java Roadmap]]

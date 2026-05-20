@@ -1,12 +1,21 @@
-| References 
+# Message Queue
+
+**Summary**: Explains message queues for asynchronous work, decoupling, delivery guarantees, partitioning, back-pressure, and failure handling.
+**Tags**: #system-design #infrastructure #message-queue #interview
+**Created**: Unknown
+**Last Updated**: 2026-05-20
+
+---
+
+## References 
 1. https://app.excalidraw.com/l/56zGeHiLyKZ/47SJUcqLNbg
-###### Why MQ
+## Why MQ
 1. Failures are isolated 
 2. Reduce latency for user doing heavy work 
 3. Improve fault tolerance 
 4. Handle bursty traffic by buffering requests 
 
-###### When to use a queue 
+## When to use a queue 
 1. Aysnc Work - user does not need results now 
 2. Bursty - absorb spikes without dropping requests. 
 3. Decoupling 
@@ -14,7 +23,7 @@
 	2. Producers and consumers have different **scaling / hardware** needs (e.g., lightweight upload service vs GPU-heavy workers).
 4. Reliability - queue hold messages, can't afford to lose work 
 5. Note: Avoid adding a queue into truly synchronous, tight-latency paths (e.g., sub-500 ms) because it almost guarantees SLA violations.
-###### What is the message Queue
+## What is the message Queue
 1. Message queues decouple producers and consumers with a buffer so you can do expensive work
 	1. asynchronously
 	2. absorb spikes and
@@ -25,7 +34,7 @@
 4. Producers/Consumers are decoupled engendering scaling of producers/consumers. 
 
 
-###### Delivery Mechanics and guarantees 
+## Delivery Mechanics and guarantees 
 1. Does Messages from Queue get deleted, once it is sent to producer?
 	1. No, Until consumer sends a ack message to the queue, queue do not purge it. 
 2. ![[Pasted image 20260302135621.png]]
@@ -38,13 +47,13 @@
 	3. exactly-once 
 		1. every message processed exactly one time 
 
-###### How queues deal with competition from consumer to process the message?
+## How queues deal with competition from consumer to process the message?
 1. **Visibility timeout** : Amazon's SQS - 30 sec configured time limit where  once a message picked up by a consumer, remains unavailable to another consumer.
 2. RabbitMQ
 3. **Partition-to-consumer mapping** : [[Apache Kafka]] assigning each partition to exactly one consumer in a consumer group.
 4. **Prefetch limits (plus ack timeouts)**: RabbitMQ, which uses channel-level prefetch settings to control how many unacked messages a consumer can hold.
 
-###### How queue handles increasing throughput 
+## How queue handles increasing throughput 
 1. Split a queue into multiple partition which consumers can process in parallel.  
 2. ![[Pasted image 20260302141317.png]]
 3. Partition key  
@@ -55,22 +64,30 @@
 	5. Tradeoff : Sometimes you accept **slightly uneven distribution for strict per‑entity ordering**, sometimes you favor distribution when ordering is less critical.
 
 
-###### What happens when your producers outpace consumers
+## What happens when your producers outpace consumers
 1. Monitor the queue depth 
 2. autoscale consumers
 3. add more partitions to queue 
 4. apply back pressure to producers (reject/slow requests, ask clients to retry).
 
-###### What happens when a message is a Poisoned Message
+## What happens when a message is a Poisoned Message
 1. Poisoned Message, that may consume all the resources in its retries. 
 2. Solution for this is having configuring max retries. 
 3. Post max tries, move the message to DLQ
 4. ![[Pasted image 20260302142629.png]]
 
 
-###### What happens when queue goes down (Fault Tolerance and Durability)
+## What happens when queue goes down (Fault Tolerance and Durability)
 1. [[Apache Kafka]] persist to disk and replicate across brokers, allowing replay of messages for recovery or reprocessing with new consumer logic.
 2. So, a replica replaces the broken queue. 
 
-###### Edge Cases 
+## Edge Cases 
 1. When a message queue process the input but fails before sending the ack message. e.g. Charge an account $10, if fails, another consumer will do the same and account will be charged twice. 
+
+---
+
+## Related Notes
+1. [[Apache Kafka]] — production MQ: partitions, offsets, consumer groups, log compaction
+2. [[Computing/Architectonic Pillars/System/Infrastructure/Concurrency|Concurrency]] — consumer threading, back-pressure, and at-least-once idempotency patterns
+3. [[Consistency Model ACID, BASE]] — delivery guarantees (at-least-once, exactly-once) map to ACID vs BASE trade-offs
+4. Used in: [[notification]] · [[FeedService]] · [[Rate Limiter]]

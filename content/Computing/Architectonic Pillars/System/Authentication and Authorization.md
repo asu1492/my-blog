@@ -1,3 +1,11 @@
+# Authentication and Authorization
+
+**Summary**: Covers Authentication and Authorization in system design, architecture, or backend engineering, with key concepts and trade-offs.
+**Tags**: #system-design #authentication-and-authorization
+**Created**: Unknown
+**Last Updated**: 2026-05-20
+
+---
 
 In the **native / database login mode** of Manhattan Active:
 1. Client calls **token endpoint** (OAuth2) with `username` + `password` (Resource Owner Password Credentials or similar direct login flow).
@@ -36,3 +44,10 @@ jti
 
 
 7. do not use password secrets to validate signature. Sign the token with a private key. The client will validate the signature using the corresponding public key available at the jwks URI and identified by a key id (kid). The key should be cached client side.
+
+---
+
+## Related Notes
+
+- [[00. Master Knowledge Map]]
+- [[System/00. Overview|System Overview]]

@@ -1,3 +1,12 @@
+# NoSQL
+
+**Summary**: Covers NoSQL in databases and data storage, including concepts, trade-offs, and practical usage.
+**Tags**: #system-design #databases #nosql
+**Created**: Unknown
+**Last Updated**: 2026-05-20
+
+---
+
 ---
 source: https://www.coursera.org/learn/introduction-to-nosql-databases/quiz/SuQ23/practice-quiz-basics-of-nosql/attempt?redirectToCover=true
 ---
@@ -43,7 +52,7 @@ History 
 		2. Modern HTTP APIs 
 		3. Data [[Data Replication]] and robustness 
 4. 4 types of Non Relational DB are 
-	1. ![[Computing/Architectonic Pillars/System/Databases/_resources/NoSQL.resources/unknown_filename.png]]
+	1. ![[Computer Science/Databases/_resources/NoSQL.resources/unknown_filename.png]]
 
 |                   | Document                                                                                                                                                                                                                                                                                                                                                                               | Column                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | Graph                                                                                                                                                                           | Key Value                                                                                                                                                                                                                                                                                                                                |
 | ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -435,3 +444,10 @@ After completing this course, you will be able to:  
 
 - [Coursera — Introduction to NoSQL Databases](https://www.coursera.org/learn/introduction-to-nosql-databases/supplement/QDLK1/course-introduction)
 - [Complete Intro to Databases (btholt)](https://btholt.github.io/complete-intro-to-databases/)
+
+---
+
+## Related Notes
+
+- [[00. Master Knowledge Map]]
+- [[System/00. Overview|System Overview]]

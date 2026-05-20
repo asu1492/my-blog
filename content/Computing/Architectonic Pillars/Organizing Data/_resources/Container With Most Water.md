@@ -1,3 +1,12 @@
+# Container With Most Water
+
+**Summary**: Worked example for the two-pointer pattern using LeetCode 11, Container With Most Water.
+**Tags**: #dsa #two-pointers #worked-example #interview
+**Created**: Unknown
+**Last Updated**: 2026-05-20
+
+---
+
 ```java
 
 public int maxAreaBruteForce(int[] height) {
@@ -55,3 +64,8 @@ return max_area;
 - Time complexity: O(n)
 - Space complexity: O(1)
 ```
+
+## Related Notes
+
+- [[../Two Pointers and Sliding Window]]
+- [[../Arrays]]

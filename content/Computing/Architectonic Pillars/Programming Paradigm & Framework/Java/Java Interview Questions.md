@@ -1,3 +1,12 @@
+# Java Interview Questions
+
+**Summary**: Covers Java Interview Questions in Java, including the core concept, practical usage, and interview-relevant points.
+**Tags**: #programming #java #java-interview-questions
+**Created**: Unknown
+**Last Updated**: 2026-05-20
+
+---
+
 1. About Java 
 	1. Java is  Pass by Value
 2. JAVA overloading vs Java overriding 
@@ -57,3 +66,11 @@
 		1. we do not define number of objects, rather internally it increases size once an array is filled. 
 11. Comparator vs Comparable : https://www.youtube.com/watch?v=ZA2oNhtNk3w&ab_channel=Telusko 
 12. Type Promotion
+
+---
+
+## Related Notes
+
+- [[00. Master Knowledge Map]]
+- [[Programming Paradigm & Framework/00. Overview|Programming Overview]]
+- [[Programming Paradigm & Framework/Java/0. Java Roadmap|Java Roadmap]]

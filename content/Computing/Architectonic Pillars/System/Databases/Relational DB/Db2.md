@@ -1,3 +1,12 @@
+# Db2
+
+**Summary**: Covers Db2 in databases and data storage, including concepts, trade-offs, and practical usage.
+**Tags**: #system-design #databases #db2
+**Created**: Unknown
+**Last Updated**: 2026-05-20
+
+---
+
 ---
 ---
 History and Features 
@@ -31,14 +40,14 @@ Db2 on Cloud 
 
 Db2 scalability with partitioning 
 
-![[Computing/Architectonic Pillars/System/Databases/_resources/Db2.resources/unknown_filename.png]]
+![[Computer Science/Databases/_resources/Db2.resources/unknown_filename.png]]
 
 * * *
 
 * Remainder or Mod Operator 
 	* WHERE mod(ID,2) = 0
 
-![[Computing/Architectonic Pillars/System/Databases/_resources/Db2.resources/instructions.md.pdf]]
+![[Computer Science/Databases/_resources/Db2.resources/instructions.md.pdf]]
 
 * * *
 
@@ -47,3 +56,10 @@ Db2 scalability with partitioning 
 * Create table structure and load data using an SQL script file 
 
 ![[instructional-labs.md.pdf]]
+
+---
+
+## Related Notes
+
+- [[00. Master Knowledge Map]]
+- [[System/00. Overview|System Overview]]

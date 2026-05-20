@@ -1,3 +1,12 @@
+# Encapsulation
+
+**Summary**: Covers Encapsulation in Java, including the core concept, practical usage, and interview-relevant points.
+**Tags**: #programming #java #encapsulation
+**Created**: Unknown
+**Last Updated**: 2026-05-20
+
+---
+
 - What is encapsulation in Java?
 	- Encapsulation refers to protecting data(_internal state_ of an object) / state and functionality through access modifiers. 
 	- It enables exposing state and functionality that is necessary while preventing misuse though excessive exposure of data and functionality. Thus engenders information hiding. 
@@ -47,4 +56,12 @@
 - How Immutable Objects are implemented? 
 	- Declare the class as final  and make all fields as private and final. 
 	- Do not provide setter method and ensure that method do not modify the object state. 
-	- e.g. public final class Constants () 
+	- e.g. public final class Constants ()
+
+---
+
+## Related Notes
+
+- [[00. Master Knowledge Map]]
+- [[Programming Paradigm & Framework/00. Overview|Programming Overview]]
+- [[Programming Paradigm & Framework/Java/0. Java Roadmap|Java Roadmap]]

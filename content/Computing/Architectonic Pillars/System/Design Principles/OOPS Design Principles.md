@@ -1,3 +1,12 @@
+# OOPS Design Principles
+
+**Summary**: Covers OOPS Design Principles as a design principle or engineering pattern, with practical implications and examples.
+**Tags**: #system-design #design-principles #oops-design-principles
+**Created**: Unknown
+**Last Updated**: 2026-05-20
+
+---
+
 Okay, let's explore a comprehensive list of object-oriented design (OOD) principles. These principles serve as guidelines for creating well-structured, maintainable, and scalable software using object-oriented programming.
 
 **SOLID Principles (The Foundation)**
@@ -83,3 +92,11 @@ These principles complement the SOLID principles and provide additional guidance
 These object-oriented design principles provide a comprehensive set of guidelines for creating well-structured, maintainable, and scalable software. By understanding and applying these principles, you can write code that is more flexible, robust, and easier to work with.
 
 This list should give you a good overview of the key OOD principles. Let me know if you have any more questions or if you'd like to explore any of these principles in more detail!
+
+---
+
+## Related Notes
+
+- [[00. Master Knowledge Map]]
+- [[System/00. Overview|System Overview]]
+- [[System/Design Principles/00. Overview|Design Principles Overview]]

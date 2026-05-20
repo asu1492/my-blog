@@ -1,3 +1,12 @@
+# Walmart
+
+**Summary**: Captures the Walmart system design case study, including the problem shape, design choices, and trade-offs.
+**Tags**: #system-design #case-study #walmart
+**Created**: Unknown
+**Last Updated**: 2026-05-20
+
+---
+
 1. Rate Limiter (LLD + distributed)
 2. Kafka exactly-once design
 3. Idempotency key implementation
@@ -229,4 +238,11 @@ Optimistic Locking
     version
     Both UserA and UserB reads version 1. UserA updates Status and now version changes to 2. 
     UserB tries to update Status results in OptimisticLockException and second update fails.
-2. 
+2.
+
+---
+
+## Related Notes
+
+- [[00. Master Knowledge Map]]
+- [[System/00. Overview|System Overview]]

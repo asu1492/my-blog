@@ -1,3 +1,12 @@
+# Spark Cluster Manager
+
+**Summary**: Covers Spark Cluster Manager in data engineering, including core concepts, workflow patterns, and practical usage.
+**Tags**: #system-design #data-engineering #spark-cluster-manager
+**Created**: Unknown
+**Last Updated**: 2026-05-20
+
+---
+
 ---
 ---
 1. Modes of running Spark on a Cluster 
@@ -105,6 +114,13 @@ Containerized application 
 | --- | --- |
 | VM<br><br>1. Hypervisor for spinning up VMs <br>2. Running application and scaling it require deployment of VM. VMs are resource heavy. Smallest Node.js VM is 400 MB <br>3. Challenges in Agile DevOPS as may work well in local m/c but starts to break as we push in production | Containers <br><br>1. Containerization is 3 Step Process<br>	1. Manifest : description <br>	2. Create Actual Image <br>	3. Actual container with its binaries and libraries required to run the prog |
 
-![[Computing/Architectonic Pillars/System/Data Engineering/Apache Spark/_resources/Spark_Cluster_Manager.resources/unknown_filename.png]]
+![[Computer Science/Data Engineering/Apache Spark/_resources/Spark_Cluster_Manager.resources/unknown_filename.png]]
 
-![[Computing/Architectonic Pillars/System/Data Engineering/Apache Spark/_resources/Spark_Cluster_Manager.resources/unknown_filename.1.png]]
+![[Computer Science/Data Engineering/Apache Spark/_resources/Spark_Cluster_Manager.resources/unknown_filename.1.png]]
+
+---
+
+## Related Notes
+
+- [[00. Master Knowledge Map]]
+- [[System/00. Overview|System Overview]]

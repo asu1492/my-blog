@@ -1,8 +1,16 @@
-  
+# Interface-Based Injection
+
+**Summary**: Covers Interface-Based Injection in Java, including the core concept, practical usage, and interview-relevant points.
+**Tags**: #programming #java #interface-based-injection
+**Created**: Unknown
+**Last Updated**: 2026-05-20
+
+---
+
 You've highlighted a crucial principle in good software design, especially when using dependency injection (DI) frameworks like Spring. Let's explore in detail why injecting dependencies using interfaces (when possible) is the recommended approach, rather than injecting concrete classes directly.
 
 #### How to carry out interface based injection
-1. @Autowired  ChatBotFlowMapService chatBotFlowMapService. This will create a bean of class that implements the interface, chatBotFlowMapService;
+1. @Autowired  FlowMapService flowMapService. This will create a bean of class that implements the interface, flowMapService;
 2. However, if multiple classes implements a single interfaces, then in such case, we have following solutions:
 1. `@Primary` Annotation:
     - You can mark one of your implementation classes with the `@Primary` annotation. This signals to Spring that, when multiple candidates exist, this one should be preferred.
@@ -10,29 +18,29 @@ You've highlighted a crucial principle in good software design, especially when 
         ```java
         @Component
         @Primary
-        public class ComposerFlowMapServiceImpl implements ChatBotFlowMapService {
+        public class OrchestratorFlowMapServiceImpl implements FlowMapService {
             // ... implementation ...
         }
         
         @Component
-        public class ChatbotFlowMapServiceImpl implements ChatBotFlowMapService {
+        public class ChatbotFlowMapServiceImpl implements FlowMapService {
             // ... implementation ...
         }
         ```
         
-        In this case, `ComposerFlowMapServiceImpl` will be injected when `@Autowired ChatBotFlowMapService` is used.
+        In this case, `OrchestratorFlowMapServiceImpl` will be injected when `@Autowired FlowMapService` is used.
     - **When to Use:** Good for situations where one implementation is the default or primary choice.
 2. `@Qualifier` Annotation:
     - `@Qualifier` allows you to specify a specific bean name for autowiring. This is useful when you have multiple implementations of the same interface and need fine-grained control over which one is injected.
     - Example:
         ```java
-        @Component("composerService") //Bean is given name
-        public class ComposerFlowMapServiceImpl implements ChatBotFlowMapService {
+        @Component("orchestratorService") //Bean is given name
+        public class OrchestratorFlowMapServiceImpl implements FlowMapService {
             // ... implementation ...
         }
         
         @Component("chatbotService")
-        public class ChatbotFlowMapServiceImpl implements ChatBotFlowMapService {
+        public class ChatbotFlowMapServiceImpl implements FlowMapService {
             // ... implementation ...
         }
         ```
@@ -41,8 +49,8 @@ You've highlighted a crucial principle in good software design, especially when 
         
         ```java
         @Autowired
-        @Qualifier("composerService")
-        private ChatBotFlowMapService chatBotFlowMapService;
+        @Qualifier("orchestratorService")
+        private FlowMapService flowMapService;
         ```
         
         or
@@ -50,19 +58,19 @@ You've highlighted a crucial principle in good software design, especially when 
         ```java
         @Autowired
         @Qualifier("chatbotService")
-        private ChatBotFlowMapService chatBotFlowMapService;
+        private FlowMapService flowMapService;
         ```
     - **When to Use:** Ideal when you have distinct use cases for each implementation and need to select them specifically.
         
 3. **Using Bean Names (Implicit Qualifier):**
-    - If you don't provide a bean name when you declare the component, Spring will use the simple name of the class as the bean name. For instance, by default the name for `ComposerFlowMapServiceImpl` will be `composerFlowMapServiceImpl`.
+    - If you don't provide a bean name when you declare the component, Spring will use the simple name of the class as the bean name. For instance, by default the name for OrchestratorFlowMapServiceImpl will be orchestratorFlowMapServiceImpl.
         
     - You can use this implicit name with the `@Qualifier` annotation too:
         
         ```java
         @Autowired
-        @Qualifier("composerFlowMapServiceImpl") // implicit name
-        private ChatBotFlowMapService chatBotFlowMapService;
+        @Qualifier("orchestratorFlowMapServiceImpl") // implicit name
+        private FlowMapService flowMapService;
         ```
         
 4. **Using Java Config:**
@@ -72,12 +80,12 @@ You've highlighted a crucial principle in good software design, especially when 
         public class AppConfig {
         
             @Bean
-            public ChatBotFlowMapService composerService(){
-               return new ComposerFlowMapServiceImpl();
+            public FlowMapService orchestratorService(){
+               return new OrchestratorFlowMapServiceImpl();
             }
         
              @Bean
-            public ChatBotFlowMapService chatbotService(){
+            public FlowMapService chatbotService(){
                return new ChatbotFlowMapServiceImpl();
             }
         }
@@ -85,11 +93,11 @@ You've highlighted a crucial principle in good software design, especially when 
         And then:
         ```java
         @Autowired
-        @Qualifier("composerService") //Bean name defined in AppConfig.java
-        private ChatBotFlowMapService chatBotFlowMapService;
+        @Qualifier("orchestratorService") //Bean name defined in AppConfig.java
+        private FlowMapService flowMapService;
         ```
     - **When to Use:** Good for more complex configurations and allows you to customize bean creation and configuration.
-    - - When you use `@Bean` without explicitly specifying a name (e.g., `@Bean public ChatBotFlowMapService composerService()`), Spring will use the **method name** as the default bean name.
+    - - When you use `@Bean` without explicitly specifying a name (e.g., `@Bean public FlowMapService orchestratorService()`), Spring will use the **method name** as the default bean name.
     - When to Use Explicit Bean Naming (`@Bean("name")`)
 	    - If you have multiple methods that would result in the same default bean name, you must use explicit naming to avoid conflicts
 	    - Some developers prefer to always use explicit bean naming for clarity and consistency, even when the method name is suitable.
@@ -133,3 +141,11 @@ You've highlighted a crucial principle in good software design, especially when 
 
 
 It makes your codebase more flexible, maintainable, and resilient to changes. While there are exceptions, in most cases, relying on interfaces for dependency injection is the best practice, especially when working with large, complex applications using DI frameworks like Spring.
+
+---
+
+## Related Notes
+
+- [[00. Master Knowledge Map]]
+- [[Programming Paradigm & Framework/00. Overview|Programming Overview]]
+- [[Programming Paradigm & Framework/Java/0. Java Roadmap|Java Roadmap]]

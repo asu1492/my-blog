@@ -1,3 +1,12 @@
+# Booking
+
+**Summary**: Captures the Booking system design case study, including the problem shape, design choices, and trade-offs.
+**Tags**: #system-design #case-study #booking
+**Created**: Unknown
+**Last Updated**: 2026-05-20
+
+---
+
 Movie Ticket Booking System
 Requirements (compact):
 Theaters → screens → shows.
@@ -323,3 +332,17 @@ public class Seat{
     private Show show;
 }
 
+---
+
+## Concepts Exercised
+- [[Computing/Architectonic Pillars/System/Infrastructure/Concurrency|Concurrency]] — check-then-act seat locking; `synchronized` / `ReentrantLock` for hold logic
+- [[Consistency Model ACID, BASE]] — ACID transactions to prevent double-booking; optimistic locking on `SeatInventory`
+- [[API Design]] — REST endpoints: `POST /hold`, `POST /confirm`, `DELETE /hold/{id}`
+- [[JPA]] — `@Transactional`, `@Version` for optimistic locking, `@ManyToOne` relationships
+
+---
+
+## Related Notes
+
+- [[00. Master Knowledge Map]]
+- [[System/00. Overview|System Overview]]

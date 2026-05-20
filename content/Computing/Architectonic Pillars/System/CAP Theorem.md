@@ -1,3 +1,11 @@
+# CAP Theorem
+
+**Summary**: Covers CAP Theorem in system design, architecture, or backend engineering, with key concepts and trade-offs.
+**Tags**: #system-design #cap-theorem
+**Created**: Unknown
+**Last Updated**: 2026-05-20
+
+---
 
 ##### What is CAP Theorem 
 1. CAP theorem formulated by
@@ -14,4 +22,11 @@
 	1. Network Failure 
 	2. Packet Loss 
 	3. Switch/Router Failure 
-	4. Data Center Connection Lost 
+	4. Data Center Connection Lost
+
+---
+
+## Related Notes
+
+- [[00. Master Knowledge Map]]
+- [[System/00. Overview|System Overview]]

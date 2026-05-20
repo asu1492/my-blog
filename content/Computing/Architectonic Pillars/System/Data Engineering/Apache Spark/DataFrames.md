@@ -1,3 +1,12 @@
+# DataFrames
+
+**Summary**: Covers DataFrames in data engineering, including core concepts, workflow patterns, and practical usage.
+**Tags**: #system-design #data-engineering #dataframes
+**Created**: Unknown
+**Last Updated**: 2026-05-20
+
+---
+
 ---
 ---
 * Equivalent to a table in relational database or data frame in R/Python, but with richer optimization. 
@@ -47,3 +56,10 @@ Loading or Exporting the data
 3. export to disk as JSON files 
 4. save data to a postgres database 
 5. use of an API to export data
+
+---
+
+## Related Notes
+
+- [[00. Master Knowledge Map]]
+- [[System/00. Overview|System Overview]]

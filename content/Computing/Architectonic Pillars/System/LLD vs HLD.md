@@ -1,3 +1,12 @@
+# LLD vs HLD
+
+**Summary**: Covers LLD vs HLD in system design, architecture, or backend engineering, with key concepts and trade-offs.
+**Tags**: #system-design #lld-vs-hld
+**Created**: Unknown
+**Last Updated**: 2026-05-20
+
+---
+
 1. HLD focuses on system design while LLD translates HLD into classes, interfaces, design patterns, data structure and algorithms. 
 2. UML diagrams to show relationship b/w classes , commonly used UML diagrams are Class Diagram, Sequence Diagram and Use Case Diagram. 
 3. Important Design Principles 
@@ -39,4 +48,11 @@
 	7. Splitwise 
 	8. Logging Framework 
 	9. Hotel Management System 
-	10. Movie Ticket Booking System 
+	10. Movie Ticket Booking System
+
+---
+
+## Related Notes
+
+- [[00. Master Knowledge Map]]
+- [[System/00. Overview|System Overview]]

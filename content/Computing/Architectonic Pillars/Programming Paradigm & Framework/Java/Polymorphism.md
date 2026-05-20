@@ -1,4 +1,12 @@
 
+
+**Summary**: Covers Question on Polymorphism in Java, including the core concept, practical usage, and interview-relevant points.
+**Tags**: #programming #java #polymorphism
+**Created**: Unknown
+**Last Updated**: 2026-05-20
+
+---
+
 #  Question on Polymorphism  
 1. What is polymorphism in Java?
 	1. It is the ability of a method to take different shape based on the context. 
@@ -23,3 +31,11 @@
 14. How does polymorphism help in achieving loose coupling?
 15. Can you override private methods in Java?
 #corejava
+
+---
+
+## Related Notes
+
+- [[00. Master Knowledge Map]]
+- [[Programming Paradigm & Framework/00. Overview|Programming Overview]]
+- [[Programming Paradigm & Framework/Java/0. Java Roadmap|Java Roadmap]]

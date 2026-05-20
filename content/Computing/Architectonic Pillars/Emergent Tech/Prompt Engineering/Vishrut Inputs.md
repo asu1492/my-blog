@@ -1,3 +1,11 @@
+# Vishrut Inputs
+
+**Summary**: Covers Vishrut Inputs in prompt engineering, including reusable patterns, examples, and practical usage.
+**Tags**: #emergent-tech #prompt-engineering #vishrut-inputs
+**Created**: Unknown
+**Last Updated**: 2026-05-20
+
+---
 
 Agentic Tools 
 1. Cursor (Project based code) 
@@ -11,3 +19,11 @@ Agentic Tools 
 8. https://www.nighthack.in/codemonk
 9. Mixture of Experts
 10. Agentic - PhiData
+
+---
+
+## Related Notes
+
+- [[00. Master Knowledge Map]]
+- [[Emergent Tech/00. Overview|Emergent Tech Overview]]
+- [[Emergent Tech/MCP]]

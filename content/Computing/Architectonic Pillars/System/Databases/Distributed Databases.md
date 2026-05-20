@@ -1,3 +1,12 @@
+# Distributed Databases
+
+**Summary**: Covers Distributed Databases in databases and data storage, including concepts, trade-offs, and practical usage.
+**Tags**: #system-design #databases #distributed-databases
+**Created**: Unknown
+**Last Updated**: 2026-05-20
+
+---
+
 ---
 source: https://www.coursera.org/learn/introduction-to-nosql-databases/quiz/WpXF1/practice-quiz-working-with-distributed-data/attempt?redirectToCover=true
 ---
@@ -132,3 +141,10 @@ The system continues to operate despite data loss or network failures.
 **Correct**
 
 Partition Tolerance means that a given system continues to operate even under circumstances of data loss or network failure. The cluster must continue to work despite any number of communication breakdowns between nodes in the system.
+
+---
+
+## Related Notes
+
+- [[00. Master Knowledge Map]]
+- [[System/00. Overview|System Overview]]

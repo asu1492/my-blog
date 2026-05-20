@@ -1,3 +1,11 @@
+# Effective Java
+
+**Summary**: Covers Effective Java in Java, including the core concept, practical usage, and interview-relevant points.
+**Tags**: #programming #java #effective-java
+**Created**: Unknown
+**Last Updated**: 2026-05-20
+
+---
 
 Principles that a program needs to follow, (RUM - CFC) 
 1. Robust 
@@ -31,6 +39,12 @@ Creating and Destroying java objects
 4. Avoid creating unnecessary objects 
 5. Eliminate obsolete object references 
 6. Avoid Finalizers 
-7. 
+7.
 
+---
 
+## Related Notes
+
+- [[00. Master Knowledge Map]]
+- [[Programming Paradigm & Framework/00. Overview|Programming Overview]]
+- [[Programming Paradigm & Framework/Java/0. Java Roadmap|Java Roadmap]]

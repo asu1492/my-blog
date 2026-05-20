@@ -1,3 +1,12 @@
+# Fact table - Wikipedia
+
+**Summary**: Covers Fact table - Wikipedia in databases and data storage, including concepts, trade-offs, and practical usage.
+**Tags**: #system-design #databases #fact-table-wikipedia
+**Created**: Unknown
+**Last Updated**: 2026-05-20
+
+---
+
 ---
 source: https://en.wikipedia.org/wiki/Fact_table
 ---
@@ -71,3 +80,10 @@ An alternative approach is the four step design process described in Kimball:[1]
 
 * **[^](https://en.wikipedia.org/wiki/Fact_table#cite_ref-Kimball_2-0)** Kimball, Ralph (2008). _The Data Warehouse Lifecycle Toolkit, 2. edition_. Wiley. [ISBN](https://en.wikipedia.org/wiki/ISBN_(identifier)) [978-0-470-14977-5](https://en.wikipedia.org/wiki/Special:BookSources/978-0-470-14977-5).
 * **[^](https://en.wikipedia.org/wiki/Fact_table#cite_ref-3)** Davide, Mauri. ["Temporal Snapshot Fact Table"](http://www.slideshare.net/davidemauri/temporal-snapshot-fact-tables).
+
+---
+
+## Related Notes
+
+- [[00. Master Knowledge Map]]
+- [[System/00. Overview|System Overview]]

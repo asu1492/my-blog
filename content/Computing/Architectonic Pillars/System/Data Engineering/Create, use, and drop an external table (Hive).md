@@ -1,3 +1,12 @@
+# Create, use, and drop an external table (Hive)
+
+**Summary**: Covers Create, use, and drop an external table (Hive) in data engineering, including core concepts, workflow patterns, and practical usage.
+**Tags**: #system-design #data-engineering #create-use-and-drop-an-external-table-hive
+**Created**: Unknown
+**Last Updated**: 2026-05-20
+
+---
+
 ---
 source: https://docs.cloudera.com/HDPDocuments/HDP3/HDP-3.1.5/using-hiveql/content/hive_create_an_external_table.html
 ---
@@ -86,3 +95,10 @@ After dropping an external table, the ==data is not gone. To retrieve it, you is
 * Check that the students.csv file on HDFS remains intact.
 
 **Parent topic:** [Apache Hive 3 tables](https://docs.cloudera.com/HDPDocuments/HDP3/HDP-3.1.5/using-hiveql/content/hive_hive_3_tables.html)
+
+---
+
+## Related Notes
+
+- [[00. Master Knowledge Map]]
+- [[System/00. Overview|System Overview]]

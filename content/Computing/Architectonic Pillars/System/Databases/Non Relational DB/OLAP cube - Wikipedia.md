@@ -1,3 +1,12 @@
+# OLAP cube - Wikipedia
+
+**Summary**: Covers OLAP cube - Wikipedia in databases and data storage, including concepts, trade-offs, and practical usage.
+**Tags**: #system-design #databases #olap-cube-wikipedia
+**Created**: Unknown
+**Last Updated**: 2026-05-20
+
+---
+
 ---
 source: https://en.wikipedia.org/wiki/OLAP_cube
 ---
@@ -95,3 +104,10 @@ The motivation[9](https://en.wikipedia.org/wiki/OLAP_cube#cite_note-DataCubeGray
 * Zhang, Chao (2017). [_Symmetric and Asymmetric Aggregate Function in Massively Parallel Computing_](https://hal.archives-ouvertes.fr/hal-01533675/) (Technical report).
 
 ## External links\[\]
+
+---
+
+## Related Notes
+
+- [[00. Master Knowledge Map]]
+- [[System/00. Overview|System Overview]]

@@ -1,3 +1,12 @@
+# Data
+
+**Summary**: Covers Data in data engineering, including core concepts, workflow patterns, and practical usage.
+**Tags**: #system-design #data-engineering #data
+**Created**: Unknown
+**Last Updated**: 2026-05-20
+
+---
+
 ---
 ---
 Small Data vs Big Data
@@ -14,7 +23,7 @@ Small Data vs Big Data
 * Fifth Value : better decisions and new market opportunity 
 * ![[image (32).png]]![[image (31).png]]![[image (30).png]]
 
-![[Computing/Architectonic Pillars/System/Data Engineering/_resources/Data.resources/unknown_filename.2.png]]
+![[Computer Science/Data Engineering/_resources/Data.resources/unknown_filename.2.png]]
 
 BD Use Case
 
@@ -68,7 +77,7 @@ Data Sources
 2. machine data
 3. transactional data 
 
-![[Computing/Architectonic Pillars/System/Data Engineering/_resources/Data.resources/Image.png]]
+![[Computer Science/Data Engineering/_resources/Data.resources/Image.png]]
 
 * * *
 
@@ -203,6 +212,13 @@ OS Platforms 
 
 * * *
 
-![[Computing/Architectonic Pillars/System/Data Engineering/_resources/Data.resources/unknown_filename.1.png]]
+![[Computer Science/Data Engineering/_resources/Data.resources/unknown_filename.1.png]]
 
-![[Computing/Architectonic Pillars/System/Data Engineering/_resources/Data.resources/unknown_filename.png]]
+![[Computer Science/Data Engineering/_resources/Data.resources/unknown_filename.png]]
+
+---
+
+## Related Notes
+
+- [[00. Master Knowledge Map]]
+- [[System/00. Overview|System Overview]]

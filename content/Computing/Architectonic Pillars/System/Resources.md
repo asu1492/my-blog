@@ -1,3 +1,12 @@
+# Resources
+
+**Summary**: Covers Resources in system design, architecture, or backend engineering, with key concepts and trade-offs.
+**Tags**: #system-design #resources
+**Created**: Unknown
+**Last Updated**: 2026-05-20
+
+---
+
 1. Design a Project Management Tool Like Jira  
 2. Design a Real-Time Collaboration Tool.  
 3. Design a Scalable Notification System  
@@ -30,3 +39,9 @@
 - [DCI](http://www.amazon.com/Lean-Architecture-Agile-Software-Development/dp/0470684208/) from James Coplien, and Trygve Reenskaug.
 - [BCE](http://www.amazon.com/Object-Oriented-Software-Engineering-Approach/dp/0201544350) by Ivar Jacobson from his book _Object Oriented Software Engineering: A Use-Case Driven Approach_
 
+---
+
+## Related Notes
+
+- [[00. Master Knowledge Map]]
+- [[System/00. Overview|System Overview]]

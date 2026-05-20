@@ -1,4 +1,12 @@
 #  Question on Abstraction 
+
+**Summary**: Covers Question on Abstraction in Java, including the core concept, practical usage, and interview-relevant points.
+**Tags**: #programming #java #abstractions
+**Created**: Unknown
+**Last Updated**: 2026-05-20
+
+---
+
 -  What is the purpose of an abstract method?
 	- Defining a Common Interface
 	- Allowing Partial Implementation
@@ -69,3 +77,11 @@
 ![[Pasted image 20250218195550.png]]
 
 #corejava
+
+---
+
+## Related Notes
+
+- [[00. Master Knowledge Map]]
+- [[Programming Paradigm & Framework/00. Overview|Programming Overview]]
+- [[Programming Paradigm & Framework/Java/0. Java Roadmap|Java Roadmap]]

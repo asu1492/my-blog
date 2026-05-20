@@ -1,3 +1,11 @@
+# 00000   Macro Overview
+
+**Summary**: Covers 00000   Macro Overview in system design, architecture, or backend engineering, with key concepts and trade-offs.
+**Tags**: #system-design #00000-macro-overview
+**Created**: Unknown
+**Last Updated**: 2026-05-20
+
+---
 
 1. Core Computation 
 2. Modularity and Distribution 
@@ -39,3 +47,10 @@
 - Their presence transforms a static fortress into a responsive organism capable of proactive entropy mitigation—exactly the bridge to physical-world interaction you originally asked about.
 
 **How to Internalise This Model** Mentally walk the fortress from the keep outward: start with “What data and logic do I need?” (Layer 0), then “How do I compose resilient modules?” (Layer 1), “How does the world touch it?” (Layer 2), “How do I defend it?” (Layer 3), and finally “How do I keep it alive forever?” (Layer 4). At any decision point, ask: “Which entropy vector am I addressing, and which layer owns the countermeasure?” Agents become the default answer whenever the question involves uncertainty, partial observability, or real-time adaptation.
+
+---
+
+## Related Notes
+
+- [[00. Master Knowledge Map]]
+- [[System/00. Overview|System Overview]]

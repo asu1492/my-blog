@@ -1,3 +1,12 @@
+# Data Warehouse, Data Marts and Data Lakes
+
+**Summary**: Covers Data Warehouse, Data Marts and Data Lakes in databases and data storage, including concepts, trade-offs, and practical usage.
+**Tags**: #system-design #databases #data-warehouse-data-marts-and-data-lakes
+**Created**: Unknown
+**Last Updated**: 2026-05-20
+
+---
+
 ---
 source: https://www.coursera.org/learn/getting-started-with-data-warehousing-and-bi-analytics/supplement/I2886/data-warehousing-with-star-and-snowflake-schemas
 ---
@@ -73,7 +82,7 @@ Data Marts
 3. RDBs with star or snowflake schema
 4. central fact table f business metric, surrounded by associates dimension tables.
 
-![[Computing/Architectonic Pillars/System/Databases/_resources/Data_Warehouse,_Data_Marts_and_Data_Lakes.resources/unknown_filename.10.png]]
+![[Computer Science/Databases/_resources/Data_Warehouse,_Data_Marts_and_Data_Lakes.resources/unknown_filename.10.png]]
 
 Types f DM based on their rel with DW
 
@@ -81,11 +90,11 @@ Types f DM based on their rel with DW
 2. Dependent - draw data from data warehouse
 3. Hybrid
 
-![[Computing/Architectonic Pillars/System/Databases/_resources/Data_Warehouse,_Data_Marts_and_Data_Lakes.resources/unknown_filename.6.png]]
+![[Computer Science/Databases/_resources/Data_Warehouse,_Data_Marts_and_Data_Lakes.resources/unknown_filename.6.png]]
 
 Purpose f DM
-![[Computing/Architectonic Pillars/System/Databases/_resources/Data_Warehouse,_Data_Marts_and_Data_Lakes.resources/unknown_filename.9.png]]
-![[Computing/Architectonic Pillars/System/Databases/_resources/Data_Warehouse,_Data_Marts_and_Data_Lakes.resources/unknown_filename.2.png]]
+![[Computer Science/Databases/_resources/Data_Warehouse,_Data_Marts_and_Data_Lakes.resources/unknown_filename.9.png]]
+![[Computer Science/Databases/_resources/Data_Warehouse,_Data_Marts_and_Data_Lakes.resources/unknown_filename.2.png]]
 
 * * *
 
@@ -102,29 +111,29 @@ Purpose f DM
 	4. Apache Hadoop
 
 DM vs DW
-![[Computing/Architectonic Pillars/System/Databases/_resources/Data_Warehouse,_Data_Marts_and_Data_Lakes.resources/unknown_filename.8.png]]
+![[Computer Science/Databases/_resources/Data_Warehouse,_Data_Marts_and_Data_Lakes.resources/unknown_filename.8.png]]
 
 Benefits f DL
-![[Computing/Architectonic Pillars/System/Databases/_resources/Data_Warehouse,_Data_Marts_and_Data_Lakes.resources/unknown_filename.png]]
+![[Computer Science/Databases/_resources/Data_Warehouse,_Data_Marts_and_Data_Lakes.resources/unknown_filename.png]]
 
-![[Computing/Architectonic Pillars/System/Databases/_resources/Data_Warehouse,_Data_Marts_and_Data_Lakes.resources/unknown_filename.3.png]]
+![[Computer Science/Databases/_resources/Data_Warehouse,_Data_Marts_and_Data_Lakes.resources/unknown_filename.3.png]]
 
 **Data Lakes vs Data Warehouse**
 
-![[Computing/Architectonic Pillars/System/Databases/_resources/Data_Warehouse,_Data_Marts_and_Data_Lakes.resources/unknown_filename.5.png]]![[Computing/Architectonic Pillars/System/Databases/_resources/Data_Warehouse,_Data_Marts_and_Data_Lakes.resources/unknown_filename.1.png]]
-![[Computing/Architectonic Pillars/System/Databases/_resources/Data_Warehouse,_Data_Marts_and_Data_Lakes.resources/unknown_filename.4.png]]
-![[Computing/Architectonic Pillars/System/Databases/_resources/Data_Warehouse,_Data_Marts_and_Data_Lakes.resources/unknown_filename.7.png]]
+![[Computer Science/Databases/_resources/Data_Warehouse,_Data_Marts_and_Data_Lakes.resources/unknown_filename.5.png]]![[Computer Science/Databases/_resources/Data_Warehouse,_Data_Marts_and_Data_Lakes.resources/unknown_filename.1.png]]
+![[Computer Science/Databases/_resources/Data_Warehouse,_Data_Marts_and_Data_Lakes.resources/unknown_filename.4.png]]
+![[Computer Science/Databases/_resources/Data_Warehouse,_Data_Marts_and_Data_Lakes.resources/unknown_filename.7.png]]
 
 * * *
 
 * * *
 
 **Enterprise DW Architecture**
-![[Computing/Architectonic Pillars/System/Databases/_resources/Data_Warehouse,_Data_Marts_and_Data_Lakes.resources/unknown_filename.12.png]]
+![[Computer Science/Databases/_resources/Data_Warehouse,_Data_Marts_and_Data_Lakes.resources/unknown_filename.12.png]]
 
 1. Hub and Spoke Model, when multiple data marts are involved.
 
-![[Computing/Architectonic Pillars/System/Databases/_resources/Data_Warehouse,_Data_Marts_and_Data_Lakes.resources/unknown_filename.11.png]]
+![[Computer Science/Databases/_resources/Data_Warehouse,_Data_Marts_and_Data_Lakes.resources/unknown_filename.11.png]]
 
 ![[Overview of Data Warehouse Architectures _ Courser.1.png]]![[Overview of Data Warehouse Architectures _ Courser.png]]
 
@@ -132,13 +141,13 @@ Benefits f DL
 
 * * *
 
-![[Computing/Architectonic Pillars/System/Databases/_resources/Data_Warehouse,_Data_Marts_and_Data_Lakes.resources/unknown_filename.13.png]]
+![[Computer Science/Databases/_resources/Data_Warehouse,_Data_Marts_and_Data_Lakes.resources/unknown_filename.13.png]]
 
-![[Computing/Architectonic Pillars/System/Databases/_resources/Data_Warehouse,_Data_Marts_and_Data_Lakes.resources/unknown_filename.18.png]]
+![[Computer Science/Databases/_resources/Data_Warehouse,_Data_Marts_and_Data_Lakes.resources/unknown_filename.18.png]]
 
-![[Computing/Architectonic Pillars/System/Databases/_resources/Data_Warehouse,_Data_Marts_and_Data_Lakes.resources/unknown_filename.19.png]]
+![[Computer Science/Databases/_resources/Data_Warehouse,_Data_Marts_and_Data_Lakes.resources/unknown_filename.19.png]]
 
-![[Computing/Architectonic Pillars/System/Databases/_resources/Data_Warehouse,_Data_Marts_and_Data_Lakes.resources/unknown_filename.22.png]]
+![[Computer Science/Databases/_resources/Data_Warehouse,_Data_Marts_and_Data_Lakes.resources/unknown_filename.22.png]]
 Why Normalization
 
 1. Reduces redundancy
@@ -153,43 +162,43 @@ Normalizing a table means to create, for each dimension:
 * * *
 
 Staging Areas
-![[Computing/Architectonic Pillars/System/Databases/_resources/Data_Warehouse,_Data_Marts_and_Data_Lakes.resources/unknown_filename.21.png]]
-![[Computing/Architectonic Pillars/System/Databases/_resources/Data_Warehouse,_Data_Marts_and_Data_Lakes.resources/unknown_filename.17.png]]
+![[Computer Science/Databases/_resources/Data_Warehouse,_Data_Marts_and_Data_Lakes.resources/unknown_filename.21.png]]
+![[Computer Science/Databases/_resources/Data_Warehouse,_Data_Marts_and_Data_Lakes.resources/unknown_filename.17.png]]
 
 * * *
 
 * * *
 
-![[Computing/Architectonic Pillars/System/Databases/_resources/Data_Warehouse,_Data_Marts_and_Data_Lakes.resources/unknown_filename.20.png]]
+![[Computer Science/Databases/_resources/Data_Warehouse,_Data_Marts_and_Data_Lakes.resources/unknown_filename.20.png]]
 
-![[Computing/Architectonic Pillars/System/Databases/_resources/Data_Warehouse,_Data_Marts_and_Data_Lakes.resources/unknown_filename.16.png]]
+![[Computer Science/Databases/_resources/Data_Warehouse,_Data_Marts_and_Data_Lakes.resources/unknown_filename.16.png]]
 
-![[Computing/Architectonic Pillars/System/Databases/_resources/Data_Warehouse,_Data_Marts_and_Data_Lakes.resources/unknown_filename.15.png]]
+![[Computer Science/Databases/_resources/Data_Warehouse,_Data_Marts_and_Data_Lakes.resources/unknown_filename.15.png]]
 
-![[Computing/Architectonic Pillars/System/Databases/_resources/Data_Warehouse,_Data_Marts_and_Data_Lakes.resources/unknown_filename.14.png]]
+![[Computer Science/Databases/_resources/Data_Warehouse,_Data_Marts_and_Data_Lakes.resources/unknown_filename.14.png]]
 
-![[Computing/Architectonic Pillars/System/Databases/_resources/Data_Warehouse,_Data_Marts_and_Data_Lakes.resources/unknown_filename.27.png]]
+![[Computer Science/Databases/_resources/Data_Warehouse,_Data_Marts_and_Data_Lakes.resources/unknown_filename.27.png]]
 
-![[Computing/Architectonic Pillars/System/Databases/_resources/Data_Warehouse,_Data_Marts_and_Data_Lakes.resources/unknown_filename.28.png]]
+![[Computer Science/Databases/_resources/Data_Warehouse,_Data_Marts_and_Data_Lakes.resources/unknown_filename.28.png]]
 
-![[Computing/Architectonic Pillars/System/Databases/_resources/Data_Warehouse,_Data_Marts_and_Data_Lakes.resources/unknown_filename.33.png]]
+![[Computer Science/Databases/_resources/Data_Warehouse,_Data_Marts_and_Data_Lakes.resources/unknown_filename.33.png]]
 
-![[Computing/Architectonic Pillars/System/Databases/_resources/Data_Warehouse,_Data_Marts_and_Data_Lakes.resources/unknown_filename.29.png]]
-![[Computing/Architectonic Pillars/System/Databases/_resources/Data_Warehouse,_Data_Marts_and_Data_Lakes.resources/unknown_filename.31.png]]
+![[Computer Science/Databases/_resources/Data_Warehouse,_Data_Marts_and_Data_Lakes.resources/unknown_filename.29.png]]
+![[Computer Science/Databases/_resources/Data_Warehouse,_Data_Marts_and_Data_Lakes.resources/unknown_filename.31.png]]
 
-![[Computing/Architectonic Pillars/System/Databases/_resources/Data_Warehouse,_Data_Marts_and_Data_Lakes.resources/unknown_filename.32.png]]
+![[Computer Science/Databases/_resources/Data_Warehouse,_Data_Marts_and_Data_Lakes.resources/unknown_filename.32.png]]
 
-![[Computing/Architectonic Pillars/System/Databases/_resources/Data_Warehouse,_Data_Marts_and_Data_Lakes.resources/unknown_filename.34.png]]
+![[Computer Science/Databases/_resources/Data_Warehouse,_Data_Marts_and_Data_Lakes.resources/unknown_filename.34.png]]
 
-![[Computing/Architectonic Pillars/System/Databases/_resources/Data_Warehouse,_Data_Marts_and_Data_Lakes.resources/unknown_filename.24.png]]
+![[Computer Science/Databases/_resources/Data_Warehouse,_Data_Marts_and_Data_Lakes.resources/unknown_filename.24.png]]
 
-![[Computing/Architectonic Pillars/System/Databases/_resources/Data_Warehouse,_Data_Marts_and_Data_Lakes.resources/unknown_filename.30.png]]
+![[Computer Science/Databases/_resources/Data_Warehouse,_Data_Marts_and_Data_Lakes.resources/unknown_filename.30.png]]
 
-![[Computing/Architectonic Pillars/System/Databases/_resources/Data_Warehouse,_Data_Marts_and_Data_Lakes.resources/unknown_filename.25.png]]
+![[Computer Science/Databases/_resources/Data_Warehouse,_Data_Marts_and_Data_Lakes.resources/unknown_filename.25.png]]
 
-![[Computing/Architectonic Pillars/System/Databases/_resources/Data_Warehouse,_Data_Marts_and_Data_Lakes.resources/unknown_filename.23.png]]
+![[Computer Science/Databases/_resources/Data_Warehouse,_Data_Marts_and_Data_Lakes.resources/unknown_filename.23.png]]
 
-![[Computing/Architectonic Pillars/System/Databases/_resources/Data_Warehouse,_Data_Marts_and_Data_Lakes.resources/unknown_filename.26.png]]
+![[Computer Science/Databases/_resources/Data_Warehouse,_Data_Marts_and_Data_Lakes.resources/unknown_filename.26.png]]
 
 * * *
 
@@ -249,3 +258,10 @@ Why BI tools 
 - A star schema is a special case of a snowflake schema where all hierarchies have been collapsed.
 - ETL pipelines moving OLTP → OLAP include a **denormalization step** that collapses snowflake hierarchies into star dimensions.
 - You can also layer materialized views of a star schema *on top of* a snowflake schema to get the best of both worlds.
+
+---
+
+## Related Notes
+
+- [[00. Master Knowledge Map]]
+- [[System/00. Overview|System Overview]]

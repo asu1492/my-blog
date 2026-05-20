@@ -1,3 +1,11 @@
+# Resources
+
+**Summary**: Covers Resources in Java, including the core concept, practical usage, and interview-relevant points.
+**Tags**: #programming #javascript #resources
+**Created**: Unknown
+**Last Updated**: 2026-05-20
+
+---
 
  1. https://www.freecodecamp.org/news/top-10-javascript-algorithms-for-coding-challenges/?ref=dailydev  #DSA
 
@@ -11,4 +19,11 @@
 7. Error handling 
 8. ES6+ Features
 9. Browers API
-10. Frameworks 
+10. Frameworks
+
+---
+
+## Related Notes
+
+- [[00. Master Knowledge Map]]
+- [[Programming Paradigm & Framework/00. Overview|Programming Overview]]

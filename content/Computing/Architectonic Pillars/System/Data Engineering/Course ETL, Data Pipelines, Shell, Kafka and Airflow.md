@@ -1,3 +1,12 @@
+# Course ETL, Data Pipelines, Shell, Kafka and Airflow
+
+**Summary**: Covers Course ETL, Data Pipelines, Shell, Kafka and Airflow in data engineering, including core concepts, workflow patterns, and practical usage.
+**Tags**: #system-design #data-engineering #course-etl-data-pipelines-shell-kafka-and-airflow
+**Created**: Unknown
+**Last Updated**: 2026-05-20
+
+---
+
 ---
 ---
 * What is ETL pipeline
@@ -19,3 +28,10 @@
 * * *
 
 * * *
+
+---
+
+## Related Notes
+
+- [[00. Master Knowledge Map]]
+- [[System/00. Overview|System Overview]]

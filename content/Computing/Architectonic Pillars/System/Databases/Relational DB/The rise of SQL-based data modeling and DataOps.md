@@ -1,3 +1,12 @@
+# The rise of SQL-based data modeling and DataOps
+
+**Summary**: Covers The rise of SQL-based data modeling and DataOps in databases and data storage, including concepts, trade-offs, and practical usage.
+**Tags**: #system-design #databases #the-rise-of-sql-based-data-modeling-and-dataops
+**Created**: Unknown
+**Last Updated**: 2026-05-20
+
+---
+
 ---
 source: https://www.holistics.io/blog/the-rise-of-sql-based-data-modeling-and-dataops/
 ---
@@ -108,3 +117,10 @@ My thesis is that we can significantly improve the data analytics process if we 
 SQL, data modeling and DevOps are three age-old concepts with little to do with one another. Yet when combined, we have an entirely new paradigm for thinking about analytics, one that's never been seen before in our 60-year old industry.
 
 We call this the DataOps paradigm. It is the guiding paradigm behind [Holistics](https://holistics.io/), a unified analytics platform that we've been working on for the past two years. And we're incredibly excited about its future.
+
+---
+
+## Related Notes
+
+- [[00. Master Knowledge Map]]
+- [[System/00. Overview|System Overview]]

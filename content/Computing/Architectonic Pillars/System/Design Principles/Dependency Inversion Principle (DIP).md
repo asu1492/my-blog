@@ -1,3 +1,12 @@
+# Dependency Inversion Principle (DIP)
+
+**Summary**: Covers Dependency Inversion Principle (DIP) as a design principle or engineering pattern, with practical implications and examples.
+**Tags**: #system-design #design-principles #dependency-inversion-principle-dip
+**Created**: Unknown
+**Last Updated**: 2026-05-20
+
+---
+
 - **Core Idea:** High-level modules should not depend on low-level modules. Both should depend on abstractions (interfaces or abstract classes).
 - **Explanation:**
     - **High-level modules:** These are the core business logic or policy-setting parts of your application. They define the overall behavior.
@@ -14,3 +23,11 @@
 - **Example:**
     - **Without DIP:** A `ReportGenerator` class directly depends on a `DatabaseReader` class. If you want to change the data source to a file, you need to modify the `ReportGenerator`.
     - **With DIP:** A `ReportGenerator` class depends on an interface `DataReader`. You can have different implementations of `DataReader` (e.g., `DatabaseReader`, `FileReader`) and inject the appropriate one at runtime. The `ReportGenerator` doesn't need to know the specific implementation.
+
+---
+
+## Related Notes
+
+- [[00. Master Knowledge Map]]
+- [[System/00. Overview|System Overview]]
+- [[System/Design Principles/00. Overview|Design Principles Overview]]

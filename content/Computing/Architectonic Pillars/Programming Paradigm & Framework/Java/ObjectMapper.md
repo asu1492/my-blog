@@ -1,3 +1,12 @@
+# ObjectMapper
+
+**Summary**: Covers ObjectMapper in Java, including the core concept, practical usage, and interview-relevant points.
+**Tags**: #programming #java #objectmapper
+**Created**: Unknown
+**Last Updated**: 2026-05-20
+
+---
+
 `objectMapper.readTree` and `objectMapper.readValue` are both methods provided by the Jackson library's `ObjectMapper` class for deserializing JSON data into Java objects. However, they have different use cases and return types:
 1. **`readTree`**:
     - This method is used to parse JSON content into a `JsonNode` object, which represents the hierarchical structure of the JSON data as a tree.
@@ -5,3 +14,11 @@
 2. **`readValue`**:
 	1. This method is used to deserialize JSON content into a Java object of a specified type.
 	2. It's typically used when you have a known Java class that corresponds to the JSON structure and you want to directly map the JSON data to that class.
+
+---
+
+## Related Notes
+
+- [[00. Master Knowledge Map]]
+- [[Programming Paradigm & Framework/00. Overview|Programming Overview]]
+- [[Programming Paradigm & Framework/Java/0. Java Roadmap|Java Roadmap]]

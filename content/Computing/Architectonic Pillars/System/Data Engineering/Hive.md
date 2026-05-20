@@ -1,3 +1,12 @@
+# Hive
+
+**Summary**: Covers Hive in data engineering, including core concepts, workflow patterns, and practical usage.
+**Tags**: #system-design #data-engineering #hive
+**Created**: Unknown
+**Last Updated**: 2026-05-20
+
+---
+
 ---
 ---
 ![[Hive Cheat Sheet.pdf]]
@@ -476,7 +485,7 @@ and by setting hive.auto.convert.join to true and Hive will automatically use Ma
 Mapjoins have a limitation in that the same table or alias cannot be used to join on different columns in the same query. (This makes sense because presumably Hive uses a HashMap keyed on the column(s) used in the join, and such a HashMap would be of no use for a join on different keys).
 Bucket Map Join
 Join is done in Mapper only. The mapper processing bucket 1 for table A will only fetch bucket 1 of table B.
-![[Computing/Architectonic Pillars/System/Data Engineering/_resources/Hive.resources/unknown_filename.png]]
+![[Computer Science/Data Engineering/_resources/Hive.resources/unknown_filename.png]]
 
 Use case:
 When all tables are:
@@ -788,3 +797,10 @@ Source
 3. <https://docs.cloudera.com/HDPDocuments/HDP3/HDP-3.1.5/migrating-data/content/hive_data_migration.html>
 4. <https://dam.ukdataservice.ac.uk/media/604456/hiveworkshoppractical.pdf>
 5. <https://docs.aws.amazon.com/emr/latest/ReleaseGuide/EMR_Interactive_Hive.html>
+
+---
+
+## Related Notes
+
+- [[00. Master Knowledge Map]]
+- [[System/00. Overview|System Overview]]

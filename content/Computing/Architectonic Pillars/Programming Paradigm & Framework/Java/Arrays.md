@@ -1,3 +1,12 @@
+# Arrays
+
+**Summary**: Covers Arrays in Java, including the core concept, practical usage, and interview-relevant points.
+**Tags**: #programming #java #arrays
+**Created**: Unknown
+**Last Updated**: 2026-05-20
+
+---
+
 ### Coding Problems
 ##### Given an array of integers `nums` and an integer `target`, return _indices of the two numbers such that they add up to `target`_. #leetcode
 
@@ -58,3 +67,11 @@ public int maxProfit(int[] prices) {
 
 
 ```
+
+---
+
+## Related Notes
+
+- [[00. Master Knowledge Map]]
+- [[Programming Paradigm & Framework/00. Overview|Programming Overview]]
+- [[Programming Paradigm & Framework/Java/0. Java Roadmap|Java Roadmap]]

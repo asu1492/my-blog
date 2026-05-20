@@ -1,3 +1,14 @@
+# Dynamic Programming
+
+**Summary**: Covers dynamic programming recognition, state definition, recurrence design, memoization, and tabulation.
+**Tags**: #dsa #dynamic-programming #interview
+**Created**: Unknown
+**Last Updated**: 2026-05-20
+
+---
+
+← [[00. Data Structure]] · [[Computing/Architectonic Pillars/Organizing Data/00. Overview|Organizing Data]]
+
 ## Dynamic Programming — 8 patterns
 1. **1D DP (Linear)**  
     Fibonacci, house robber.
@@ -264,3 +275,10 @@ cash[i] = Math.max(cash[i-1], hold[i-1] + price[i]);
         
 
 ---
+
+## Related Notes
+
+- [[00. Overview]]
+- [[Binary Search + Greedy]]
+- [[Graph, Trees and Heap]]
+- [[Time and Space Complexity]]

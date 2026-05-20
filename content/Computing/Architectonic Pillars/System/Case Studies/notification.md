@@ -1,3 +1,11 @@
+# notification
+
+**Summary**: Captures the notification system design case study, including the problem shape, design choices, and trade-offs.
+**Tags**: #system-design #case-study #notification
+**Created**: Unknown
+**Last Updated**: 2026-05-20
+
+---
 
 Step by Step
 1. Define Requrirement 
@@ -592,4 +600,18 @@ Why not user @Data for JPA Entities
 @Enumerated(EnumType.STRING)
 EnumType.STRING ensures enum values are stored as strings in the database instead of ordinals, preventing data corruption if enum order changes.
 1. Without this annotation, JPA stores Enum as Ordinal(0,1,2) -> if Enum order changes, DB becomes corrupted. 
-2. With this annoation, it is stored as id="xaw3r343" 
+
+---
+
+## Concepts Exercised
+- [[Message Queue]] — async channel dispatch; at-least-once delivery with idempotent consumers
+- [[Computing/Architectonic Pillars/System/Design Principles/Design Pattern|Design Pattern]] — Strategy pattern for channel-specific delivery (email/SMS/push); Factory for channel creation
+- [[JPA]] — `@Enumerated(EnumType.STRING)` to guard against ordinal corruption; entity relationships
+2. With this annoation, it is stored as id="xaw3r343"
+
+---
+
+## Related Notes
+
+- [[00. Master Knowledge Map]]
+- [[System/00. Overview|System Overview]]

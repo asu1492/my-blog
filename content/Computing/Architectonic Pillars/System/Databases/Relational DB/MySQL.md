@@ -1,3 +1,12 @@
+# MySQL
+
+**Summary**: Covers MySQL in databases and data storage, including concepts, trade-offs, and practical usage.
+**Tags**: #system-design #databases #mysql
+**Created**: Unknown
+**Last Updated**: 2026-05-20
+
+---
+
 ---
 source: https://app.slack.com/client/T022QFTP49L/C02V7HRCJE6
 ---
@@ -85,7 +94,7 @@ The tables in the mysql database fall into several categories, some of which i
 * Log System Tables
 * Server-Side Help System Tables
 
-![[Computing/Architectonic Pillars/System/Databases/_resources/MySQL.resources/instructions.md.pdf]]
+![[Computer Science/Databases/_resources/MySQL.resources/instructions.md.pdf]]
 
 ![[MYSQL1.pdf]]
 
@@ -129,3 +138,10 @@ MySQL can be accessed through 
 | Importing | load data infile 'file\_data.csv' into table table\_name <br><br>mysqlimport table\_name file\_data.csv |
 | Showing structure of newly created table | DESCRIBE table\_name; |
 |     |     |
+
+---
+
+## Related Notes
+
+- [[00. Master Knowledge Map]]
+- [[System/00. Overview|System Overview]]

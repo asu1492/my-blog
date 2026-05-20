@@ -1,3 +1,11 @@
+# API Design
+
+**Summary**: Covers API Design in system design, architecture, or backend engineering, with key concepts and trade-offs.
+**Tags**: #system-design #api-design
+**Created**: Unknown
+**Last Updated**: 2026-05-20
+
+---
 
 ###### What is an API
 1. Interface that enables two software components to communicate with each other using set of definitions and protocols.
@@ -40,4 +48,11 @@
 			1. /events/cursor=123&limit=25 [cursor is last item]
 10. Security 
 	1. via JWT which carries signed claims(role,expiry)
-	2. Also, it is not best practice to send userId in request body, e.g. {"userId", "text"}, userId should be inferred from JWT Token 
+	2. Also, it is not best practice to send userId in request body, e.g. {"userId", "text"}, userId should be inferred from JWT Token
+
+---
+
+## Related Notes
+
+- [[00. Master Knowledge Map]]
+- [[System/00. Overview|System Overview]]

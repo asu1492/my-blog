@@ -1,3 +1,12 @@
+# Consistency Model ACID, BASE
+
+**Summary**: Covers Consistency Model ACID, BASE in databases and data storage, including concepts, trade-offs, and practical usage.
+**Tags**: #system-design #databases #consistency-model-acid-base
+**Created**: Unknown
+**Last Updated**: 2026-05-20
+
+---
+
 ---
 ---
 **Consistency Model** 
@@ -63,3 +72,10 @@ Transaction
 1. Sets of queries that is carried out for one task. 
 2. treated as one, as performed simultaneously. 
 3. Query needs to work in same way every time, no matter how you send it -- multiple threads.
+
+---
+
+## Related Notes
+
+- [[00. Master Knowledge Map]]
+- [[System/00. Overview|System Overview]]

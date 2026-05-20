@@ -1,3 +1,12 @@
+# Quiz
+
+**Summary**: Covers Quiz in data engineering, including core concepts, workflow patterns, and practical usage.
+**Tags**: #system-design #data-engineering #quiz
+**Created**: Unknown
+**Last Updated**: 2026-05-20
+
+---
+
 ---
 source: https://www.coursera.org/learn/etl-and-data-pipelines-shell-airflow-kafka/quiz/qHa3I/practice-quiz-an-introduction-to-data-pipelines/attempt?redirectToCover=true
 ---
@@ -472,3 +481,10 @@ Batch process refresh rate
 **Correct**
 
 Correct, the refresh rate of individual batch processes is increased to achieve near-real-time processing.
+
+---
+
+## Related Notes
+
+- [[00. Master Knowledge Map]]
+- [[System/00. Overview|System Overview]]

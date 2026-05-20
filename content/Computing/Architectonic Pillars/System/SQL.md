@@ -1,3 +1,11 @@
+# SQL
+
+**Summary**: Covers SQL in system design, architecture, or backend engineering, with key concepts and trade-offs.
+**Tags**: #system-design #sql
+**Created**: Unknown
+**Last Updated**: 2026-05-20
+
+---
 
 ![[Pasted image 20260315215331.png]]
 
@@ -84,3 +92,10 @@ The problem can be solved **without a subquery** using either a
 	);
 	      
 	```
+
+---
+
+## Related Notes
+
+- [[00. Master Knowledge Map]]
+- [[System/00. Overview|System Overview]]

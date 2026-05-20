@@ -1,3 +1,11 @@
+# Clean Architecture
+
+**Summary**: Covers Clean Architecture as a design principle or engineering pattern, with practical implications and examples.
+**Tags**: #system-design #design-principles #clean-architecture
+**Created**: Unknown
+**Last Updated**: 2026-05-20
+
+---
 
 ![[Pasted image 20240514123344.png]]
 
@@ -37,3 +45,11 @@ Interface Adapter
 Framework and Drivers 
 1. composed of frameworks and tools such as the Database, the Web Framework, etc
 2. Generally you don’t write much code in this layer other than glue code that communicates to the next circle inwards.
+
+---
+
+## Related Notes
+
+- [[00. Master Knowledge Map]]
+- [[System/00. Overview|System Overview]]
+- [[System/Design Principles/00. Overview|Design Principles Overview]]

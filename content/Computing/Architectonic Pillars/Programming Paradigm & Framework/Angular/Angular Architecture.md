@@ -1,6 +1,18 @@
 # Angular Architecture
 
+**Summary**: Covers Angular Architecture in Angular, including architecture, concepts, and practical usage.
+**Tags**: #programming #angular #angular-architecture
+**Created**: Unknown
+**Last Updated**: 2026-05-20
+
 ---
+
+---
+
+## See also
+- [[Computing/Architectonic Pillars/Programming Paradigm & Framework/Angular/Angular MOC|Angular MOC]]
+- [[Computing/Architectonic Pillars/System/Design Principles/Dependency Injection|Dependency Injection]]
+- [[Computing/Architectonic Pillars/System/Design Principles/Clean Architecture|Clean Architecture]]
 
 ## Performance: trackBy in ngFor
 
@@ -55,12 +67,19 @@ Bootstrapping sequence that Angular expects:
 - Consequences of Loading main.js before polyfills.js:
     - Angular bootstraps without a fully-patched async environment.
     - Internal assumptions like “Zone is present and owns microtasks” are violated.
-    - That surfaced as **NG0908 runtime errors** on DSS/chat pages.
+    - That surfaced as **NG0908 runtime errors** on dashboard/chat pages.
 
 #### main.js
 1. `main.js` is the **compiled application bundle** built from `src/main.ts` and your app code. It typically contains: 
-2. ```java 
+2. ```typescript 
    platformBrowserDynamic()
 	  .bootstrapModule(AppModule)
 	  .catch(err => console.error(err));
    ```
+
+---
+
+## Related Notes
+
+- [[00. Master Knowledge Map]]
+- [[Programming Paradigm & Framework/00. Overview|Programming Overview]]

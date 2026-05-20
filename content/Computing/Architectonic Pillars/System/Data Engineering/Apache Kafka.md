@@ -1,3 +1,15 @@
+# Apache Kafka
+
+**Summary**: Covers Apache Kafka in data engineering, including core concepts, workflow patterns, and practical usage.
+**Tags**: #system-design #data-engineering #apache-kafka
+**Created**: Unknown
+**Last Updated**: 2026-05-20
+
+---
+
+Related Notes
+1. [[Message Queue]] — concept layer; Kafka is a production implementation of a distributed message queue
+2. Used in: [[FeedService]] · [[Rate Limiter]]
 
 References 
 1. Simpler Kafka Explanation : https://www.gentlydownthe.stream/
@@ -227,4 +239,11 @@ This is what is referred to as a **commit log**, each record is appended to the 
 1. built-in partitioning
 2. [[Data Replication]],
 3. fault tolerance 
-4. 
+4.
+
+---
+
+## Related Notes
+
+- [[00. Master Knowledge Map]]
+- [[System/00. Overview|System Overview]]

@@ -1,3 +1,12 @@
+# System Design Notes
+
+**Summary**: Covers System Design Notes in system design, architecture, or backend engineering, with key concepts and trade-offs.
+**Tags**: #system-design #system-design-notes
+**Created**: Unknown
+**Last Updated**: 2026-05-20
+
+---
+
 ![[Pasted image 20260228184559.png]]
 
 
@@ -502,3 +511,10 @@ Try answering without looking:
 If you want, a next step could be a one-page “cheat sheet” that maps these 29 videos to key formulas, definitions, and interview checklists.
 
 1. [https://www.youtube.com/watch?v=FSR1s2b-l_I&list=PLTCrU9sGyburBw9wNOHebv9SjlE4Elv5a](https://www.youtube.com/watch?v=FSR1s2b-l_I&list=PLTCrU9sGyburBw9wNOHebv9SjlE4Elv5a)
+
+---
+
+## Related Notes
+
+- [[00. Master Knowledge Map]]
+- [[System/00. Overview|System Overview]]

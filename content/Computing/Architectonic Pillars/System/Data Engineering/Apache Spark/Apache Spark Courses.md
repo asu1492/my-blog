@@ -1,3 +1,12 @@
+# Apache Spark Courses
+
+**Summary**: Covers Apache Spark Courses in data engineering, including core concepts, workflow patterns, and practical usage.
+**Tags**: #system-design #data-engineering #apache-spark-courses
+**Created**: Unknown
+**Last Updated**: 2026-05-20
+
+---
+
 ---
 ---
 Udemy
@@ -8,3 +17,10 @@ Udemy
 4. [Python Crashcourse](https://docs.google.com/presentation/d/1CuqvSGMqdMTT1dTblX5enEqZNLS8d0fHwZImQ3zzbpQ/edit)
 
 Coursera : IBM
+
+---
+
+## Related Notes
+
+- [[00. Master Knowledge Map]]
+- [[System/00. Overview|System Overview]]

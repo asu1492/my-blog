@@ -1,3 +1,12 @@
+# Hadoop and MapReduce
+
+**Summary**: Covers Hadoop and MapReduce in data engineering, including core concepts, workflow patterns, and practical usage.
+**Tags**: #system-design #data-engineering #hadoop-and-mapreduce
+**Created**: Unknown
+**Last Updated**: 2026-05-20
+
+---
+
 ---
 source: https://www.google.com/search?q=Hadoop&rlz=1C1JJTC_enIN977IN977&sourceid=chrome&ie=UTF-8
 ---
@@ -21,7 +30,7 @@ Hadoop Common 
 
 6. Provides common Java libraries that can be used across all modules.
 
-![[Computing/Architectonic Pillars/System/Data Engineering/_resources/Untitled_Note.resources/unknown_filename.png]]
+![[Computer Science/Data Engineering/_resources/Untitled_Note.resources/unknown_filename.png]]
 
 Bigdata process is broken into 
 
@@ -63,9 +72,9 @@ public void map(Object key, Text value, Context context)
 * text : dataype of output key
 * longWritable : datatype of output value 
 
-![[Computing/Architectonic Pillars/System/Data Engineering/_resources/Untitled_Note.resources/image (1).png]]
+![[Computer Science/Data Engineering/_resources/Untitled_Note.resources/image (1).png]]
 
-![[Computing/Architectonic Pillars/System/Data Engineering/_resources/Untitled_Note.resources/image (2).png]]
+![[Computer Science/Data Engineering/_resources/Untitled_Note.resources/image (2).png]]
 
 * * *
 
@@ -127,4 +136,11 @@ Hadoop Streaming 
 * Here streaming does not means real time data processing, rather data is streamed through programs(any prog)
 * read data from stdin and writes data as stdout 
 * Mapper gives key<space>value per line 
-* HS is written in java![[Computing/Architectonic Pillars/System/Data Engineering/_resources/Untitled_Note.resources/image.png]]
+* HS is written in java![[Computer Science/Data Engineering/_resources/Untitled_Note.resources/image.png]]
+
+---
+
+## Related Notes
+
+- [[00. Master Knowledge Map]]
+- [[System/00. Overview|System Overview]]

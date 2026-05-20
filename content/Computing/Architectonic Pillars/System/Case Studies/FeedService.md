@@ -1,3 +1,12 @@
+# FeedService
+
+**Summary**: Captures the FeedService system design case study, including the problem shape, design choices, and trade-offs.
+**Tags**: #system-design #case-study #feedservice
+**Created**: Unknown
+**Last Updated**: 2026-05-20
+
+---
+
 FeedService.txt
 
 Requirement 
@@ -233,4 +242,20 @@ public class PostEventProducer {
 @KafkaListener(topic=""post-created-topic")
 public void consume(PostEvent event){
 
+---
+
+## Concepts Exercised
+- [[Caching]] — pre-computed `FeedEntry` rows cached in Redis; cache-aside on feed read
+- [[Message Queue]] — Kafka fan-out on write: new post event → feed generation consumers
+- [[Apache Kafka]] — `post-created-topic` producer/consumer; partition by `authorId`
+- [[Data Modeling]] — `FeedEntry` (denormalized per-user) vs `Post` (canonical); read vs write trade-off
+- [[JPA]] — `@Index` on `(authorId, createdAt)` for feed query performance
+
 }
+
+---
+
+## Related Notes
+
+- [[00. Master Knowledge Map]]
+- [[System/00. Overview|System Overview]]

@@ -1,5 +1,12 @@
 # YARN — Yet Another Resource Negotiator
 
+**Summary**: Covers YARN — Yet Another Resource Negotiator in data engineering, including core concepts, workflow patterns, and practical usage.
+**Tags**: #system-design #data-engineering #yarn
+**Created**: Unknown
+**Last Updated**: 2026-05-20
+
+---
+
 YARN is the resource management and job scheduling layer of the Hadoop ecosystem (Hadoop 2.x+). It decouples resource management from the MapReduce programming model, allowing multiple computation frameworks (Spark, Tez, Flink) to share the same cluster.
 
 ---
@@ -70,3 +77,10 @@ See: `[[Apache Spark/Spark Cluster Manager]]`
 - `[[Hadoop and MapReduce]]` — original compute framework YARN replaced MR1's JobTracker
 - `[[Apache Spark/Apache Architecture]]` — driver/executor model runs on top of YARN
 - `[[Data Pipelines]]` — Airflow submits YARN jobs as operators
+
+---
+
+## Related Notes
+
+- [[00. Master Knowledge Map]]
+- [[System/00. Overview|System Overview]]

@@ -26,19 +26,19 @@ Thanks for stopping by — I hope you find something valuable here.
 - Coordinated R&D Kickoff quizzes & social events (spot award winner).
 
 ### 2024
-- Owned delivery of Price Match, Chatbot Inspector & Generate Draft Responses, on schedule.
-- Upskilled on SB2 & RabbitMQ, shipping “Customer Interaction” and “Order Reset” ahead of plan.
+- Owned delivery of multiple chatbot features and customer service tools, on schedule.
+- Upskilled on SB2 & RabbitMQ, shipping customer interaction and order management features ahead of plan.
 - Achieved 95%+ test coverage with Cypress, Karma/Jasmine and JUnit/Mockito—zero regressions.
 - Produced demo videos and docs for third-party chatbot integrations; led pan-R&D events.
 
 ### 2025
-- Owned end-to-end delivery of Maven Chatbot feature roadmap—shipping label PDFs, QR-code printerless returns, POS/OMNI order widgets, Store Locator, DSS page extensibility, and FAQ/Policy Document Upload UI—all on schedule with zero rollback.
+- Owned end-to-end delivery of chatbot feature roadmap—shipping document generation, returns processing, order management widgets, store locator, dashboard extensibility, and document upload UI—all on schedule with zero rollback.
 - Resolved 172 Jira tickets (CIIs, defects, stories, support tickets) across the year, sustaining ≈14 fixes per month while triaging live customer issues in parallel.
-- Led Maven bilingual localization (FR/EN) for the customer go-live—fixed chatbot language detection, agent ban messages, OTP error messages, email "Reply-To" routing, and out-of-office-hours logic across both locales.
-- Architected the Agents migration, refactoring OrderStatus, OrderCancel, PriceMatch, and Misship flows into the new agent-based framework and validating via Postman & UI end-to-end.
-- Optimized chatbot response performance—diagnosed Parcel API latency causing 15–20 s response times and shipped a design change that brought order inquiries back within SLA.
-- Adopted 6+ chatbot APIs to Swagger (startChat, chat, singleTurnChat, endChat, genAIRequestResponse, priceMatch, conversation messages) for product enablement and third-party integration readiness.
-- Drove cross-customer production support for multiple customers, resolving P1/P2 issues including SendGrid email failures, tax-exempt flow bugs, case-routing defects, and inbound-email attachment handling.
+- Led bilingual localization (FR/EN) for customer go-live—fixed chatbot language detection, agent ban messages, OTP error messages, email "Reply-To" routing, and out-of-office-hours logic across both locales.
+- Architected agent-based migration, refactoring order status, cancellation, pricing, and shipping flows into new framework and validating via Postman & UI end-to-end.
+- Optimized chatbot response performance—diagnosed API latency causing 15–20 s response times and shipped a design change that brought order inquiries back within SLA.
+- Adopted 6+ chatbot APIs to Swagger for product enablement and third-party integration readiness.
+- Drove cross-customer production support for multiple customers, resolving P1/P2 issues including email failures, tax-exempt flow bugs, case-routing defects, and inbound-email attachment handling.
 - Introduced Playwright UI test cases for self-service flows and continued code-drop validation cadence, maintaining high regression confidence across releases.
 
 ## Core Strengths

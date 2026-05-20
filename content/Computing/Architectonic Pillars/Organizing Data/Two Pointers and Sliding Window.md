@@ -1,3 +1,14 @@
+# Two Pointers and Sliding Window
+
+**Summary**: Study note for recognizing and solving two-pointer, fixed-window, and variable sliding-window coding interview patterns.
+**Tags**: #dsa #interview #two-pointers #sliding-window
+**Created**: Unknown
+**Last Updated**: 2026-05-20
+
+---
+
+← [[00. Data Structure]] · [[Computing/Architectonic Pillars/Organizing Data/00. Overview|Organizing Data]]
+
 A fixed window moves both pointers together.  
 A variable window moves **r** forward normally, but moves **l** only when a condition is violated (sum > k, too many distinct chars, etc.).
 
@@ -13,7 +24,7 @@ A variable window moves **r** forward normally, but moves **l** only when a cond
 LC 42: 
 ![[Pasted image 20251217101139.png]]
 
-# **1. Two-Pointer / Sliding-Window — Questions From _Your Provided List_**
+## **1. Two-Pointer / Sliding-Window — Questions From _Your Provided List_**
 
 ### **A. Pure Two-Pointer**
 These use two pointers converging or scanning:
@@ -48,7 +59,7 @@ So **14–16 questions from your list** fall under this category.
 
 ---
 
-# **2. Questions ServiceNow Commonly Asks in This Pattern**
+## **2. Questions ServiceNow Commonly Asks in This Pattern**
 
 These are based on repeated patterns from ServiceNow past rounds:
 
@@ -85,7 +96,7 @@ These are based on repeated patterns from ServiceNow past rounds:
 
 ---
 
-# **3. How to Use This List in Preparation**
+## **3. How to Use This List in Preparation**
 
 The entire set collapses into **5 patterns you should master**:
 
@@ -147,7 +158,7 @@ After each pattern, I’ll ask _one short check-in question_ so you stay active.
 
 ---
 
-# ✅ **1. Two-Pointer Template (Java Pseudocode)**
+## ✅ **1. Two-Pointer Template (Java Pseudocode)**
 
 Use this whenever you have _sorted input_, _mirror operations_, or _measure interactions between edges_.
 
@@ -191,7 +202,7 @@ In a palindrome check, which pointer typically moves first — left or right?
 
 ---
 
-# ✅ **2. Sliding Window (Variable Size) Template**
+## ✅ **2. Sliding Window (Variable Size) Template**
 
 Used when window grows until a **condition is violated**, then shrinks to fix it.
 
@@ -236,7 +247,7 @@ In variable-window problems, what triggers the **shrink phase**?
 
 ---
 
-# ✅ **3. Sliding Window (Fixed Size k) Template**
+## ✅ **3. Sliding Window (Fixed Size k) Template**
 
 Used when the window size **never changes**.
 
@@ -274,6 +285,15 @@ What is the fixed window size in “Find all anagrams of a pattern”?
 
 ---
 
-# Want the **pattern recognition rules** next?
+## Want the **pattern recognition rules** next?
 
 Example: “How do I instantly know if a question is sliding window vs two-pointer?”
+
+## Related Notes
+
+- [[00. Overview]]
+- [[00. Data Structure]]
+- [[Arrays]]
+- [[Hashing]]
+- [[_resources/Container With Most Water]]
+- [[_resources/Longest Substring Without Repeating Characters]]
